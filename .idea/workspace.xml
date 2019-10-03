@@ -1,0 +1,788 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f01d8431-5c74-43f6-a416-a1f52e62610b" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests.py" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="writing_checking.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/writing_checking.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="295">
+              <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TC_writing_checking.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/TC_writing_checking.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="693">
+              <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="developed_string.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tools/developed_string.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="525">
+              <caret line="25" selection-start-line="25" selection-end-line="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="15" column="26" lean-forward="true" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>RANGE_OF</find>
+      <find>PAttern</find>
+      <find>RAN</find>
+      <find>lambda</find>
+      <find>lambda_</find>
+      <find>BaseCar</find>
+      <find>transform</find>
+      <find>numberOfLoaded</find>
+      <find>convert</find>
+      <find>baseIma</find>
+      <find>transforma</find>
+      <find>items</find>
+      <find>bestcar</find>
+      <find>captio</find>
+      <find>map</find>
+      <find>range</find>
+      <find>text</find>
+      <find>va</find>
+      <find>IMPORT</find>
+      <find>IMPORTA</find>
+      <find>IMPO</find>
+      <find>IMPORTANT</find>
+      <find>EXCEL_DB</find>
+      <find>paths.FILE_TO_PRINT</find>
+      <find>choose</find>
+      <find>output_sheet</find>
+      <find>save_chosen_paragrahs</find>
+      <find>make_report_from_pattern</find>
+      <find>paths.REPORT</find>
+      <find>finda</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/ALGORITHMS/largest_rectangle.py" />
+        <option value="$PROJECT_DIR$/USEFUL_PAPERS/less_metaclasses.py" />
+        <option value="$PROJECT_DIR$/USEFUL_PAPERS/less_errors.py" />
+        <option value="$PROJECT_DIR$/USEFUL_PAPERS/less_type_hints.py" />
+        <option value="$PROJECT_DIR$/USEFUL_PAPERS/less_decorators.py" />
+        <option value="$PROJECT_DIR$/USEFUL_PAPERS/less_context_manager.py" />
+        <option value="$PROJECT_DIR$/USEFUL_PAPERS/less_generators.py" />
+        <option value="$PROJECT_DIR$/USEFUL_PAPERS/less_argi_kwargi.py" />
+        <option value="$PROJECT_DIR$/USEFUL_PAPERS/template.py" />
+        <option value="$PROJECT_DIR$/USEFUL_PAPERS/draft1.py" />
+        <option value="$PROJECT_DIR$/USEFUL_PAPERS/import_gwiazdka/module1.py" />
+        <option value="$PROJECT_DIR$/USEFUL_PAPERS/import_gwiazdka/module2.py" />
+        <option value="$PROJECT_DIR$/USEFUL_PAPERS/import_gwiazdka/script1.py" />
+        <option value="$PROJECT_DIR$/USEFUL_PAPERS/import_kilka_razy/module2.py" />
+        <option value="$PROJECT_DIR$/USEFUL_PAPERS/import_kilka_razy/module1.py" />
+        <option value="$PROJECT_DIR$/USEFUL_PAPERS/draft2.py" />
+        <option value="$PROJECT_DIR$/calculator.py" />
+        <option value="$PROJECT_DIR$/abstracts.py" />
+        <option value="$PROJECT_DIR$/template2.py" />
+        <option value="$PROJECT_DIR$/archive/anthonyms.py" />
+        <option value="$PROJECT_DIR$/parse_word.py" />
+        <option value="$PROJECT_DIR$/tests.py" />
+        <option value="$PROJECT_DIR$/template.py" />
+        <option value="$PROJECT_DIR$/tkinterelo.py" />
+        <option value="$PROJECT_DIR$/paths.py" />
+        <option value="$PROJECT_DIR$/test_qt.py" />
+        <option value="$PROJECT_DIR$/multibutton_window.py" />
+        <option value="$PROJECT_DIR$/main_program_2.py" />
+        <option value="$PROJECT_DIR$/tkinterelo2.py" />
+        <option value="$PROJECT_DIR$/tests/tests.py" />
+        <option value="$PROJECT_DIR$/main_program.py" />
+        <option value="$PROJECT_DIR$/parse_excel.py" />
+        <option value="$PROJECT_DIR$/parse_excel_2.py" />
+        <option value="$PROJECT_DIR$/tests/TC_create_revision.py" />
+        <option value="$PROJECT_DIR$/revision_creating.py" />
+        <option value="$PROJECT_DIR$/tests/test_data/TC_create_report.py" />
+        <option value="$PROJECT_DIR$/databases/paths.py" />
+        <option value="$PROJECT_DIR$/tests/TC_create_report.py" />
+        <option value="$PROJECT_DIR$/report_creating.py" />
+        <option value="$PROJECT_DIR$/DRAFTS/template.py" />
+        <option value="$PROJECT_DIR$/DRAFTS/draft2.py" />
+        <option value="$PROJECT_DIR$/archive/writing_cheking_old.py" />
+        <option value="$PROJECT_DIR$/tools/developed_excel.py" />
+        <option value="$PROJECT_DIR$/DRAFTS/draft1.py" />
+        <option value="$PROJECT_DIR$/tests/test_data/TC_writing_cheking.py" />
+        <option value="$PROJECT_DIR$/tools/developed_word.py" />
+        <option value="$PROJECT_DIR$/tests/TC_writing_checking.py" />
+        <option value="$PROJECT_DIR$/tools/developed_string.py" />
+        <option value="$PROJECT_DIR$/tests/TC_unit_tests.py" />
+        <option value="$PROJECT_DIR$/writing_checking.py" />
+        <option value="$PROJECT_DIR$/main.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1938" />
+    <option name="height" value="1050" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="writing_checker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="writing_checker" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="writing_checker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="writing_checker" type="462c0819:PsiDirectoryNode" />
+              <item name="databases" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="writing_checker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="writing_checker" type="462c0819:PsiDirectoryNode" />
+              <item name="DRAFTS" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="writing_checker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="writing_checker" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="writing_checker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="writing_checker" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="test_data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="writing_checker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="writing_checker" type="462c0819:PsiDirectoryNode" />
+              <item name="tools" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SearchEverywhereHistoryKey" value="_&#9;FILE&#9;file://C:/Users/Lenovo/Desktop/proj_writing/writing_checker/design_pattern.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/tools" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Lenovo\Desktop\proj_writing\writing_checker\tools" />
+      <recent name="C:\Users\Lenovo\Desktop\proj_writing\writing_checker\databases" />
+      <recent name="C:\Users\Lenovo\Desktop\proj_writing\writing_checker\archive" />
+      <recent name="C:\Users\Lenovo\Desktop\proj_writing\writing_checker\DRAFTS" />
+      <recent name="C:\Users\Lenovo\Desktop\proj_writing\writing_checker\tests" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Program Projects\1. Wakacje 2018\TESTY\keras7v112\TESTS\general_tools_test" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.main">
+    <configuration name="TC_unit_tests" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="keras7" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/TC_unit_tests.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="keras7" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="test2" type="PythonConfigurationType" factoryName="Python">
+      <module name="keras7" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="D:\Program Projects\1. Wakacje 2018\TESTY\keras7v27\USEFUL_PAPERS\draft_2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="Unittests in TC_create_report.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="keras7" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/TC_create_report.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+    </configuration>
+    <configuration name="Unittests in TC_create_revision.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="keras7" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/TC_create_revision.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+    </configuration>
+    <configuration name="Unittests in TC_writing_checking.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="keras7" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/TC_writing_checking.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.test2" />
+      <item itemvalue="Python.TC_unit_tests" />
+      <item itemvalue="Python tests.Unittests in TC_writing_checking.py" />
+      <item itemvalue="Python tests.Unittests in TC_create_report.py" />
+      <item itemvalue="Python tests.Unittests in TC_create_revision.py" />
+      <item itemvalue="Python.main" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python tests.Unittests in TC_writing_checking.py" />
+        <item itemvalue="Python tests.Unittests in TC_create_revision.py" />
+        <item itemvalue="Python tests.Unittests in TC_create_report.py" />
+        <item itemvalue="Python.TC_unit_tests" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\Lenovo\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f01d8431-5c74-43f6-a416-a1f52e62610b" name="Default" comment="" />
+      <created>1532429165765</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1532429165765</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="Unittests_in_TC_writing_checking_py - 2019.10.01 at 20h 03m 53s.xml">
+      <configuration name="Unittests in TC_writing_checking.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_TC_writing_checking_py - 2019.10.01 at 20h 25m 11s.xml">
+      <configuration name="Unittests in TC_writing_checking.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_TC_writing_checking_py - 2019.10.01 at 20h 25m 46s.xml">
+      <configuration name="Unittests in TC_writing_checking.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_TC_writing_checking_py - 2019.10.01 at 20h 26m 10s.xml">
+      <configuration name="Unittests in TC_writing_checking.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_TC_writing_checking_py - 2019.10.01 at 20h 26m 43s.xml">
+      <configuration name="Unittests in TC_writing_checking.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_TC_writing_checking_py - 2019.10.01 at 20h 28m 43s.xml">
+      <configuration name="Unittests in TC_writing_checking.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_TC_writing_checking_py - 2019.10.01 at 20h 29m 03s.xml">
+      <configuration name="Unittests in TC_writing_checking.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_TC_create_report_py - 2019.10.01 at 20h 29m 14s.xml">
+      <configuration name="Unittests in TC_create_report.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_TC_create_revision_py - 2019.10.01 at 20h 29m 21s.xml">
+      <configuration name="Unittests in TC_create_revision.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_TC_writing_checking_py - 2019.10.01 at 20h 33m 22s.xml">
+      <configuration name="Unittests in TC_writing_checking.py" configurationId="tests" />
+    </history-entry>
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49667773" visible="true" weight="0.1953125" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32908705" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.10804851" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Python Console" order="7" weight="0.3296582" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.33958104" />
+      <window_info id="Structure" order="1" sideWeight="0.50332224" side_tool="true" weight="0.088541664" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32908705" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.24145535" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+    </layout>
+    <layout-to-restore>
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49667773" visible="true" weight="0.1953125" />
+      <window_info id="Structure" order="1" sideWeight="0.50332224" side_tool="true" weight="0.088541664" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32908705" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.46637267" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.10804851" />
+      <window_info anchor="bottom" id="Python Console" order="7" weight="0.3296582" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.5997795" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32908705" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+    </layout-to-restore>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url />
+          <line>12</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url />
+          <line>83</line>
+          <option name="timeStamp" value="135" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url />
+          <line>14</line>
+          <option name="timeStamp" value="136" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url />
+          <line>39</line>
+          <option name="timeStamp" value="139" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url />
+          <line>88</line>
+          <option name="timeStamp" value="226" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url />
+          <line>45</line>
+          <option name="timeStamp" value="430" />
+        </line-breakpoint>
+      </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+      <option name="time" value="566" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/USEFUL_PAPERS/template.py" />
+    <entry file="file://$PROJECT_DIR$/USEFUL_PAPERS/draft1.py" />
+    <entry file="file://$PROJECT_DIR$/USEFUL_PAPERS/less_context_manager.py" />
+    <entry file="file://$PROJECT_DIR$/USEFUL_PAPERS/less_argi_kwargi.py" />
+    <entry file="file://$PROJECT_DIR$/USEFUL_PAPERS/import_gwiazdka/module1.py" />
+    <entry file="file://$PROJECT_DIR$/USEFUL_PAPERS/import_gwiazdka/module2.py" />
+    <entry file="file://$PROJECT_DIR$/USEFUL_PAPERS/import_gwiazdka/script1.py" />
+    <entry file="file://$PROJECT_DIR$/USEFUL_PAPERS/import_kilka_razy/module2.py" />
+    <entry file="file://$PROJECT_DIR$/USEFUL_PAPERS/import_kilka_razy/script1.py" />
+    <entry file="file://$PROJECT_DIR$/USEFUL_PAPERS/less_errors.py" />
+    <entry file="file://$PROJECT_DIR$/USEFUL_PAPERS/import_kilka_razy/module1.py" />
+    <entry file="file://$PROJECT_DIR$/USEFUL_PAPERS/less_decorators.py" />
+    <entry file="file://$PROJECT_DIR$/USEFUL_PAPERS/draft2.py" />
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydev_run_in_console.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="51" selection-start-line="51" selection-end-line="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/envs/keras7/Lib/site-packages/textract/parsers/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="30" column="37" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/envs/keras7/Lib/tkinter/ttk.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="531" column="6" selection-start-line="531" selection-start-column="6" selection-end-line="531" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/archive/main_program_old.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="966">
+          <caret line="46" column="18" lean-forward="true" selection-start-line="46" selection-start-column="18" selection-end-line="46" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/envs/keras7/Lib/re.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5922">
+          <caret line="285" column="4" selection-start-line="285" selection-start-column="4" selection-end-line="285" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/envs/keras7/Lib/zipfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="1089" selection-start-line="1089" selection-end-line="1089" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/envs/keras7/Lib/site-packages/openpyxl/workbook/workbook.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28">
+          <caret line="142" column="8" selection-start-line="142" selection-start-column="8" selection-end-line="142" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/envs/keras7/Lib/subprocess.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="996" selection-start-line="996" selection-end-line="996" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharmCE2018.1/system/python_stubs/1983715517/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="233" column="4" selection-start-line="233" selection-start-column="4" selection-end-line="233" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/envs/keras7/Lib/tkinter/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="1277" column="8" selection-start-line="1277" selection-start-column="8" selection-end-line="1277" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/archive/main_program.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="27" column="17" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/archive/tkinterelo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/archive/multibutton_window.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1008">
+          <caret line="48" column="10" lean-forward="true" selection-start-line="48" selection-start-column="10" selection-end-line="48" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main_program_2.py" />
+    <entry file="file://$PROJECT_DIR$/tests/test_data/TC_create_report.py" />
+    <entry file="file://$PROJECT_DIR$/DRAFTS/draft2.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/envs/keras7/Lib/site-packages/openpyxl/cell/cell.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4977">
+          <caret line="237" selection-start-line="237" selection-end-line="237" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/archive/writing_cheking_old.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/databases/dictionary.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/databases/paths.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_data/TC_writing_cheking.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/envs/keras7/Lib/site-packages/openpyxl/reader/excel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="95" selection-start-line="95" selection-end-line="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/envs/keras7/Lib/unittest/case.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="58" selection-start-line="58" selection-end-line="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/design_patterns.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="422">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/developed_tkinter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-754">
+          <caret lean-forward="true" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/report_creating.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="86">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/revision_creating.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-628">
+          <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/developed_word.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="15" lean-forward="true" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/developed_excel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/TC_create_report.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="422">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/TC_create_revision.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="415">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/TC_unit_tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1071">
+          <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DRAFTS/draft1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/developed_string.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/writing_checking.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/TC_writing_checking.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="693">
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="15" column="26" lean-forward="true" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
