@@ -1,1 +1,1 @@
-# Django-knowledge
+# sth-knowledge
