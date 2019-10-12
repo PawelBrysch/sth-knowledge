@@ -1,0 +1,82 @@
+<!--
+TODO 1. czy onclick/onload musi miec srednik?
+TODO 2. czy link musi byc "a"?
+TODO 3. jak dziala min_height
+TODO 4. header vs noramlny "div"
+-->
+<!--**************************
+GENERAL
+**************************-->
+<!--CSS-->                          <link rel="stylesheet" href="style.css" type="text/css"/>
+<!--obrazek-->                      <img src="tux.jpg"/>
+<!--ENTER-->                        <br/>
+<input type="submit" value="Sprawdź" onclick="sprawdz()"/>
+
+<!--**************************
+Linki
+**************************-->
+<!--link-->                         <a href="http://www.google.pl"></a>
+<!--mini napis po najechaniu-->     <a title="kliknij"></a>
+<!--do nowej strony-->              <a target="_blank"></a>
+
+
+<!--**************************
+Javascript
+**************************-->
+<!--import skryptu-->               <script type="text/javascript" src="imported_script.js"></script>
+<!--
+gdzie ostatecznie podpinamy?->                                                                       przed koncem "body"
+-->
+<!--onload-->                       <body onload="some_func();">
+
+
+<!--**************************
+Dialog
+**************************-->
+<!--text input field-->             <input type="text" id="some_id" />
+<!--push button-->                  <input type="submit" value="seen_by_the_user" onclick="some_func()"/>
+
+
+<!--**************************
+Jak elegancko dodac clear:both?
+**************************-->
+<div id="menu">
+    <div id="div1">sth1</div>
+    <div id="div2">sth1</div>
+    <div style="clear:both"></div>
+</div>
+
+
+<!--**************************
+Jak wyslizowac dany fragment?
+**************************-->
+<span class="some_class">text do wystylizowania </span>
+<!--
+w praktyce fragment to->                                                                                        naglowek
+-->
+
+
+<!--**************************
+Jak dodac CSS wprost do znacznika?
+**************************-->
+<h1 style="color: green;">sth</h1>
+
+
+<!--**************************
+Tabele
+**************************-->
+<table>
+    <tr>
+        <td>
+        </td>
+    </tr>
+</table>
+<!--
+align="center"  - czego to odpowiednik?->                                                CSS'a, ale tego piszemy w HTMLu
+                - czy kady markup ma ten atrybut?->                 NIE, wybrane markupy maja wybrane "CSS'owe" atrybuty
+-->
+<!--komorka na wiele linii-->          <td colspan="3"></td>
+
+<!--*****************************************************************************************************************-->
+<!--*****************************************************************************************************************-->
+<!--*****************************************************************************************************************-->

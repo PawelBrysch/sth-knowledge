@@ -1,0 +1,65 @@
+/*******************/
+/*General*/
+/*******************/
+/*  jak zrobic jeden style dla dwoch obiektow?->                                               po przecinku w naglowku*/
+/*element ma dwie klasy - ktora jest nadrzedna?->                                         wczesniej zdefiniowana w css*/
+/*opacity:0 - co wtedy?->                                                                           obiekt niewidoczny*/
+
+body{}
+#id{}
+.class{}
+
+/*TODO 1. przejscia transition*/
+
+#sth{
+    /*Przezroczystosc*/
+    opacity: 0.8;
+
+    /*Kolor tla*/
+    background-color: gray;
+    background-color: #303030;
+    background-image: url("path_to_image.jpg");
+    filter: brightness(50%);
+
+    /*Czcionka*/
+    font-family: 'Grenze', serif;
+    font-size: 44px; font-weight: 900;
+    color: white;
+    text-decoration: none; /*przekreslenie, pochylenie, itp.*/
+
+    /*Rozmieszczenie*/
+    width: 1000px; height: 170px;
+    height: 170px; min-height: 620px;
+
+    margin-left: auto; margin-right: auto; /*dopasuje do srodka*/
+    margin-top: 20px;
+
+    display: inline-block; /*pola do gry szachy same uloza sie w tablice z takim property*/
+
+    /*Borders*/
+    border: 3px solid gray;
+    border-right: 2px dotted grey; border-bottom: 2px dotted red;
+    border-radius: 15px; /*zaokregli katy bordera*/
+
+    /*Przejscia*/
+    transition: all .3s ease-in-out;
+
+    /*Inne*/
+    float: left;
+    letter-spacing: 3px;
+    text-align: center; text-align: justify;
+    cursor: pointer;
+
+    /*******************/
+    /*Wymuszenie*/
+    /*******************/
+    color: red !important;
+}
+
+/**********************************************************************************************************************/
+
+
+
+
+
+
