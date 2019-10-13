@@ -1,0 +1,35 @@
+"""
+Przetrwanie w konsoli
+"""
+clear 				-> czysci konsole
+<q>                 -> opuszczenie notepada
+<CRTL+X+C>, :wq     -> wyjscie z notepada w trybie amend
+
+"""
+Cofanie zmian
+# (wpierw trzeba cofnac z kolejki, a dopiero pozniej mozna cofnac zmiany)
+"""
+git reset HEAD <file> 	  	-> cofa z kolejki
+git checkout -- <file>    	-> cofa zmiany w pliku
+
+	
+"""
+Zalozmy, ze chcemy cos dodac do ostatniego commita
+"""
+git log                     -> pokazuje historie commitow (full)
+git log --stat              -> pokazuej liczbe delecji/insercji
+git log --pretty=oneline    -> same tytuly
+git log --pretty=short      -> tytul + autor
+
+
+"""
+Zalozmy, ze chcemy cos dodac do ostatniego commita
+"""
+git add forgotten_file
+git commit --amend
+
+###############################################################################
+git remote -v               -> pokazuje skad sklonowano plik
+git push [remote_repo (origin)] [branch(dev)]  
+
+
