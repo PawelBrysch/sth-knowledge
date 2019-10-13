@@ -1,2 +1,2 @@
-# Django-knowledge that is bad place 2
+# Django-knowledge that is bad place 3
 sdsad
