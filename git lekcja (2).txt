@@ -1,0 +1,85 @@
+"""
+Przetrwanie w konsoli
+"""
+clear 				-> czysci konsole
+<q>                 -> opuszczenie notepada
+<CRTL+X+C>, :wq     -> wyjscie z notepada w trybie amend
+
+"""
+Cofanie zmian
+# (wpierw trzeba cofnac z kolejki, a dopiero pozniej mozna cofnac zmiany)
+"""
+git reset HEAD <file> 	  	-> cofa z kolejki
+git checkout -- <file>    	-> cofa zmiany w pliku
+
+	
+"""
+Zalozmy, ze chcemy cos dodac do ostatniego commita
+"""
+git log                     -> pokazuje historie commitow (full)
+git log --stat              -> pokazuej liczbe delecji/insercji
+git log --pretty=oneline    -> same tytuly
+git log --pretty=short      -> tytul + autor
+
+
+"""
+Zalozmy, ze chcemy cos dodac do ostatniego commita
+"""
+"""
+1. co jak chcemy tylko zmienic notke?->                                              samo "git commit --amend"
+"""
+git add forgotten_file
+git commit --amend (przenosi nas do edytora)
+
+###############################################################################
+git remote -v               -> pokazuje skad sklonowano plik
+git push [remote_repo (origin)] [branch(dev)]
+
+
+
+###############################################################################
+jak siê cofn¹æ? 			-> git reset --hard 0213h0h9 
+a jak pójœæ do przodu       -> TYMCZASOWO:  1) utworzyc branch z przodu
+                                            2) cofnac sie nim
+                                          ( 3) zmergowac (w sumie mozna zostac) )
+                                          
+git merge sth => co zostanie na miejscu?        -> sth     
+
+###############################################################################
+czy mozna pushowac na rozne branche?->          tak!     
+jak wywolac konflikt?->                         nie moze byc fast forward
+
+
+
+"""
+Remote
+"""
+git branch -a ->                                lista wszystkich branchy remotow tez
+git checkout -b <branch> origin/<branch> ->     chyba tak nalezy tworzyc branche ( 1)lokalne 2)odpowiadajace )
+WYSTARCZY git checkout <branch>                 
+git push -u origin <branch> ->                  utworzenie remote brancha z lokalnego (nazwa nowego remote 
+                                                taka sama, jak *HEAD
+q        usuniecie remote brancha
+git branch -d <branch>                          usuniecie local brancha 
+git branch -m <new_name>                        zmiana nazwy lokalna          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,21 @@
+git checkout -b <branch> = "git branch <branch>" + "git checkout <branch>"
+
+co robimy po rozwiazaniu komnfliktow? -> 						trzeba zaddowac wszystkie te pliki (bo merge to tez jest taki "commit")
+
+git branch -v => pokazuje migawki poszczegolnch branchy
+
+git branch --merged; git branch --no-merged => w pewnym sensie mowi o drzewie
+
+git branch -d <branch> 				=> usuwa scalona galaz
+git branch -D <branch>				=> usuwa neiscalona galaz
+
+
+git checkout -b serverfix origin/serverfix -> chyba tak nalezy tworzyc branche
+
+
+
+
+
+
+
+

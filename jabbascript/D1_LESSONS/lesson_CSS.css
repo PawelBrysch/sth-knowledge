@@ -27,9 +27,14 @@ body{}
     color: white;
     text-decoration: none; /*przekreslenie, pochylenie, itp.*/
 
+    /*Tekst odstepy*/
+    letter-spacing: 3px;
+    line-height: 150%;
+
     /*Rozmieszczenie*/
     width: 1000px; height: 170px;
     height: 170px; min-height: 620px;
+    width: 50%;
 
     margin-left: auto; margin-right: auto; /*dopasuje do srodka*/
     margin-top: 20px;
@@ -46,7 +51,7 @@ body{}
 
     /*Inne*/
     float: left;
-    letter-spacing: 3px;
+
     text-align: center; text-align: justify;
     cursor: pointer;
 
