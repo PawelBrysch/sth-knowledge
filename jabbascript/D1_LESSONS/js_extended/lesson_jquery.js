@@ -1,3 +1,5 @@
+//TODO 1. zamienic "element" na "selector" wszedzie
+
 /*******************
  GENERAL
  ********************/
@@ -10,6 +12,21 @@
 // $("some_markup");
 // $("[some_attr = some_val]");
 
+
+/*******************
+ Funkcje - ogolnie
+ ********************/
+/**
+ * jak definiowac->                                                                              w tagu<script></script>
+ * */
+/** onload*/
+// jQuery(function($)
+//     {
+//         some_body
+//     }
+// );
+/** uzycie funkcji z libki*/
+// $.some_func(element);
 
 /*******************
  Zmiany elementow
@@ -34,7 +51,41 @@
 
 
 /*******************
- Eventy
+ Eventy - general
  ********************/
-/** alternatywa dla addEventListener*/
+/** ogolna forma*/
 // $(element).on("click", function() { do_sth(3.14); });
+/** odwolanie sie do wlasciciela eventu*/
+// $(element).eventName(function()
+//     {
+//         $(this);
+//     }
+// );
+
+/*******************
+ Lista eventow
+ ********************/
+/** "onClick"*/
+// $(element).click(function() { do_sth(3.14); });
+/** "onScroll"
+ * raczej tylko dla->                                                                                           window*/
+// $(window).scroll(function() { do_sth(3.14); });
+
+/*******************
+ Lista funkcji
+ ********************/
+/** scrollTo
+ * jak wwyglada znacznik?->                                                <a id="some_id" href="#">someInnerHTML</a> */
+// $.scrollTo($('#some_id'), time_ms);
+/** fadeIn(), fadeOut()*/
+// $(selector).fadeIn();
+// $(selector).fadeOut();
+
+/*******************
+ Lista funkcji
+ ********************/
+/** licza pixeli od gory strony*/
+// $(window).scrollTop();
+
+
+

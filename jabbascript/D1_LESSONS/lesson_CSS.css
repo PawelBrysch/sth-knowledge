@@ -4,21 +4,33 @@
 /*  jak zrobic jeden style dla dwoch obiektow?->                                               po przecinku w naglowku*/
 /*element ma dwie klasy - ktora jest nadrzedna?->                                         wczesniej zdefiniowana w css*/
 /*opacity:0 - co wtedy?->                                                                           obiekt niewidoczny*/
+/*composition > element - fachowa nazwa->                                                               parent > child*/
 
 body{}
 #id{}
 .class{}
+a.class{} /*jakas dla dla hiperlacz*/
+li:first-child{} /*pierwszy na liscie*/
 
 /*TODO 1. przejscia transition*/
+/*TODO 2. czy a.class ma jakies znaczenie?*/
+/*TODO 3. padding vs margin*/
+/*TODO 4. opacity vs display:none*/
+
+/*!!!TODO 5. dlaczego raz jest znaczek, a raz nie?*/ /*composition > element*/
+ol                      >   li{}
+.class_of_ul_markup         a{}
 
 #sth{
     /*Przezroczystosc*/
     opacity: 0.8;
+    display: none;
 
     /*Kolor tla*/
     background-color: gray;
     background-color: #303030;
     background-image: url("path_to_image.jpg");
+    background: url("path_to_image.jpg") no-repeat 0px 0px; /*nie powtarzaj grafik*/
     filter: brightness(50%);
 
     /*Czcionka*/
@@ -26,6 +38,7 @@ body{}
     font-size: 44px; font-weight: 900;
     color: white;
     text-decoration: none; /*przekreslenie, pochylenie, itp.*/
+    text-transform: uppercase;
 
     /*Tekst odstepy*/
     letter-spacing: 3px;
@@ -39,7 +52,15 @@ body{}
     margin-left: auto; margin-right: auto; /*dopasuje do srodka*/
     margin-top: 20px;
 
+    padding: 5px 0px 5px 0px; /* vs margin*/
+    padding: 10px;
+
     display: inline-block; /*pola do gry szachy same uloza sie w tablice z takim property*/
+    display: block; /*1) link stanie sie blokiem*/ /*2) wiersze listy uloza sie poziomo*/
+
+    position: fixed; /*Ponizsze dwa dzialaja chyba tylko, gdy position jest fixed*/
+    right: 50px;
+    bottom: 50px;
 
     /*Borders*/
     border: 3px solid gray;
@@ -49,11 +70,17 @@ body{}
     /*Przejscia*/
     transition: all .3s ease-in-out;
 
+    /*Listy*/
+    list-style-type: none; /*nie ma kropek*/
+    line-height: 200%; /*wysokosc wiersza w liscie*/
+
     /*Inne*/
     float: left;
 
     text-align: center; text-align: justify;
     cursor: pointer;
+    resize: none;  /*1. dla <textarea> 2. zrobi tak, że nie możemy powiekszyc*/
+
 
     /*******************/
     /*Wymuszenie*/

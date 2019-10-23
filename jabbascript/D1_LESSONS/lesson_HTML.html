@@ -3,13 +3,18 @@ TODO 1. czy onclick/onload musi miec srednik?
 TODO 2. czy link musi byc "a"?
 TODO 3. jak dziala min_height
 TODO 4. header vs noramlny "div"
+TODO 5. <p>
+TODO 6. co robi alt w <img>
+TODO 7. Jak postowac w Django i co bedzie zamiast "enctype="multipart/form-data""
 -->
 <!--**************************
 GENERAL
 **************************-->
 <!--CSS-->                          <link rel="stylesheet" href="style.css" type="text/css"/>
 <!--obrazek-->                      <img src="tux.jpg"/>
+<!--obrazek z podpisem-->           <figure><img src=""></a><figcaption>description</figcaption></figure>
 <!--ENTER-->                        <br/>
+<!--akapit-->                        <p></p>
 <input type="submit" value="Sprawdź" onclick="sprawdz()"/>
 
 <!--**************************
@@ -25,15 +30,19 @@ gdzie zmianiac property ikonek?->                                               
 <!--do nowej strony-->              <a target="_blank"></a>
 <!--podpiecie fontello-->           <link rel="stylesheet" href="css/fontello.css" type="text/css" />
 <!--fontello-->                     <i class="icon-name"></i>
+<!--link do elementu-->             <a href="#someID">someInnerhHTML</a>
 
 
 <!--**************************
 Javascript
 **************************-->
-<!--import skryptu-->               <script type="text/javascript" src="imported_script.js"></script>
 <!--
-gdzie ostatecznie podpinamy?->                                                                       przed koncem "body"
+gdzie ostatecznie podpinamy?->               skrypt korzysta z HTML naszych rzeczy-> na koncu, jQuery zwykle na poczatku
+    na koncu, czyli gdzie?->                                                                        przed koncem </body>
 -->
+<!--import wlasnego skryptu-->       <script type="text/javascript" src="imported_script.js"></script>
+<!--import biblioteki-->            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<!--import skryptu z tej biblioteki-->                <script src="jquery.scrollTo.min.js"></script>
 <!--onload-->                       <body onload="some_func();">
 
 
@@ -83,6 +92,23 @@ align="center"  - czego to odpowiednik?->                                       
                 - czy kady markup ma ten atrybut?->                 NIE, wybrane markupy maja wybrane "CSS'owe" atrybuty
 -->
 <!--komorka na wiele linii-->          <td colspan="3"></td>
+
+
+<!--**************************
+Listy
+**************************-->
+<ol>
+    <li></li>
+    <li></li>
+</ol>
+<ul>
+    <li></li>
+    <li></li>
+</ul>
+<!--
+ol/ul - ma to znaczenie?->                                                                                     chyba nie
+czy mozna cos wstawiac miedzy znaczniki li?                                                                          NIE
+-->
 
 <!--*****************************************************************************************************************-->
 <!--*****************************************************************************************************************-->

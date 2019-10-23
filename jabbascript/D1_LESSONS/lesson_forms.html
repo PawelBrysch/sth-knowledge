@@ -1,0 +1,111 @@
+<!--##############################
+General
+##############################-->
+<form action="order.php" method="post">
+    <!--form1-->
+    <!--form2-->
+</form>
+<!--
+1. po co form?->                                                                                         by dodac metode
+2. co dostaje metoda (ogolnie)->                                                                  {"name": "value", ...}
+-->
+
+<!--##############################
+Radio button [SINGLE] // Checkbox [MULTI]
+##############################-->
+ <fieldset>
+    <legend> Rodzaj nadwozia </legend>
+    <div><label><input type="radio" value="1" name="some_name" checked> Hatchback </label></div>
+    <div><label><input type="radio" value="2" name="some_name"> Kabriolet </label></div>
+    <div><label><input type="radio" value="3" name="some_name"> Kombi </label></div>
+ </fieldset>
+
+<fieldset>
+    <legend> Choose your weapon: </legend>
+    <div><label><input type="checkbox" name="some_name_as_array[]" value="val1" disabled checked> magnum </label></div>
+    <div><label><input type="checkbox" name="some_name_as_array[]" value="val2" checked> shotgun </label></div>
+    <div><label><input type="checkbox" name="some_name_as_array[]" value="val3"> m4a1 </label></div>
+    <div><label><input type="checkbox" name="some_name_as_array[]" value="val4"> knife </label></div>
+</fieldset>
+<!--
+1. czy "radio" moze byc multi?->                                                                                     TAK
+                                          ale ... -> trzeba dac ROZNE name (nie moze to byc jedna tablica do wszystkich)
+
+2. po co <div>?->                                                                                        by bylo pionowo
+3. czemu <input> w <label>'u ->                                                               by caly napis byl klikalny
+    mozna inaczej?->                                                 TAK, ale wtedy trzeba uzyc atrybutu for="id_inputu"
+4. po co <fieldset>?->                                                                   1. daje border, 2. daje legende
+
+5. co robi checked?->                                                                           wybiera wartosc domyslna
+6. po co disabled?                                                                                to jest juz zaznaczone
+-->
+
+<!--##############################
+Expanded list [SINGLE]
+##############################-->
+<label for="some_id"> Choose color: </label>
+<select id="some_id" name="some_name">
+    <option value="r">red</option>
+    <option value="g" selected>green</option>
+    <option value="b">blue</option>
+    <option value="y">yellow</option>
+</select>
+<!--
+1. zamiast "checked" jest->                                                                                     selected
+-->
+
+
+<!--##############################
+Inputy - atrybuty
+##############################-->
+<input required> <!-- bez tego nie bedzie mozliwy submit -->
+<input multiple> <!-- mozna wstawic kilka opcji-->
+<input placeholder="some_text_in_background"> <!-- szary tekst, ktory znika po kliknieciu -->
+
+
+<!--##############################
+Inputy - przyklady
+##############################-->
+<!--Classic-->
+<label> Podaj imie <input type="text" name="some_name" placeholder="Jak masz na imię?"></label>
+<!--Password-->
+<label> Podaj haslo <input type="password" name="some_name"></label>
+<!--Number-->
+<label> Podaj liczbe <input type="number" name="some_name" ></label>
+<!--Search-->
+<label> Szukaj <input type="search" name="some_name"></label>
+<!-- e-mail -->
+<label> Give me an e-mail <input type="email" name="some_name" required></label>
+<!-- Phone -->
+<label> Give me a phone <input type="tel" name="some_name" multiple></label>
+<!-- Date -->
+<label> Give me a date <input type="date" name="some_name" min="2019-01-01" max="2020-01-01"></label>
+<!-- Hour
+step = 1->                                                                                     mamy wybor w sekundach-->
+<label> Give me a hour <input type="time" name="some_name" step="1" min="09:00" max="18:00"></label>
+<!-- Comment -->
+<label> Give me a comment <textarea name="komentarz" rows="4" cols="80" maxlength="25" minlength="10"></textarea></label>
+
+<!-- Progress bar -->
+<label> someLabel </label><progress id="onJavascriptPurpose" max="100" value="75"></progress>
+<!-- Colored progress bar -->
+<label> someLabel </label><meter min="0" max="100" title="someTitle" low="30" high="70" optimum="75" value="30"></meter>
+
+<!-- File-->
+<label> Give me a file </label> <input type="file" name="some_name" accept="image/x-png,image/gif,image/jpeg">
+
+
+<!--##############################
+Submity (wysle(+)/nie wysle(-), nie mozna(-)/ mozna rozszerzyc(+)
+##############################-->
+<!--
+1. TODO po co nie wysylac?
+-->
+<!--(+,-)-->
+<input type="submit" value="seen by user">
+<!--(-,-)-->
+<input type="button" value="seen by user">
+<!--(+,+)-->
+<button type="button">seen by user</button>
+
+
