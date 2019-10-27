@@ -1,4 +1,6 @@
 //TODO 1. zamienic "element" na "selector" wszedzie
+//TODO 2. roznica miedzy metodami onload
+//TODO 3. sprawdz, czy overrides jest dobrze ujete
 
 /*******************
  GENERAL
@@ -19,11 +21,17 @@
 /**
  * jak definiowac->                                                                              w tagu<script></script>
  * */
-/** onload*/
+/** onload - v1*/
 // jQuery(function($)
 //     {
 //         some_body
 //     }
+// );
+/** onload - v2*/
+// $(document).ready(function()
+//      {
+//          some_body
+//      }
 // );
 /** uzycie funkcji z libki*/
 // $.some_func(element);
@@ -72,20 +80,27 @@
 // $(window).scroll(function() { do_sth(3.14); });
 
 /*******************
- Lista funkcji
+Void
  ********************/
 /** scrollTo
- * jak wwyglada znacznik?->                                                <a id="some_id" href="#">someInnerHTML</a> */
+ * jak wyglada znacznik?->                                                 <a id="some_id" href="#">someInnerHTML</a> */
 // $.scrollTo($('#some_id'), time_ms);
 /** fadeIn(), fadeOut()*/
-// $(selector).fadeIn();
-// $(selector).fadeOut();
+// $('selector').fadeIn();
+// $('selector').fadeOut();
 
 /*******************
- Lista funkcji
+Attributes // methods returning attributes
  ********************/
-/** licza pixeli od gory strony*/
+/** zwraca liczbe pixeli od gory strony*/
+/**
+ * A) tylko dla "window"
+ * */
 // $(window).scrollTop();
+/**
+ * B) ogolna
+ * */
+// $('selector').offset().top;
 
 
 

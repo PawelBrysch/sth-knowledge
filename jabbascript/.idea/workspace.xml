@@ -36,7 +36,7 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="D:/code_tools/interpreters/node_js/node.exe" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -60,8 +60,11 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.gra.html">
+  <component name="RunManager" selected="JavaScript Debug.index.html">
     <configuration name="gra.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/jabbascript/D3_ZELENT_do_obejrzenia/js5/gra.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/jabbascript/D2_do_przerobienia/kurs_css3/www/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="draft1.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/A0_DRAFTS/draft1.js" working-dir="$PROJECT_DIR$/A0_DRAFTS">
@@ -75,6 +78,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.index.html" />
         <item itemvalue="JavaScript Debug.gra.html" />
         <item itemvalue="Node.js.memory.js" />
         <item itemvalue="Node.js.draft1.js" />
@@ -101,7 +105,12 @@
       <workItem from="1571400946994" duration="54000" />
       <workItem from="1571420983131" duration="23754000" />
       <workItem from="1571755921285" duration="9245000" />
-      <workItem from="1571845925024" duration="5177000" />
+      <workItem from="1571845925024" duration="5342000" />
+      <workItem from="1571921090086" duration="66000" />
+      <workItem from="1571924134622" duration="10771000" />
+      <workItem from="1571999287631" duration="3208000" />
+      <workItem from="1572154670669" duration="5276000" />
+      <workItem from="1572194797902" duration="1742000" />
     </task>
     <servers />
   </component>
