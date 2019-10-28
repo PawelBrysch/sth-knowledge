@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+    <style>
+        #id1
+        {
+            width: 100px;
+            height: 500px;
+            background-color: aqua;
+        }
+
+        #id2
+        {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+
+    <script src="jquery-3.4.1.min.js"></script>
+
+    <script>
+
+      $(document).ready(function(){
+        console.log("2");
+
+      });
+
+      $(document).ready(function(){
+        console.log("3");
+
+      });
+
+
+        $(function()
+            {
+                console.log("1");
+            }
+        );
+
+
+
+      function someFunc() {
+        console.log("3");
+        $("#id2").html("nowy");
+      }
+
+    </script>
+
+</head>
+<body>
+
+    <div id="id1" onclick="someFunc()">
+        innerHTML
+    </div>
+    <div id="id2" >
+        drugi
+    </div>
+
+
+
+</body>
+<script type="text/javascript" src="draft1.js"></script>
+</html>

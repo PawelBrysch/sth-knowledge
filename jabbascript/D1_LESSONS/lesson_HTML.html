@@ -1,87 +1,79 @@
-<!--
-TODO 1. czy onclick/onload musi miec srednik?
-TODO 2. czy link musi byc "a"?
-TODO 3. jak dziala min_height
-TODO 4. header vs noramlny "div"
-TODO 5. <p>
-TODO 6. co robi alt w <img>
-TODO 7. Jak postowac w Django i co bedzie zamiast "enctype="multipart/form-data""
--->
 <!--**************************
-GENERAL
+REVIEV
 **************************-->
-<!--CSS-->                          <link rel="stylesheet" href="style.css" type="text/css"/>
-<!--obrazek-->                      <img src="tux.jpg"/>
-<!--obrazek z podpisem-->           <figure><img src=""></a><figcaption>description</figcaption></figure>
-<!--ENTER-->                        <br/>
-<!--akapit-->                       <p></p>
-<!--index gorny-->                  <sup></sup>
-<input type="submit" value="Sprawdź" onclick="sprawdz()"/>
+<!--
+czy inline event musi miec srednik?->                                                                                NIE
+czy link musi byc w <a></a>?->                                                                                       TAK
+czego uzyc, by ustalic "limity" wymiarow divov?->                                                  np. "max-height", itd
+jak opisac dzialanie <p></p>->                                                                                 2 x ENTER
+kiedy skrypt musi byc na koncu?->                                                                            chyba NIGDY
+    *to jaki jest ewentualny powod errorow?->                                            struktura DOM sie nie utworzyla
+    *rozwiazanie->                         w globalu tylko "vary", reszta we funkcje (w ostatecznosci w window.onload())
+jak elegancko dodac clear:both?->                                         --><div style="clear:both"></div><!-- na koncu
+-->
+
 
 <!--**************************
-Linki
+MARKUPS - complex
+**************************-->
+<!--CSS-->                          <link rel="stylesheet" href="style.css" type="text/css"/>
+<!--link do elementu-->             <a href="#someID">link to element</a>
+
+
+<!--**************************
+MARKUPS - simple
+**************************-->
+<!--akapit-->                       <p></p>
+<!--enter-->                        <br/>
+<!--index gorny-->                  <sup></sup>
+
+
+<!--**************************
+IMAGES
+**************************-->
+<!--obrazek-->                      <img src="some_pict.jpg"/>
+<!--obrazek z podpisem-->           <figure><img src="some_pict.jpg"><figcaption>description</figcaption></figure>
+<!--napis w razie braku obrazka-->  <img alt="some_caption"/>
+
+
+<!--**************************
+FONTELLO
 **************************-->
 <!--
 czy we fontello musi byc "i"?->                                                                            niekoniecznie
-    czym ogolnie jest te "i"?->                                                                            pochyly tekst
-gdzie zmianiac property ikonek?->                                                               w fontello.css (na dole)
+czym ogolnie jest te "i"?->                                                                                pochyly tekst
+gdzie zmieniac property ikonek?->                                                               w fontello.css (na dole)
 -->
-<!--link-->                         <a href="http://www.google.pl"></a>
-<!--mini napis po najechaniu-->     <a title="kliknij"></a>
-<!--do nowej strony-->              <a target="_blank"></a>
 <!--podpiecie fontello-->           <link rel="stylesheet" href="css/fontello.css" type="text/css" />
 <!--fontello-->                     <i class="icon-name"></i>
-<!--link do elementu-->             <a href="#someID">someInnerhHTML</a>
 
 
 <!--**************************
-Javascript
+LINKS
 **************************-->
-<!--
-gdzie ostatecznie podpinamy?->               skrypt korzysta z HTML naszych rzeczy-> na koncu, jQuery zwykle na poczatku
-    na koncu, czyli gdzie?->                                                                        przed koncem </body>
--->
-<!--import wlasnego skryptu-->       <script type="text/javascript" src="imported_script.js"></script>
-<!--import biblioteki-->            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-<!--import skryptu z tej biblioteki-->                <script src="jquery.scrollTo.min.js"></script>
-<!--onload-->                       <body onload="some_func();">
+<!--link-->                         <a href="http://www.somewebpage.pl"></a>
+<!--mini napis po najechaniu-->     <a title="click here"></a>
+<!--do nowej strony-->              <a target="_blank"></a>
 
 
 <!--**************************
-Dialog
+JAVASCRIPT
 **************************-->
-<!--text input field-->             <input type="text" id="some_id" />
-<!--push button-->                  <input type="submit" value="seen_by_the_user" onclick="some_func()"/>
-<!--jak inline zmienic atrybut-->   <input type="some_type" some_event="this.attribute = new_value;">
+<!--import wlasnego skryptu-->          <script type="text/javascript" src="imported_script.js"></script>
+<!--import jQuery-->                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<!--import skryptu z tej biblioteki-->  <script src="jquery.scrollTo.min.js"></script>
+<!--onload (BAD PRACTISE)-->            <body onload="some_func();">
 
 
 <!--**************************
-Jak elegancko dodac clear:both?
+STYLE
 **************************-->
-<div id="menu">
-    <div id="div1">sth1</div>
-    <div id="div2">sth1</div>
-    <div style="clear:both"></div>
-</div>
+<!--span-->                         <span id="some_id">sth to style</span>
+<!--"inline css"-->                 <div style="color: green;">sth</div>
 
 
 <!--**************************
-Jak wyslizowac dany fragment?
-**************************-->
-<span class="some_class">text do wystylizowania </span>
-<!--
-w praktyce fragment to->                                                                                        naglowek
--->
-
-
-<!--**************************
-Jak dodac CSS wprost do znacznika?
-**************************-->
-<h1 style="color: green;">sth</h1>
-
-
-<!--**************************
-Tabele
+TABLE
 **************************-->
 <table>
     <tr>
@@ -91,13 +83,12 @@ Tabele
 </table>
 <!--
 align="center"  - czego to odpowiednik?->                                                CSS'a, ale tego piszemy w HTMLu
-                - czy kady markup ma ten atrybut?->                 NIE, wybrane markupy maja wybrane "CSS'owe" atrybuty
 -->
-<!--komorka na wiele linii-->          <td colspan="3"></td>
+<!--komorka na wiele linii-->       <td colspan="3"></td>
 
 
 <!--**************************
-Listy
+LIST
 **************************-->
 <ol>
     <li></li>
@@ -112,6 +103,4 @@ ol/ul - ma to znaczenie?->                                                      
 czy mozna cos wstawiac miedzy znaczniki li?                                                                          NIE
 -->
 
-<!--*****************************************************************************************************************-->
-<!--*****************************************************************************************************************-->
-<!--*****************************************************************************************************************-->
+

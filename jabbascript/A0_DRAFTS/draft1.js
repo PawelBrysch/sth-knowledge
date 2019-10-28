@@ -1,1 +1,3 @@
-console.log(0.15*3);
+function doSth() {
+  document.getElementById("id1").innerHTML = "new";
+}

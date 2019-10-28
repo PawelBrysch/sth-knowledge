@@ -1,59 +1,25 @@
 /*******************
+ REVIEV
+ ********************/
+/**
+ czy w "innerHTML" moze byc cos innego niz napis?->                                   TAK, w szczegolnosci caly znacznik
+ zamiast "elif"->                                                                                              "else if"
+
+ */
+
+
+/*******************
  GENERAL
  ********************/
-/**
- * czy w "innerHTML" moze byc cos innego niz napis?->                                 TAK, w szczegolnosci caly znacznik
- * ad. 1)   czy mamy handler do obiektu?->                                                                  TAK ("this")
- *          czy mozna nadpisac istniejaca funckje?->                                                                 TAK
- * ad. 3)   na co uwazac?->                                                       inne nazwy( "click" zamiast "onclick")
- *          w czym lepsze od wpisywania do htmla?->                                moze byc kilka funkcji na jeden event
- */
-/**1. dodanie metody do istniejacej klasy*/
+/**   dodanie metody do istniejacej klasy
+
+ czy mamy handler do obiektu?->                                                                             TAK ("this")
+ czy mozna nadpisac istniejaca funckje?->                                                                            TAK
+ * */
 // SomeClass.prototype.new_func = function(arg1, arg2);
-/**2. przeladowanie calej strony*/
+
+/**   przeladowanie calej strony*/
 // location.reload()
-/**3. dodanie nasluchiwacza elementu*/
-// html_element.addEventListener("click", function() { do_sth(3.14); });
-
-/*******************
- STRING
- ********************/
-/**
- * jak napisac string w stringu->                                                                    "'tak'" lub '"tak"'
- *      wazne, by ...->                                                                                      byly ROZNE!
- * ad. 1) co czy mozemy zrobic "set" za pomoca tego wyrazenia?->                                       nie (tylko "get")
- */
-/**1. pobranie i-ego znaku ze stringa*/
-// string.charAt(i);
-
-
-/*******************
- Wplyw na HTML, CSS
- ********************/
-/**
- * ad 2) co wstawic, gdy value ma byc funkcja (bo attr to np. onclick), a my chcemy, by nie dzialo sie nic?->        ";"
- */
-/**1. zmiana property CSS'a*/
-// document.getElementById(some_id).style.some_property = "some_value";
-/**2. zmiana atrybutu HTML'a*/
-// document.getElementById(some_id).setAttribute("atrr_name","new_value");
-
-
-/*******************
- Else if
- ********************/
-// var some_str;
-// if(var1>0) {
-//     some_str = "valA";
-// }
-// else if(var1<0){
-//     some_str = "valB";
-// }
-
-/*******************
- Dialog
- ********************/
-// jak pobrac text z text input fielda?->                                      document.getElementById("some_id").value;
 
 
 /*******************
@@ -61,15 +27,63 @@
  ********************/
 // window.onload = some_func;
 
+
+/*******************
+ ATTRIBUTES (EVENTS included) & PROPERTIES
+ ********************/
+/**   zmiana atrybutu HTML'a
+
+ co wstawic, gdy value ma byc funkcja (bo attr to np. onclick), a my chcemy, by nie dzialo sie nic?->                ";"
+ * */
+// document.getElementById(some_id).setAttribute("atrr_name","new_value");
+
+/**   dodanie funckji do eventu za pomoca nasluchiwacza
+
+ na co uwazac?->                                                                  inne nazwy( "click" zamiast "onclick")
+ w czym lepsze od wpisywania do htmla?->                                           moze byc kilka funkcji na jeden event
+ jaki minus?->                                                                                       nie dziala na IE <9
+        jak obejsc?->                                                                                   jQuery (."on()")
+        ale wtedy minusem jest:                                                                       koniecznosc jQuery
+ */
+// html_element.addEventListener("click", function() { do_sth(3.14); });
+
+/**   dodanie eventu 1) na kazdej przegladarce 2) bez jQuery */
+// function addEvent(element, evnt, funct){
+//   if (element.attachEvent)
+//     return element.attachEvent('on'+evnt, funct);
+//   else
+//     return element.addEventListener(evnt, funct, false);
+// }
+
+/**   zmiana property CSS'a*/
+// document.getElementById(some_id).style.some_property = "some_value";
+
+
+/*******************
+ STRING
+ ********************/
+/**
+ jak napisac string w stringu->                                                                      "'tak'" lub '"tak"'
+ wazne, by ...->                                                                                        byly ROZNE!
+ */
+
+/**   pobranie i-ego znaku ze stringa
+
+ co czy mozemy zrobic "set" za pomoca tego wyrazenia?->                                                nie (tylko "get")
+ * */
+// string.charAt(i)
+
+
 /*******************
  Timery
  ********************/
 /**
- czy mozna ustawic setTimeout bez timera?-> 															            TAK
+ po co jest timer?->                                                             w sumie do uzycia na nim clearTimeout()
+        a po co jest clearTimeout()->                      zapobiegnie wywolaniu setTimeout() (timer robi tu za handler)
  */
-// var timer1 = 0;
-// clearTimeout(timer1);
-// timer1 = setTimeout("zmienslajd()", 5000);
+// var timer = 0;
+// timer = setTimeout(someFunc, 5000);
+// clearTimeout(timer);
 
 
 

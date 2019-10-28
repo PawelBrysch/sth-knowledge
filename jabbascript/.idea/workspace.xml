@@ -36,7 +36,7 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/D1_LESSONS" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -46,7 +46,12 @@
     <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_interpreter_path" value="D:/code_tools/interpreters/node_js/node" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.appearance" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JavaScript" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Lenovo\Desktop\django_top2\sth-knowledge\jabbascript\D1_LESSONS" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -110,7 +115,8 @@
       <workItem from="1571924134622" duration="10771000" />
       <workItem from="1571999287631" duration="3208000" />
       <workItem from="1572154670669" duration="5276000" />
-      <workItem from="1572194797902" duration="1742000" />
+      <workItem from="1572194797902" duration="8607000" />
+      <workItem from="1572278960579" duration="7027000" />
     </task>
     <servers />
   </component>
