@@ -1,24 +1,21 @@
+
+
 /*******************
  REVIEV
  ********************/
-/**
- czy w "innerHTML" moze byc cos innego niz napis?->                                   TAK, w szczegolnosci caly znacznik
- zamiast "elif"->                                                                                              "else if"
-
- */
+/** czy w "innerHTML" moze byc cos innego niz napis?->                             TAK, w szczegolnosci caly znacznik */
+/**zamiast "elif"->                                                                                         "else if" */
 
 
 /*******************
  GENERAL
  ********************/
-/**   dodanie metody do istniejacej klasy
-
- czy mamy handler do obiektu?->                                                                             TAK ("this")
- czy mozna nadpisac istniejaca funckje?->                                                                            TAK
- * */
+/**   DODANIE METODY DO ISTNIEJACEJ KLASY*/
+/** czy mamy handler do obiektu?->                                                                       TAK ("this") */
+/** czy mozna nadpisac istniejaca funckje?->                                                                      TAK */
 // SomeClass.prototype.new_func = function(arg1, arg2);
 
-/**   przeladowanie calej strony*/
+/**   PRZELADOWANIE CALEJ STRONY*/
 // location.reload()
 
 
@@ -31,10 +28,8 @@
 /*******************
  ATTRIBUTES (EVENTS included) & PROPERTIES
  ********************/
-/**   zmiana atrybutu HTML'a
-
- co wstawic, gdy value ma byc funkcja (bo attr to np. onclick), a my chcemy, by nie dzialo sie nic?->                ";"
- * */
+/**   ZMIANA ATRYBUTU HTML'A*/
+/** co wstawic, gdy value ma byc funkcja (bo attr to np. onclick), a my chcemy, by nie dzialo sie nic?->          ";" */
 // document.getElementById(some_id).setAttribute("atrr_name","new_value");
 
 /**   dodanie funckji do eventu za pomoca nasluchiwacza

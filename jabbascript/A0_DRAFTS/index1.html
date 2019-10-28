@@ -6,59 +6,38 @@
 
 
     <style>
-        #id1
+        div
         {
+            border: 2px solid #000;
             width: 100px;
-            height: 500px;
-            background-color: aqua;
+            height: 30px;
+            margin: 10px;
+            position: relative;
+            background-color: yellow;
+        }
+        #el3
+        {
+            background-color: black;
+            width: 100px;
+            height: 60px;
+            top: -50px;
         }
 
-        #id2
-        {
-            width: 100px;
-            height: 100px;
-            background-color: red;
-        }
     </style>
 
     <script src="jquery-3.4.1.min.js"></script>
 
     <script>
 
-      $(document).ready(function(){
-        console.log("2");
-
-      });
-
-      $(document).ready(function(){
-        console.log("3");
-
-      });
-
-
-        $(function()
-            {
-                console.log("1");
-            }
-        );
-
-
-
-      function someFunc() {
-        console.log("3");
-        $("#id2").html("nowy");
-      }
 
     </script>
 
 </head>
 <body>
 
-    <div id="id1" onclick="someFunc()">
-        innerHTML
-    </div>
-    <div id="id2" >
-        drugi
+    <div id="el1" style="z-index: 5"></div>
+    <div id="el2" style="z-index: 5">
+        <div id="el3" style="z-index: 2"></div>
     </div>
 
 

@@ -8,27 +8,26 @@
 /*czy "hover" jest tylko dla linkow?->                                                                             NIE*/
 /*czy kaska moze miec na posrednim etapie "hover"?->                                                               TAK*/
 /*      przyklad->                                                                                  ol > li:hover > a */
+/*kiedy znaczek ">" w selektorze?->                                                           chyba tylko przy listach*/
 
 body{}
 #id{}
 .class{}
-a.class{} /*jakas dla dla hiperlacz*/
-li:first-child{} /*pierwszy na liscie*/
-input[type=text]{}
-input[type=text]:focus{} /*gdy piszemy w inpucie*/
+selector.class{}
 .outside_class .inside_class{}
 .outside_class:hover .inside_class{}
 
-/*TODO 1. przejscia transition*/
-/*TODO 2. czy a.class ma jakies znaczenie?*/
+input[type=text]{}
+input[type=text]:focus{} /*gdy piszemy w inpucie*/
+
+li:first-child{} /*pierwszy na liscie*/
+ol > li{}
+
+
 /*TODO 3. padding vs margin*/
 /*TODO 4. opacity vs display:none*/
 /*TODO 5. block vs inline-block*/
-/*TODO 6. (!!!) position: relative, absolute // z-index - how it works*/
 
-/*!!!TODO 5. dlaczego raz jest znaczek, a raz nie?*/ /*composition > element*/
-ol                      >   li{}
-.class_of_ul_markup         a{}
 
 #sth{
     /*Przezroczystosc*/
@@ -108,23 +107,14 @@ input
     outline: none; /*brak defaultowego borderu*/
 }
 
-#sticky_div{
-    position: fixed; /*Dopiero od teraz "left", "top", itd... maja sens*/
-    left: 0; /* tez moga byc procenty*/
-    top: 0;
-    right: 50px;
-    bottom: 50px;
-    z-index: 100; /*pozycja na stacku background->foreground*/
-}
+
 
 
 /*******************/
-/*Transition, Transform*/
+/*TRANSITION, TRANSFORM*/
 /*******************/
 /*jak zrobic, by transition dotyczyla wszystkich wlasciwosci?->                           "all" jako pierwszy argument*/
 /*co zrobic, jesli transform ma dotyczyc wiekszych ilosci przeksztalcen?->                             dac je po sobie*/
-
-/*jak to wstawic*/
 selector
 {
 	transition: property time typeOfTransition;
@@ -135,16 +125,18 @@ selector:hover
 }
 
 /*******************/
-/*position*/
+/*POSITION*/
 /*******************/
-/*ktore wlaczaja left, rigth, itd?->                                                                         WSZYSTKIE*/
+/* co to znaczy "byc na innym planie"->              divy, ktore nrmalnie bylyby wokol niego "doklejaja" sie do siebie*/
+/* co dzieje sie w przeciwnym wypadku (relative)->                                             zostaje "puste miejsce"*/
+/* co zrobic, jesli nie chemy nic zmienic->                              position: relative; i żadnego top, left, itd.*/
 selector
 {
-    position: relative; /* 0xy: div, w ktorym jestesmy*/
-    position: absolute; /* 0xy: najbardziej wewnetrzny div, ktoremu ktos ustawil relative */
-    position: fixed; /* 0xy: okno przegladarki*/
-
+    position: relative; /* przesuniecie "na chama" z miejsca, gdzie normalnie powinien byc */
+    position: absolute; /* 1)0xy: najblizszy rodzic, ktoremu ktos ustawil position:non-static  2) jest na innym planie*/
+    position: fixed;    /* 1)0xy: okno przegladarki /
 }
+
 
 
 
