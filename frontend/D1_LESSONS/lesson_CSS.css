@@ -1,5 +1,5 @@
 /*******************/
-/*General*/
+/*REVIEW*/
 /*******************/
 /*  jak zrobic jeden style dla dwoch obiektow?->                                               po przecinku w naglowku*/
 /*element ma dwie klasy - ktora jest nadrzedna?->                                         wczesniej zdefiniowana w css*/
@@ -9,7 +9,12 @@
 /*czy kaska moze miec na posrednim etapie "hover"?->                                                               TAK*/
 /*      przyklad->                                                                                  ol > li:hover > a */
 /*kiedy znaczek ">" w selektorze?->                                                           chyba tylko przy listach*/
+/* co robi "padding", czego nie robi "margin" (2)->              1) poszerza wnetrze "border" 2) ma "background-color"*/
 
+
+/*******************/
+/*SELECTORS*/
+/*******************/
 body{}
 #id{}
 .class{}
@@ -18,96 +23,93 @@ selector.class{}
 .outside_class:hover .inside_class{}
 
 input[type=text]{}
-input[type=text]:focus{} /*gdy piszemy w inpucie*/
+input[type=text]:focus{}                                        /*gdy piszemy w inpucie*/
 
-li:first-child{} /*pierwszy na liscie*/
+li:first-child{}                                                /*pierwszy na liscie*/
 ol > li{}
 
 
-/*TODO 3. padding vs margin*/
-/*TODO 4. opacity vs display:none*/
-/*TODO 5. block vs inline-block*/
-
-
-#sth{
-    /*Przezroczystosc*/
+/*******************/
+/*CLASSIC*/
+/*******************/
+selector
+{
+    /*PRZEZROCZYSTOSC*/
     opacity: 0.8;
-    display: none;
 
-    /*Kolor tla*/
+    /*KOLOR TLA*/
     background-color: gray;
     background-color: #303030;
     background-image: url("path_to_image.jpg");
-    background: url("path_to_image.jpg") no-repeat 0px 0px; /*nie powtarzaj grafik*/
+    background: url("path_to_image.jpg") no-repeat 0px 0px;     /*nie powtarzaj grafik*/
     filter: brightness(50%);
 
-    /*Czcionka*/
+    /*CZCIONKA*/
     font-family: 'Grenze', serif;
     font-size: 44px; font-weight: 900;
     color: white;
-    text-decoration: none; /*przekreslenie, pochylenie, itp.*/
+    text-decoration: none;                                      /*przekreslenie, pochylenie, itp.*/
     text-transform: uppercase;
 
-    /*Tekst odstepy*/
+    /*TEKST - UKLAD*/
     letter-spacing: 3px;
     line-height: 150%;
+    text-align: center; text-align: justify;
 
-    /*Rozmieszczenie*/
+    /*ROZMIAR*/
     width: 1000px; height: 170px;
     height: 170px; min-height: 620px;
     width: 50%;
 
-    margin-left: auto; margin-right: auto; /*dopasuje do srodka*/
+    margin-left: auto; margin-right: auto;                      /*dopasuje do srodka*/
     margin-top: 20px;
 
-    padding: 5px 0px 5px 0px; /* vs margin*/
+    padding: 5px 0px 5px 0px;
     padding: 10px;
 
-    display: inline-block; /*1)pola do gry szachy same uloza sie w tablice z takim property, 2) wiersze listy uloza sie poziomo**/
-    display: block; /* link stanie sie blokiem**/
+    box-sizing: border-box;                                     /*zmienia typ myslenia o boxie: padding nie poszerza borderu, a w zamian zabiera content*/
 
-    box-sizing: border-box; /*zmienia typ myslenia o boxie: padding nie dodaje sie do wigth, a "odejmuje"*/
-
-
-
-    /*Borders*/
+    /*BORDERS*/
     border: 3px solid gray;
     border-right: 2px dotted grey; border-bottom: 2px dotted red;
-    border-radius: 15px; /*zaokregli katy bordera*/
+    border-radius: 15px;                                        /*zaokregli katy bordera*/
 
-    /*Przejscia*/
-    transition: all .3s ease-in-out;
-    overflow: hidden; /* gdyby obraz wewnatrz sie powiekszyl, to div sie nie zmieni*/
+}
 
-    /*Listy*/
-    list-style-type: none; /*nie ma kropek*/
-    line-height: 200%; /*wysokosc wiersza w liscie*/
 
-    /*Inne*/
+/*******************/
+/*SPECIAL   */
+/*******************/
+selector
+{
     float: left;
-
-    text-align: center; text-align: justify;
     cursor: pointer;
-    resize: none;  /*1. dla <textarea> 2. zrobi tak, że nie możemy powiekszyc*/
-
-
-    /*******************/
-    /*Wymuszenie*/
-    /*******************/
     color: red !important;
 }
 
+/*******************/
+/*SPECIFIC MARKUPS*/
+/*******************/
 body
 {
-    margin: 0 !important; /*brak defaultowego borderu*/
+    margin: 0 !important;           /*brak defaultowego borderu*/
 }
 
 input
 {
-    outline: none; /*brak defaultowego borderu*/
+    outline: none;                  /*brak defaultowego borderu*/
 }
 
+textarea
+{
+    resize: none;                   /*zrobi tak, że nie możemy powiekszyc*/
+}
 
+ul
+{
+    list-style-type: none;          /*nie ma kropek*/
+    line-height: 200%;              /*wysokosc wiersza w liscie*/
+}
 
 
 /*******************/
@@ -118,11 +120,14 @@ input
 selector
 {
 	transition: property time typeOfTransition;
+    overflow: hidden;                             /* gdyby obraz wewnatrz sie powiekszyl, to div sie nie zmieni*/
 }
 selector:hover
 {
 	transform: typeOfTransformation(arg);
+
 }
+
 
 /*******************/
 /*POSITION*/
@@ -134,16 +139,17 @@ selector
 {
     position: relative; /* przesuniecie "na chama" z miejsca, gdzie normalnie powinien byc */
     position: absolute; /* 1)0xy: najblizszy rodzic, ktoremu ktos ustawil position:non-static  2) jest na innym planie*/
-    position: fixed;    /* 1)0xy: okno przegladarki /
+    position: fixed;    /* 1)0xy: okno przegladarki /*/
 }
 
-
-
-
-/**********************************************************************************************************************/
-
-
-
-
-
+/*******************/
+/*DISPLAY*/
+/*******************/
+/* do szachownicy i listy pionowej najlepiej uzyc->                                            "display: inline-block"*/
+selector
+{
+    display: none;
+    display: inline-block;  /* powstaje nowy div (czyli +<margin, padding, height, width> **/
+    display: block;         /* blok na cala szerokosc**/
+}
 
