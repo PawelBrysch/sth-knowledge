@@ -1,17 +1,29 @@
+<!--TODO 1 zrobic , tak by wewnetrzen divy (main i debug) sterowaly zewnetrznym-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link href="https://fonts.googleapis.com/css?family=Orbitron:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" type="text/css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="post.js"></script>
+
+
 </head>
 <body>
     <div id="app">
         <div id="main">
             <div id="screen">
+                <div id="errorScreen" class="subscreen">E</div>
+                <div id="memoryScreen" class="subscreen">M</div>
+                <div id="statScreen" class="subscreen">n=0</div>
+                <div id="signScreen" class="subscreen partOfInput" >-</div>
+                <div id="mainScreen" class="subscreen partOfInput">123456789012</div>
             </div>
             <div id="keyboard">
-            <div class="button" id="fib" >Fib</div>
+            <div class="button" id="fib" onclick="post();">Fib</div>
             <div class="button" id="statOn" >StatOn</div>
             <div class="button" id="statMPlus" >StatM+</div>
             <div class="button" id="mdn" >Mdn</div>
@@ -49,5 +61,7 @@
 
         </div>
     </div>
+
+
 </body>
 </html>

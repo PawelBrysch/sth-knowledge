@@ -90,3 +90,44 @@
 {
     margin-right: 40px;
 }
+
+#screen{
+    position: relative;
+}
+
+.subscreen {
+    background-color: white;
+    font-family: 'Orbitron', serif;
+    font-size: 24px;
+    font-weight: 700;
+    display: inline-block;
+}
+
+.partOfInput{
+    font-size: 32px;
+}
+
+#errorScreen{
+
+}
+
+#memoryScreen{
+
+}
+
+#statScreen{
+    position: absolute;
+    right: 0;
+}
+
+#signScreen{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+#mainScreen{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}

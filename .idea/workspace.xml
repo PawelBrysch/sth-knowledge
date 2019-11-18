@@ -2,8 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f01d8431-5c74-43f6-a416-a1f52e62610b" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python_other/draft.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python_other/lesson_annotations.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/requests/trail_request.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/selenium/lesson_signature_typeguard.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/keras7.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/keras7.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/calc/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/calc/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/calc/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/calc/style.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -13,68 +20,14 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mysite/polls/views.py">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="trail_request.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/requests/trail_request.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="399">
+              <caret line="19" column="20" lean-forward="true" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
               <folding>
-                <element signature="e#0#35#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mysite/polls/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mysite/mysite/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="22" selection-start-line="22" selection-end-line="22" />
-              <folding>
-                <element signature="e#630#662#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="36" selection-start-column="36" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test_file.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test_file.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="20" selection-start-column="20" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="conf.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Anaconda3/envs/keras7/Lib/site-packages/django/urls/conf.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
-              <folding>
-                <element signature="e#38#67#0" expanded="true" />
+                <element signature="e#82#97#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -85,17 +38,13 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JavaScript File" />
         <option value="Python Script" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>RANGE_OF</find>
-      <find>PAttern</find>
-      <find>RAN</find>
-      <find>lambda</find>
-      <find>lambda_</find>
       <find>BaseCar</find>
       <find>transform</find>
       <find>numberOfLoaded</find>
@@ -121,6 +70,11 @@
       <find>make_report_from_pattern</find>
       <find>paths.REPORT</find>
       <find>finda</find>
+      <find>reque</find>
+      <find />
+      <find>CallMemo</find>
+      <find>_callMemo</find>
+      <find>arguments</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -129,65 +83,21 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/USEFUL_PAPERS/import_gwiazdka/module1.py" />
-        <option value="$PROJECT_DIR$/USEFUL_PAPERS/import_gwiazdka/module2.py" />
-        <option value="$PROJECT_DIR$/USEFUL_PAPERS/import_gwiazdka/script1.py" />
-        <option value="$PROJECT_DIR$/USEFUL_PAPERS/import_kilka_razy/module2.py" />
-        <option value="$PROJECT_DIR$/USEFUL_PAPERS/import_kilka_razy/module1.py" />
-        <option value="$PROJECT_DIR$/USEFUL_PAPERS/draft2.py" />
-        <option value="$PROJECT_DIR$/calculator.py" />
-        <option value="$PROJECT_DIR$/abstracts.py" />
-        <option value="$PROJECT_DIR$/template2.py" />
-        <option value="$PROJECT_DIR$/archive/anthonyms.py" />
-        <option value="$PROJECT_DIR$/parse_word.py" />
-        <option value="$PROJECT_DIR$/tests.py" />
-        <option value="$PROJECT_DIR$/template.py" />
-        <option value="$PROJECT_DIR$/tkinterelo.py" />
-        <option value="$PROJECT_DIR$/paths.py" />
-        <option value="$PROJECT_DIR$/test_qt.py" />
-        <option value="$PROJECT_DIR$/multibutton_window.py" />
-        <option value="$PROJECT_DIR$/main_program_2.py" />
-        <option value="$PROJECT_DIR$/tkinterelo2.py" />
-        <option value="$PROJECT_DIR$/tests/tests.py" />
-        <option value="$PROJECT_DIR$/main_program.py" />
-        <option value="$PROJECT_DIR$/parse_excel.py" />
-        <option value="$PROJECT_DIR$/parse_excel_2.py" />
-        <option value="$PROJECT_DIR$/tests/TC_create_revision.py" />
-        <option value="$PROJECT_DIR$/revision_creating.py" />
-        <option value="$PROJECT_DIR$/tests/test_data/TC_create_report.py" />
-        <option value="$PROJECT_DIR$/databases/paths.py" />
-        <option value="$PROJECT_DIR$/tests/TC_create_report.py" />
-        <option value="$PROJECT_DIR$/report_creating.py" />
-        <option value="$PROJECT_DIR$/DRAFTS/template.py" />
-        <option value="$PROJECT_DIR$/DRAFTS/draft2.py" />
-        <option value="$PROJECT_DIR$/archive/writing_cheking_old.py" />
-        <option value="$PROJECT_DIR$/tools/developed_excel.py" />
-        <option value="$PROJECT_DIR$/DRAFTS/draft1.py" />
-        <option value="$PROJECT_DIR$/tests/test_data/TC_writing_cheking.py" />
-        <option value="$PROJECT_DIR$/tools/developed_word.py" />
-        <option value="$PROJECT_DIR$/tests/TC_writing_checking.py" />
-        <option value="$PROJECT_DIR$/tools/developed_string.py" />
-        <option value="$PROJECT_DIR$/tests/TC_unit_tests.py" />
-        <option value="$PROJECT_DIR$/main.py" />
-        <option value="$PROJECT_DIR$/writing_checking.py" />
-        <option value="$PROJECT_DIR$/soma_package/file1.py" />
-        <option value="$PROJECT_DIR$/ehhh/file1.py" />
-        <option value="$PROJECT_DIR$/ehhh/file2.py" />
-        <option value="$PROJECT_DIR$/package1/modulle1.py" />
-        <option value="$PROJECT_DIR$/top_level.py" />
-        <option value="$PROJECT_DIR$/package1/module2.py" />
-        <option value="$PROJECT_DIR$/test_file.py" />
-        <option value="$PROJECT_DIR$/mysite/polls/urls.py" />
-        <option value="$PROJECT_DIR$/mysite/polls/views.py" />
-        <option value="$PROJECT_DIR$/mysite/mysite/urls.py" />
+        <option value="$PROJECT_DIR$/python_other/draft.py" />
+        <option value="$PROJECT_DIR$/python_other/lesson_annotations.py" />
+        <option value="$PROJECT_DIR$/selenium/apiski.py" />
+        <option value="$PROJECT_DIR$/selenium/lesson_signature_typeguard.py" />
+        <option value="$PROJECT_DIR$/requests/trail_request.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="960" />
-    <option name="width" value="960" />
-    <option name="height" value="1032" />
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1938" />
+    <option name="height" value="1050" />
   </component>
+  <component name="ProjectId" id="1TSldNkzFeDyLGokWgd42h8aa8U" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -203,6 +113,16 @@
               <item name="sth-knowledge" type="b2602c69:ProjectViewProjectNode" />
               <item name="sth-knowledge" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="sth-knowledge" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sth-knowledge" type="462c0819:PsiDirectoryNode" />
+              <item name="requests" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sth-knowledge" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sth-knowledge" type="462c0819:PsiDirectoryNode" />
+              <item name="selenium" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -212,19 +132,28 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="_&#9;FILE&#9;file://C:/Users/Lenovo/Desktop/proj_writing/writing_checker/design_pattern.py" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/ehhh" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Anaconda3/envs/keras7/Scripts" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings module-name="keras7" is-module-sdk="true">
+        <option name="myUseModuleSdk" value="true" />
+        <option name="myModuleName" value="keras7" />
+      </console-settings>
+    </option>
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Program Projects\1. Wakacje 2018\TESTY\keras7v112\TESTS\general_tools_test" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Lenovo\Desktop\PROJECTS\django_top2\sth-knowledge\django" />
+      <recent name="C:\Users\Lenovo\Desktop\PROJECTS\django_top2\sth-knowledge\django\foo_module" />
       <recent name="C:\Users\Lenovo\Desktop\django_top\Django-knowledge\ehhh" />
       <recent name="C:\Users\Lenovo\Desktop\proj_writing\writing_checker\tools" />
       <recent name="C:\Users\Lenovo\Desktop\proj_writing\writing_checker\databases" />
-      <recent name="C:\Users\Lenovo\Desktop\proj_writing\writing_checker\archive" />
-      <recent name="C:\Users\Lenovo\Desktop\proj_writing\writing_checker\DRAFTS" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Program Projects\1. Wakacje 2018\TESTY\keras7v112\TESTS\general_tools_test" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -239,8 +168,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.test_file">
-    <configuration name="file2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.trail_request">
+    <configuration name="apiski" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="keras7" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -248,17 +177,17 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ehhh" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/selenium" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ehhh/file2.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/selenium/apiski.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="foo" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="keras7" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -266,17 +195,17 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ddjango" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ddjango/foo.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="modulle1" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="lesson_annotations" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="keras7" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -284,11 +213,29 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/package1" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/python_other" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/package1/modulle1.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python_other/lesson_annotations.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="scraperek" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="keras7" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/selenium" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/selenium/scraperek.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -312,7 +259,7 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="test_file" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="trail_request" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="keras7" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -320,49 +267,31 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/requests" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_file.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/requests/trail_request.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="top_level" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="keras7" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/top_level.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
     <list>
       <item itemvalue="Python.test2" />
-      <item itemvalue="Python.main" />
-      <item itemvalue="Python.file2" />
-      <item itemvalue="Python.modulle1" />
-      <item itemvalue="Python.top_level" />
-      <item itemvalue="Python.test_file" />
+      <item itemvalue="Python.foo" />
+      <item itemvalue="Python.scraperek" />
+      <item itemvalue="Python.lesson_annotations" />
+      <item itemvalue="Python.apiski" />
+      <item itemvalue="Python.trail_request" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.test_file" />
-        <item itemvalue="Python.main" />
-        <item itemvalue="Python.main" />
-        <item itemvalue="Python.main" />
-        <item itemvalue="Python.top_level" />
+        <item itemvalue="Python.trail_request" />
+        <item itemvalue="Python.apiski" />
+        <item itemvalue="Python.apiski" />
+        <item itemvalue="Python.lesson_annotations" />
+        <item itemvalue="Python.lesson_annotations" />
       </list>
     </recent_temporary>
   </component>
@@ -376,6 +305,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1532429165765</updated>
+      <workItem from="1573461465840" duration="3855000" />
+      <workItem from="1573484565289" duration="32000" />
     </task>
     <servers />
   </component>
@@ -421,264 +352,180 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="2578" height="1410" extended-state="6" />
+    <frame x="-9" y="-9" width="2578" height="1410" extended-state="7" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49667773" visible="true" weight="0.15351562" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32908705" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Python Console" order="7" weight="0.3296582" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.39581037" />
-      <window_info id="Structure" order="1" sideWeight="0.50332224" side_tool="true" weight="0.088541664" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32908705" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.33386013" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3292978" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.39305893" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Python Console" order="7" weight="0.24535917" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.33817595" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.24145535" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.10804851" />
     </layout>
-    <layout-to-restore>
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49667773" visible="true" weight="0.1953125" />
-      <window_info id="Structure" order="1" sideWeight="0.50332224" side_tool="true" weight="0.088541664" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32908705" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.46637267" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.5997795" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32908705" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.10804851" />
-      <window_info anchor="bottom" id="Python Console" order="7" weight="0.3296582" />
-    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url />
-          <line>12</line>
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url />
-          <line>83</line>
-          <option name="timeStamp" value="135" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url />
-          <line>14</line>
-          <option name="timeStamp" value="136" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url />
-          <line>39</line>
-          <option name="timeStamp" value="139" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url />
-          <line>88</line>
-          <option name="timeStamp" value="226" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url />
-          <line>45</line>
-          <option name="timeStamp" value="430" />
-        </line-breakpoint>
-      </breakpoints>
-      <default-breakpoints>
-        <breakpoint type="python-exception">
-          <properties notifyOnTerminate="true" exception="BaseException">
-            <option name="notifyOnTerminate" value="true" />
-          </properties>
-        </breakpoint>
-      </default-breakpoints>
-      <option name="time" value="566" />
-    </breakpoint-manager>
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/archive/main_program_old.py" />
-    <entry file="file://$USER_HOME$/Anaconda3/envs/keras7/Lib/zipfile.py">
+    <entry file="file://$PROJECT_DIR$/python_other/lesson_annotations.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="1089" selection-start-line="1089" selection-end-line="1089" />
+        <state relative-caret-position="1071">
+          <caret line="51" selection-start-line="51" selection-end-line="51" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/envs/keras7/Lib/site-packages/openpyxl/workbook/workbook.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28">
-          <caret line="142" column="8" selection-start-line="142" selection-start-column="8" selection-end-line="142" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/envs/keras7/Lib/subprocess.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="996" selection-start-line="996" selection-end-line="996" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/envs/keras7/Lib/tkinter/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="1277" column="8" selection-start-line="1277" selection-start-column="8" selection-end-line="1277" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/archive/main_program.py" />
-    <entry file="file://$PROJECT_DIR$/archive/tkinterelo.py" />
-    <entry file="file://$PROJECT_DIR$/archive/multibutton_window.py" />
-    <entry file="file://$PROJECT_DIR$/main_program_2.py" />
-    <entry file="file://$PROJECT_DIR$/tests/test_data/TC_create_report.py" />
-    <entry file="file://$PROJECT_DIR$/DRAFTS/draft2.py" />
-    <entry file="file://$USER_HOME$/Anaconda3/envs/keras7/Lib/site-packages/openpyxl/cell/cell.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4977">
-          <caret line="237" selection-start-line="237" selection-end-line="237" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/archive/writing_cheking_old.py" />
-    <entry file="file://$PROJECT_DIR$/databases/dictionary.py" />
-    <entry file="file://$PROJECT_DIR$/databases/paths.py" />
-    <entry file="file://$PROJECT_DIR$/tests/test_data/TC_writing_cheking.py" />
-    <entry file="file://$USER_HOME$/Anaconda3/envs/keras7/Lib/site-packages/openpyxl/reader/excel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="95" selection-start-line="95" selection-end-line="95" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tools/design_patterns.py" />
-    <entry file="file://$PROJECT_DIR$/tools/developed_tkinter.py" />
-    <entry file="file://$PROJECT_DIR$/report_creating.py" />
-    <entry file="file://$PROJECT_DIR$/tools/developed_word.py" />
-    <entry file="file://$PROJECT_DIR$/tools/developed_excel.py" />
-    <entry file="file://$PROJECT_DIR$/tests/TC_create_report.py" />
-    <entry file="file://$PROJECT_DIR$/tests/TC_create_revision.py" />
-    <entry file="file://$PROJECT_DIR$/tests/TC_unit_tests.py" />
-    <entry file="file://$PROJECT_DIR$/DRAFTS/draft1.py" />
-    <entry file="file://$PROJECT_DIR$/revision_creating.py" />
-    <entry file="file://$PROJECT_DIR$/tests/TC_writing_checking.py" />
-    <entry file="file://$PROJECT_DIR$/writing_checking.py" />
-    <entry file="file://$USER_HOME$/.PyCharmCE2018.1/system/python_stubs/1983715517/builtins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62055">
-          <caret line="2955" column="8" selection-start-line="2955" selection-start-column="8" selection-end-line="2955" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tools/developed_string.py" />
-    <entry file="file://$USER_HOME$/Anaconda3/envs/keras7/Lib/unittest/case.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="14427">
-          <caret line="700" column="49" selection-start-line="700" selection-start-column="49" selection-end-line="700" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/envs/keras7/Lib/re.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5712">
-          <caret line="275" column="23" selection-start-line="275" selection-start-column="23" selection-end-line="275" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/soma_package/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/ehhh/file1.py" />
-    <entry file="file://$PROJECT_DIR$/ehhh/file2.py" />
-    <entry file="file://$PROJECT_DIR$/package1/module2.py" />
-    <entry file="file://$PROJECT_DIR$/top_level.py" />
-    <entry file="file://$PROJECT_DIR$/package1/modulle1.py" />
-    <entry file="file://$PROJECT_DIR$/mysite/mysite/settings.py">
+    <entry file="file://$PROJECT_DIR$/selenium/file1.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/polls/tests.py">
+    <entry file="file://$PROJECT_DIR$/selenium/file2.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/polls/models.py">
+    <entry file="file://$PROJECT_DIR$/selenium/file3.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/polls/apps.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/polls/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/manage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/envs/keras7/Lib/site-packages/django/urls/conf.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="e#38#67#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/polls/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/polls/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/mysite/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-          <folding>
-            <element signature="e#630#662#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
+    <entry file="file://$PROJECT_DIR$/selenium/scraperek.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="36" selection-start-column="36" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_file.py">
+    <entry file="file://$PROJECT_DIR$/python_other/draft.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/selenium/apiski.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python_other/lesson_annotations.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1491">
+          <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python_other/draft.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python_other/lesson_annotations.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python_other/lesson_annotations.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python_other/draft.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/selenium/drafat1.js" />
+    <entry file="file://$PROJECT_DIR$/selenium/file1.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/selenium/file2.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/selenium/file3.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/selenium/scraperek.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="20" selection-start-column="20" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/envs/keras7/Lib/inspect.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="2976" column="36" selection-start-line="2976" selection-start-column="27" selection-end-line="2976" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/envs/keras7/Lib/site-packages/typeguard/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="77" column="8" selection-start-line="77" selection-start-column="8" selection-end-line="77" selection-end-column="8" />
+          <folding>
+            <element signature="e#166#188#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/selenium/lesson_signature_typeguard.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="33" lean-forward="true" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/selenium/apiski.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python_other/lesson_annotations.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="835">
+          <caret line="51" selection-start-line="51" selection-end-line="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requests/trail_request.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="19" column="20" lean-forward="true" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+          <folding>
+            <element signature="e#82#97#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

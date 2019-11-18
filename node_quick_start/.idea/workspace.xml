@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b9465d3d-d1ca-4d92-97ee-402e6eacb182" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="JsBowerSettings">
+    <node-interpreter value="node" />
+    <bower-package value="" />
+    <bower.json value="" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="ProjectId" id="1Rw1qmL7HtgCeuq9W5SQOXxTZPB" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
+    <property name="nodejs_interpreter_path" value="D:/code_tools/interpreters/node_js/node" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.HTML" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Lenovo\Desktop\django_top2\sth-knowledge\jabbascript\D1_LESSONS" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="index.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/frontend/calc/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="from_html.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/source/from_html.js" working-dir="$PROJECT_DIR$/source">
+      <method v="2" />
+    </configuration>
+    <configuration name="it_should_run.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/source/it_should_run.js" working-dir="$PROJECT_DIR$/source">
+      <method v="2" />
+    </configuration>
+    <configuration name="post.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/calc/post.js" working-dir="$PROJECT_DIR$/calc">
+      <method v="2" />
+    </configuration>
+    <configuration name="trail_pure_request.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/source/trail_pure_request.js" working-dir="$PROJECT_DIR$/source">
+      <method v="2" />
+    </configuration>
+    <configuration name="trial_xmlhttp_request.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/source/trial_xmlhttp_request.js" working-dir="$PROJECT_DIR$/source">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.trial_xmlhttp_request.js" />
+        <item itemvalue="Node.js.trail_pure_request.js" />
+        <item itemvalue="Node.js.from_html.js" />
+        <item itemvalue="Node.js.it_should_run.js" />
+        <item itemvalue="Node.js.post.js" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b9465d3d-d1ca-4d92-97ee-402e6eacb182" name="Default Changelist" comment="" />
+      <created>1570563537938</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1570563537938</updated>
+      <workItem from="1570563541553" duration="3362000" />
+      <workItem from="1570637116622" duration="12147000" />
+      <workItem from="1570866756999" duration="30281000" />
+      <workItem from="1571069511985" duration="2535000" />
+      <workItem from="1571073698302" duration="6564000" />
+      <workItem from="1571400903709" duration="18000" />
+      <workItem from="1571400946994" duration="54000" />
+      <workItem from="1571420983131" duration="23754000" />
+      <workItem from="1571755921285" duration="9245000" />
+      <workItem from="1571845925024" duration="5342000" />
+      <workItem from="1571921090086" duration="66000" />
+      <workItem from="1571924134622" duration="10771000" />
+      <workItem from="1571999287631" duration="3208000" />
+      <workItem from="1572154670669" duration="5276000" />
+      <workItem from="1572194797902" duration="8607000" />
+      <workItem from="1572278960579" duration="12175000" />
+      <workItem from="1572371760621" duration="5389000" />
+      <workItem from="1572455373542" duration="9274000" />
+      <workItem from="1572709006273" duration="7798000" />
+      <workItem from="1572719117503" duration="1168000" />
+      <workItem from="1572721629533" duration="399000" />
+      <workItem from="1572722323349" duration="1635000" />
+      <workItem from="1572761574017" duration="5051000" />
+      <workItem from="1573368428850" duration="599000" />
+      <workItem from="1573461401724" duration="61000" />
+      <workItem from="1573485227890" duration="3650000" />
+      <workItem from="1573585832608" duration="2582000" />
+      <workItem from="1573920446763" duration="163000" />
+      <workItem from="1573922817475" duration="5271000" />
+      <workItem from="1574007119059" duration="8026000" />
+      <workItem from="1574098329675" duration="1518000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/source/trail_pure_request.js</url>
+          <line>22</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

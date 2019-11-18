@@ -1,0 +1,71 @@
+--TODO 1. jak z 1) 2) niepelnymi insertami?
+
+1. Pytanie nr 15 									SELECT * FROM pytania WHERE id=15
+4. Pytania z programowania z roku 2009				SELECT * FROM pytania WHERE kategoria="programowanie" AND rok=2009
+5. Tylko treœci pytañ i 4 odpowiedzi z roku 2010	SELECT tresc, odpa, odpb, odpc, odpd FROM pytania WHERE rok=2010
+6. Pytania u³o¿one alfabetycznie wg treœci			SELECT * FROM pytania ORDER BY tresc ASC
+7. Treœci pytañ o numerach 10-12					SELECT tresc FROM pytania WHERE id>=10 and id<=12
+8. Pytania zaczynaj¹ce siê od s³ów “Jak”			SELECT * FROM pytania WHERE tresc LIKE "Jak%"
+
+1. najdrozsza ksiazka w bazie v1->					SELECT * FROM ksiazki WHERE cena=(SELECT MAX(cena) FROM ksiazki)	
+							  v2->   				SELECT * FROM ksiazki ORDER BY cena DESC LIMIT 1
+							  
+2.Wyjmij dla wszystkich zamówieñ: 					SELECT klienci.imie, klienci.nazwisko, zamowienia.idzamowienia, zamowienia.data
+imiê i nazwisko klienta zamawiaj¹cego, 				FROM klienci, zamowienia WHERE klienci.idklienta=zamowienia.idklienta
+idzamówienia, datê zamówienia
+
+3. !!! ALIASY->										SELECT k.imie, k.nazwisko, z.idzamowienia, z.data
+													FROM klienci AS k, zamowienia AS z WHERE k.idklienta=.idklienta
+													
+		czy po WHERE musza byc aliasy wtedy?-> 		tak											
+        													
+4. Imiona i nazwiska osób, 							SELECT klienci.imie, klienci.nazwisko FROM klienci, zamowienia
+które zamówi³y kiedykolwiek ksi¹¿kê nr 2			WHERE klienci.idklienta = zamowienia.idklienta AND zamowienia.idksiazki=2
+
+5. Jakie ksi¹¿ki (tytu³, autor) 					SELECT ks.tytul, ks.nazwiskoautora FROM ksiazki AS ks, klienci AS kl, zamowienia AS z
+zamówi³a osoba: Jan Nowak?							WHERE kl.imie="Jan" AND kl.nazwisko="Nowak" 
+													AND z.idklienta = kl.idklienta AND z.idksiazki=ks.idksiazki
+													
+***_UPDATE!!!
+basic usage->										UPDATE klienci SET nazwisko="psikuta" WHERE idklienta=4	
+round()												ROUND(cena*1.1, 2)	
+przedzial											idzamowienia BETWEEN 4 and 5
+
+***_INSERT!!!
+base usage_->										INSERT INTO klienci
+													VALUES (NULL, "Franciszek", "Janowski", "Chorzow")
+			
+		dlaczego NULL?-> 							autoinkrementacja
+		
+zalozmy, ze chemy inna kolejnosc					(miast, imie, nazwisko, idklienta) VALUES ("Chorzow", "Franciszek", "Janowski", NULL)
+		
+		jaki jest tego plus?-> 						mozna wstawic NIEPELNE rekordy
+		
+kilka insertow										INSERT INTO klienci
+													VALUES
+													(rekord1),
+													(rekord2)
+		
+***_INSERT!!!	
+usuwanie rekordu									DELETE FROM zamowienia
+													WHERE idzamowienia=2
+													
+usuniecie rekordow z tabeli							TRUNCATE TABLE nazwa_tabeli
+usuniecie tabeli									DROP TABLE nazwa_tabeli
+usuniecie bazy										DROP DATABASE nazwa tabeli
+if existts\											DROP TABLE nazwa_tabeli IF EXISTS
+
+
+
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
