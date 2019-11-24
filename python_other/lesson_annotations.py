@@ -70,3 +70,4 @@ czego nie robic w try?->                                                        
 # list_ = []
 # _private_method = len
 
+print(__name__)

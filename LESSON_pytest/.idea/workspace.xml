@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3ef3678a-86e8-4d71-8b54-f3c2640ea5b7" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>class Status</find>
+      <find>Plot</find>
+      <find>PlotTypes</find>
+      <find>def _type_checker</find>
+      <find>type_checker</find>
+      <find>CONSOLE_PRI</find>
+      <find>CONSOLE_PRINT</find>
+      <find>Period</find>
+      <find>Error during BitBlt</find>
+      <find>execute_scenario</find>
+      <find>Msg2</find>
+      <find>name</find>
+      <find>class DBC</find>
+      <find>ecu_attributes.copy()</find>
+      <find>attri</find>
+      <find>import pytest</find>
+      <find>ut_dbc</find>
+      <find>mark</find>
+      <find>pytestmark</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="953" />
+    <option name="width" value="974" />
+    <option name="height" value="1047" />
+  </component>
+  <component name="ProjectId" id="1U3pfqmtJ4XLbO90ZLOZsgfL7XA" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from start import *&#10;from core.base.test_runner import TestRunner" module-name="TESTUS" is-module-sdk="true">
+        <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from start import *&#10;from core.base.test_runner import TestRunner" />
+        <option name="myUseModuleSdk" value="true" />
+        <option name="myModuleName" value="TESTUS" />
+      </console-settings>
+    </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\BryschP\Desktop\testus_top\TESTUS-Automation_Framework\PLAYGROUND" />
+      <recent name="C:\Users\BryschP\Desktop\testus_top\TESTUS-Automation_Framework\PLAYGROUND\lesson_jinja2" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\BryschP\TESTUS\tests_implementation\test_cases" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python tests.pytest in 19_re_usable_mock_test.py">
+    <configuration name="pytest in 15_advanced_class_test.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="TESTUS" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/15_advanced_class_test.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest in 16_scoped_and_meta_fixtures_test.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="TESTUS" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/16_scoped_and_meta_fixtures_test.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest in 17_marked_meta_fixtures.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="TESTUS" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/17_marked_meta_fixtures.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest in 18_the_mocker_fixture.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="TESTUS" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/18_the_mocker_fixture.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest in 19_re_usable_mock_test.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="TESTUS" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/19_re_usable_mock_test.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python tests.pytest in 19_re_usable_mock_test.py" />
+        <item itemvalue="Python tests.pytest in 18_the_mocker_fixture.py" />
+        <item itemvalue="Python tests.pytest in 17_marked_meta_fixtures.py" />
+        <item itemvalue="Python tests.pytest in 16_scoped_and_meta_fixtures_test.py" />
+        <item itemvalue="Python tests.pytest in 15_advanced_class_test.py" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3ef3678a-86e8-4d71-8b54-f3c2640ea5b7" name="Default Changelist" comment="" />
+      <created>1567589778936</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1567589778936</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="pytest_in_15_advanced_class_test_py - 2019.10.07 at 09h 07m 32s.xml">
+      <configuration name="pytest in 15_advanced_class_test.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_15_advanced_class_test_py - 2019.10.07 at 09h 09m 13s.xml">
+      <configuration name="pytest in 15_advanced_class_test.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_15_advanced_class_test_py - 2019.10.07 at 09h 09m 42s.xml">
+      <configuration name="pytest in 15_advanced_class_test.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_15_advanced_class_test_py - 2019.10.07 at 09h 11m 26s.xml">
+      <configuration name="pytest in 15_advanced_class_test.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_16_scoped_and_meta_fixtures_test_py - 2019.10.07 at 09h 24m 04s.xml">
+      <configuration name="pytest in 16_scoped_and_meta_fixtures_test.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_16_scoped_and_meta_fixtures_test_py - 2019.10.07 at 09h 30m 51s.xml">
+      <configuration name="pytest in 16_scoped_and_meta_fixtures_test.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_16_scoped_and_meta_fixtures_test_py - 2019.10.07 at 09h 31m 23s.xml">
+      <configuration name="pytest in 16_scoped_and_meta_fixtures_test.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_17_marked_meta_fixtures_py - 2019.10.07 at 09h 39m 30s.xml">
+      <configuration name="pytest in 17_marked_meta_fixtures.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_18_the_mocker_fixture_py - 2019.10.07 at 10h 12m 02s.xml">
+      <configuration name="pytest in 18_the_mocker_fixture.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_19_re_usable_mock_test_py - 2019.10.07 at 10h 16m 07s.xml">
+      <configuration name="pytest in 19_re_usable_mock_test.py" configurationId="tests" />
+    </history-entry>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/source/generators/g_base.py</url>
+          <line>196</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
