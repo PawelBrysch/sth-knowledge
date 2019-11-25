@@ -4,3 +4,7 @@
 /**uzycie wlasnego modulu**/
 // var printMsg = require("createnodemodule_v2_xcom_elo").printMsg;
 // printMsg();
+
+let prev = process;
+
+console.log(process);

@@ -11,7 +11,6 @@
   "devDependencies": {},
   "dependencies": {
     "request": "^2.88.0",
-    "typescript": "^3.7.2",
     "xmlhttprequest": "^1.8.0"
   }
 }

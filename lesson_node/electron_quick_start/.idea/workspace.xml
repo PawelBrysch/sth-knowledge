@@ -70,14 +70,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Node.js.lesson.js">
+  <component name="RunManager" selected="Node.js.draft5.js">
     <configuration name="draft5.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/source/draft5.js" working-dir="$PROJECT_DIR$/source">
       <method v="2" />
     </configuration>
     <configuration name="from_html.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/source/from_html.js" working-dir="$PROJECT_DIR$/source">
       <method v="2" />
     </configuration>
-    <configuration name="lesson.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/source/lesson.js" working-dir="$PROJECT_DIR$/source">
+    <configuration name="it_should_run.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/source/it_should_run.js" working-dir="$PROJECT_DIR$/source">
       <method v="2" />
     </configuration>
     <configuration name="trail_pure_request.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/source/trail_pure_request.js" working-dir="$PROJECT_DIR$/source">
@@ -88,11 +88,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Node.js.lesson.js" />
         <item itemvalue="Node.js.draft5.js" />
         <item itemvalue="Node.js.trial_xmlhttp_request.js" />
         <item itemvalue="Node.js.trail_pure_request.js" />
         <item itemvalue="Node.js.from_html.js" />
+        <item itemvalue="Node.js.it_should_run.js" />
       </list>
     </recent_temporary>
   </component>
@@ -140,18 +140,13 @@
       <workItem from="1574101952154" duration="1306000" />
       <workItem from="1574105826750" duration="1372000" />
       <workItem from="1574185208869" duration="1227000" />
-      <workItem from="1574701894186" duration="3628000" />
-      <workItem from="1574707681555" duration="3330000" />
+      <workItem from="1574701894186" duration="3586000" />
+      <workItem from="1574705623210" duration="2019000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-    <option name="exactExcludedFiles">
-      <list>
-        <option value="$PROJECT_DIR$/source/draft5.js" />
-      </list>
-    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -173,12 +168,6 @@
           <url>file://$PROJECT_DIR$/source/trail_pure_request.js</url>
           <line>22</line>
           <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/source/lesson.js</url>
-          <line>9</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

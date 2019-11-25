@@ -2,13 +2,23 @@
 side_effect vs return_value
 ######################'''
 '''
-Jak to dziala?                                                  side_effect przeslania niezaleznie od kolejnosci dodania
+Jak to dziala?->                                                side_effect przeslania niezaleznie od kolejnosci dodania
+czy mozna wstawic jako argument dla patch?->                                                                         TAK
 '''
 
-from LESSON_pytest.lesson_mock.draft2_src import some_func
 
-@patch("core.base.log.Log.TestEquipment._files_filter_with_versions", side_effect=[{}, {}]):
-    pass
+'''######################
+Mock(spec=Class_or_func)
+######################'''
+'''
+co nam to daje?->                      wywali AttributeError, jak wywolamy atrybut, ktorego nie ma dana klasa (regresja)
+a sprawdza argumenty?->                                                                                              NIE
+'''
 
+from unittest.mock import Mock
+
+mocek = Mock(details=lambda: "elo")
+mocek.details()
+mocek.details
 
 

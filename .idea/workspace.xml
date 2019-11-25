@@ -1012,10 +1012,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.draft2" />
-        <item itemvalue="Python.ut_tested_method" />
-        <item itemvalue="Python.total_draft" />
-        <item itemvalue="Python.draft1 (2)" />
-        <item itemvalue="Python.14_class_based_test" />
+        <item itemvalue="Python.draft2" />
+        <item itemvalue="Python.draft2" />
+        <item itemvalue="Python.draft2" />
+        <item itemvalue="Python.draft2" />
       </list>
     </recent_temporary>
   </component>
@@ -1065,15 +1065,6 @@
     <history-entry file="Unittests_in_TC_writing_checking_py - 2019.10.01 at 20h 33m 22s.xml">
       <configuration name="Unittests in TC_writing_checking.py" configurationId="tests" />
     </history-entry>
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
