@@ -1,0 +1,14 @@
+########################################################################################################################
+1. Robilismy feature na developie && master nie posunal sie do przodu!
+
+SOLUTION:
+- po prostu tworzymy brancha
+
+
+########################################################################################################################
+1. Robilismy feature na developie && master POSUNAL sie do przodu!
+
+SOLUTION:
+1. utworzenie branch'a
+2. cofka developa
+>>>>>>git reset --hard 39212u4cawecn12e8cy92yncrq

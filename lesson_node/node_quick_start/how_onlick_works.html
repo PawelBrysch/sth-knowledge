@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //TODO-> Dziala, tak jak myslelismy
+
+        function klik1() {
+          console.log("klik1");
+        }
+        function klik2() {
+          console.log("klik2");
+        }
+        function klik3() {
+          console.log("klik3");
+        }
+    </script>
+    <style>
+        .outer
+        {
+            background-color: red;
+            width: 200px;
+            height: 200px;
+        }
+        .middle
+        {
+            background-color: yellow;
+            width: 100px;
+            height: 100px;
+        }
+        .inner
+        {
+            background-color: green;
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="outer" onclick="klik1()">
+        <div class="middle" onclick="klik2()">
+            <div class="inner" onclick="klik3()"> </div>
+        </div>
+    </div>
+</body>
+</html>

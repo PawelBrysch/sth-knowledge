@@ -1,0 +1,17 @@
+1. Sitkowski robi branch
+	2. Brysch robi cos z brancha SITKOWSKIEGO
+3. Sitkowski cos zmienia i go merguja.
+3. Brysch zmienia to, co zmienil Sitkowski (i powinien miec konflikt)
+4. Brysch robi pull requesta.
+5. Bitbucket krzycyz o konflikt.
+
+SOLUTION
+1. pull na developie (bo jest dalej)
+2. checkout na feature/brysch
+3. git merge develop
+4. rozwiazanie konfliktu
+5. push
+
+WNIOSKI
+A) pull działa tylko na jedna branch
+B) daleko chyba od idei "rebase" w takim dzialaniu

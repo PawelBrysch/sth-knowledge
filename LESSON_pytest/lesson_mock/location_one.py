@@ -1,17 +1,16 @@
-class Foo:
-    class_attribute =                                       "original               CLASS ATTRIBUTE"
-
-    def __init__(self):
-        print("Jestem w __init__")
-        self.instance_attribute =                           "original               INSTANCE ATTRIBUTE"
-
-    def instance_method(self):
-        return                                              "original result from   INSTANCE METHOD"
-
-    @classmethod
-    def class_method(cls):
-        return                                              "original result from   CLASS METHOD"
+import os
+from LESSON_pytest.lesson_mock.location_two import Foo
 
 
+def some_function():
+    obj = Foo()
+    print("class_.class_attribute:", Foo.class_attribute)
+    print("class_.class_method:   ", Foo.class_method())
+    print("obj.instance_attribute:", obj.instance_attribute)
+    print("obj.instance_method:   ", obj.instance_method())
+
+
+def use_os_and_print_getcwd_external():
+    print(os.getcwd())
 
 

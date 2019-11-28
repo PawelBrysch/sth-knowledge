@@ -2,6 +2,22 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/git_/TODOS/TOP_git_full_div/first/testy2019" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/git_/TODOS/TOP_git_issue_lucy_stash/git_issue_lucy_stash/fras_top/testy2019" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/git_/TODOS/TOP_git_issue_lucy_stash/git_issue_lucy_stash/lucy_top/testy2019" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/git_/TODOS/TOP_git_issue_lucy_stash_master_upfront/git_issue_lucy_stash - Kopia/fras_top/testy2019" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/git_/TODOS/TOP_git_issue_lucy_stash_master_upfront/git_issue_lucy_stash - Kopia/lucy_top/testy2019" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/git_/TODOS/TOP_git_issue_lucy_stash_master_upfront/git_issue_lucy_stash/fras_top/testy2019" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/git_/TODOS/TOP_git_issue_lucy_stash_master_upfront/git_issue_lucy_stash/lucy_top/testy2019" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/git_/TODOS/TOP_git_issue_lucy_stash_master_upfront/git_issue_lucy_stash/z_dev_at_the_end_top/testy2019" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/git_/TODOS/TOP_git_issue_merge_conflict/_other/testy2019" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/git_/TODOS/TOP_git_issue_merge_conflict/brysch/testy2019" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/git_/TODOS/TOP_git_issue_merge_conflict/sitkowski/testy2019" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/git_/TODOS/TOP_git_pull_everything/first/testy2019" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/git_/TODOS/TOP_git_pull_everything/quite_new_guy/testy2019" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/git_/TODOS/TOP_git_pull_everything/second/testy2019" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/git_/TODOS/TOP_git_pull_everything/second_ciagnie_mastera/testy2019" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/git_/TODOS/git_diff_example" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/lesson_node/lesson_diff" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/python_other/work_python_1/relative_top/python-relative-imports" vcs="Git" />
   </component>

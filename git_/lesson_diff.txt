@@ -1,0 +1,9 @@
+1. Mamy branche "left" i "right". Plik "dodatkowy.txt" jest tylko na "right"
+
+[z left]
+>>>>>>git diff --name-status right
+[Out]:D 		"dodatkowy.txt"
+
+[z right]
+>>>>>>git diff --name-status left
+[Out]:A 		"dodatkowy.txt"

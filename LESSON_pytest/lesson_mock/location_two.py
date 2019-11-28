@@ -1,14 +1,12 @@
-from LESSON_pytest.lesson_mock.location_one import Foo
+class Foo:
+    class_attribute = "original               CLASS ATTRIBUTE"
 
-def some_function():
-    obj = Foo()
+    def __init__(self):
+        self.instance_attribute = "original               INSTANCE ATTRIBUTE"
 
-    print("class_.class_attribute:", Foo.class_attribute)
-    print("class_.class_method:   ", Foo.class_method())
-    print("obj.instance_attribute:", obj.instance_attribute)
-    print("obj.instance_method:   ", obj.instance_method())
+    def instance_method(self):
+        return "original result from   INSTANCE METHOD"
 
-
-def some_function_which_only_calls_instance_method():
-    obj = Foo()
-    print("obj.instance_method:   ", obj.instance_method())
+    @classmethod
+    def class_method(cls):
+        return "original result from   CLASS METHOD"
