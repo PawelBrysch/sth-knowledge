@@ -12,9 +12,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="JavaScript File" />
         <option value="TypeScript File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -37,7 +37,7 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../NPM build - zadania/lesson_npm" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -143,6 +143,8 @@
       <workItem from="1574701894186" duration="3628000" />
       <workItem from="1574707681555" duration="3474000" />
       <workItem from="1574794000934" duration="1367000" />
+      <workItem from="1575129076775" duration="4846000" />
+      <workItem from="1575390534934" duration="54000" />
     </task>
     <servers />
   </component>

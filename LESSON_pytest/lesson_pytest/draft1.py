@@ -13,16 +13,12 @@ kiedy fixture byloby mustem?                                               gdyby
     a jak to zrobic prosciej?->                                                                       mark.parametrize()
 
 zatem, czym ogolnie jest fixture?->                                                                    context managerem
+po co je yieldujemy?->                                                                     taki dodatkowy ficzer, a co !
 '''
-# TODO jak zrobic normalne importy?
-
-# TODO po co yieldowac fixture?
-# TODO co jesli jest kilka asercji po sobie?
 
 # TODO porownaj: 1) pliki (readlines i bez) 2) JSONy
 # TODO tworze plik i odpalam wybrane testy z roznych: 1) klas w tym samym module 2) modulow
 # TODO if na test (np wczesniejszy test)
-# TODO czy testy musza miec Class(obiect)
 
 # TODO #future co, gdy fixture sie sypnie (finalizer)
 # TODO #wtf  czy mark dziala jak testy sa w klasie
@@ -49,31 +45,32 @@ zatem, czym ogolnie jest fixture?->                                             
 '''#########################
 Fixture [test level]
 #########################'''
-# TODO czy mozna przechwycic "yieldy" fixture z wyzszego poziomu?
-# from pytest import fixture, mark
-#
-# def raise_error():
-#     return 1/0
-#
-# class TestClass(object):
-#     @fixture
-#     def fixture_for_one_test(self):
-#         print("\n## PREPARE")
-#         yield [1, 2, 3]
-#         print("\n## TIDY")
-#
-#     def test_with_fixture_as_argument(self, fixture_for_one_test):
-#         value_passed = fixture_for_one_test
-#         print("value_passed: ", value_passed)
-#         assert True
-#
-#     @mark.usefixtures("fixture_for_one_test")
-#     def test_with_fixture_as_decorator(self):
-#         # raise_error()
-#         assert True
-#
-#     def test_without_fixture(self):
-#         assert True
+# TODO jak zrobic normalne importy?
+from pytest import fixture, mark
+# from LESSON_pytest.lesson_pytest.external_module import divide
+
+def raise_error():
+    return 1/0
+
+class TestClass():
+    @fixture
+    def fixture_for_one_test(self):
+        print("\n## PREPARE")
+        yield [1, 2, 3]
+        print("\n## TIDY")
+
+    def test_with_fixture_as_argument(self, fixture_for_one_test):
+        value_passed = fixture_for_one_test
+        print("value_passed: ", value_passed)
+        assert True
+
+    @mark.usefixtures("fixture_for_one_test")
+    def test_with_fixture_as_decorator(self):
+        # raise_error()
+        assert True
+
+    def test_without_fixture(self):
+        assert True
 
 
 '''#########################

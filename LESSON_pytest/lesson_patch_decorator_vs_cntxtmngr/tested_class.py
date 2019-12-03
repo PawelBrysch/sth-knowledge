@@ -1,5 +1,5 @@
-from LESSON_pytest.lesson_mock_pt2.used_class import UsedClass
-from LESSON_pytest.lesson_mock_pt2.used_functions import function_to_replace, function_to_save, function_to_tmock
+from LESSON_pytest.lesson_patch_decorator_vs_cntxtmngr.used_class import UsedClass
+from LESSON_pytest.lesson_patch_decorator_vs_cntxtmngr.used_functions import function_to_replace, function_to_save, function_to_tmock
 
 class TestedClass:
     def own_method_to_replace(self):
@@ -15,6 +15,7 @@ class TestedClass:
         return "3 good"
 
     def tested_method(self):
+        # helper = UsedClass()
         helper = UsedClass()
 
         result = []
