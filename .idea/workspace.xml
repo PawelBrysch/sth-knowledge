@@ -2,22 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f01d8431-5c74-43f6-a416-a1f52e62610b" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/LESSON_pytest/lesson_pytest/normal_script.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LESSON_pytest/lesson_pytest/test_hellu_world.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/job_scraper/initialinsert_pracujpl.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/job_scraper/lesson_enum.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/job_scraper/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_sphinx/lesson_sphinx_.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson_lxml/lesson_ etree.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson_lxml/lesson_abstract.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson_lxml/lesson_argparse.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/python_other/work_python_1/relative_top/python-relative-imports/.idea/keras7.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LESSON_pytest/lesson_mock_pt2/tested_class.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LESSON_pytest/lesson_mock_pt2/used_class.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LESSON_pytest/lesson_mock_pt2/used_functions.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LESSON_pytest/lesson_mock_pt2/ut_tested_method.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LESSON_pytest/lesson_pytest/draft1.py" beforeDir="false" afterPath="$PROJECT_DIR$/LESSON_pytest/lesson_pytest/draft1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_node/node_quick_start/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_node/node_quick_start/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/python_other/work_python_1/relative_top/python-relative-imports" beforeDir="false" afterPath="$PROJECT_DIR$/python_other/work_python_1/relative_top/python-relative-imports" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sql_knowledge/sample.py" beforeDir="false" afterPath="$PROJECT_DIR$/sql_knowledge/sample.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,7 +37,7 @@
     <property name="SearchEverywhereHistoryKey" value="_&#9;FILE&#9;file://C:/Users/Lenovo/Desktop/proj_writing/writing_checker/design_pattern.py" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Python" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../pytest_top/pycharm_2018_Feb" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lesson_lxml" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="PyConsoleOptionsProvider">
@@ -59,15 +49,15 @@
     </option>
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Program Projects\1. Wakacje 2018\TESTY\keras7v112\TESTS\general_tools_test" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Lenovo\Desktop\PROJECTS\django_top2\sth-knowledge\lesson_lxml" />
       <recent name="C:\Users\Lenovo\Desktop\PROJECTS\django_top2\sth-knowledge\django" />
       <recent name="C:\Users\Lenovo\Desktop\PROJECTS\django_top2\sth-knowledge\django\foo_module" />
       <recent name="C:\Users\Lenovo\Desktop\django_top\Django-knowledge\ehhh" />
       <recent name="C:\Users\Lenovo\Desktop\proj_writing\writing_checker\tools" />
-      <recent name="C:\Users\Lenovo\Desktop\proj_writing\writing_checker\databases" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Program Projects\1. Wakacje 2018\TESTY\keras7v112\TESTS\general_tools_test" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -82,20 +72,17 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.pytest in normal_script.py">
-    <configuration name="initialinsert_pracujpl" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.lesson_abstract">
+    <configuration name="lesson_ parser" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="keras7" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/job_scraper" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/job_scraper/initialinsert_pracujpl.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\Lenovo\Desktop\PROJECTS\django_top2\sth-knowledge\lesson_lxml\lesson_ etree.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -104,7 +91,25 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="lesson_enum" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="lesson_abstract" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="keras7" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lesson_lxml" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lesson_lxml/lesson_abstract.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="lesson_argparse" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="keras7" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -112,13 +117,13 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/job_scraper" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lesson_lxml" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/job_scraper/lesson_enum.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lesson_lxml/lesson_argparse.py" />
       <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
@@ -161,21 +166,6 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest in test_hello_world.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-      <module name="keras7" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests2" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests2/test_hello_world.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
     <configuration name="pytest in test_hellu_world.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="keras7" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -193,19 +183,19 @@
     </configuration>
     <list>
       <item itemvalue="Python.test2" />
-      <item itemvalue="Python.lesson_enum" />
-      <item itemvalue="Python.initialinsert_pracujpl" />
-      <item itemvalue="Python tests.pytest in test_hello_world.py" />
       <item itemvalue="Python tests.pytest in test_hellu_world.py" />
       <item itemvalue="Python tests.pytest in normal_script.py" />
+      <item itemvalue="Python.lesson_ parser" />
+      <item itemvalue="Python.lesson_argparse" />
+      <item itemvalue="Python.lesson_abstract" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.pytest in normal_script.py" />
-        <item itemvalue="Python tests.pytest in test_hellu_world.py" />
-        <item itemvalue="Python tests.pytest in test_hello_world.py" />
-        <item itemvalue="Python.initialinsert_pracujpl" />
-        <item itemvalue="Python.initialinsert_pracujpl" />
+        <item itemvalue="Python.lesson_abstract" />
+        <item itemvalue="Python.lesson_abstract" />
+        <item itemvalue="Python.lesson_argparse" />
+        <item itemvalue="Python.lesson_ parser" />
+        <item itemvalue="Python.lesson_ parser" />
       </list>
     </recent_temporary>
   </component>
