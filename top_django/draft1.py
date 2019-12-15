@@ -1,0 +1,1 @@
+#TODO jak dodac skrypty do gornego prawego rogu?
