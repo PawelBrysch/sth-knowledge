@@ -1,0 +1,16 @@
+
+# some_dict.items()
+# >>> {{ some_dict.items()}}
+
+# some_dict.items()|map('last')
+# >>> {{ some_dict.items()|map('last')}}
+# some_dict.items()|map('last')|list
+# >>> {{ some_dict.items()|map('last')|list}}
+
+# some_dict.items()|map('last')|selectattr('name', 'equalto', '2B')
+# >>> {{ some_dict.items()|map('last')|selectattr('name', 'equalto', '2B')}}
+# some_dict.items()|map('last')|selectattr('name', 'equalto', '2B')|list
+# >>> {{ some_dict.items()|map('last')|selectattr('name', 'equalto', '2B')|list }}
+
+# some_dict.items()|map('last')|selectattr('name', 'equalto', 'MC2')|list
+# >>>{{ some_dict.items()|map('last')|selectattr('name', 'equalto', 'MC2')|list }}
