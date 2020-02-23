@@ -7,6 +7,3 @@ def verify_function():
 unwrap_func = "elo"
 
 print(verify_function())
-
-
-

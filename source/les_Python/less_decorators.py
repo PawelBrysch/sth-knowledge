@@ -1,100 +1,60 @@
-
-''' simplyest decorator'''
-# def shout(word="yes"):
-#     return word.capitalize()+"!"
+'''#########################
+functools.wraps, inspect.unwrap
+#########################'''
 #
-# scream = shout
 #
-# def doSomethingBefore(func):
-#     print("I do something before then I call the function you gave me")
-#     print(func())
 #
-# doSomethingBefore(scream)
-# #-> ???
 
-'''########'''
-''' next'''
-'''########'''
-def my_shiny_new_decorator(a_function_to_decorate):
-    def the_wrapper_around_the_original_function():
-        print("Before the function runs")
-        a_function_to_decorate()
-        print("After the function runs")
-    return the_wrapper_around_the_original_function
-
-''' @(-), lose(+/-)'''
-# def a_stand_alone_function():
+'''#########################
+DECORATORS
+#########################'''
+''' 2 ways of usage '''
+# def my_shiny_new_decorator(a_function_to_decorate):
+#     def the_wrapper_around_the_original_function():
+#         print("Before the function runs")
+#         to_return = a_function_to_decorate()
+#         print("After the function runs")
+#         return to_return
+#     return the_wrapper_around_the_original_function
+#
+#
+# def original_v1():
 #     print("I am a stand alone function, don't you dare modify me")
 #
-# # #BEFORE
-# a_stand_alone_function()
-#
-# # #AFTER 1
-# a_stand_alone_function = my_shiny_new_decorator(a_stand_alone_function)
-# a_stand_alone_function()
-
-
-'''@(+), lose(+)'''
-# @my_shiny_new_decorator
-# def a_stand_alone_function():
-#     print("I am a stand alone function, don't you dare modify me")
-#
-# a_stand_alone_function()
-
-'''@(+), lose(-)'''
-# def a_stand_alone_function():
-#     print("I am a stand alone function, don't you dare modify me")
+# decorated_COPY_of_v1 = my_shiny_new_decorator(original_v1)
 #
 # @my_shiny_new_decorator
-# def a_stand_alone_function_decorated():
-#     return a_stand_alone_function()
+# def original_v2():
+#     print("I am a stand alone function, don't you dare modify me")
 #
-# a_stand_alone_function_decorated()
+#
+# original_v1()
+# print("\n")
+# decorated_COPY_of_v1()
+# print("\n")
+# original_v2()
 
 
-'''########'''
-''' additional arguments'''
-'''########'''
-# def a_decorator_passing_arguments(function_to_decorate):
-#     def a_wrapper_accepting_arguments(number):
-#         for i in range(number):
-#             function_to_decorate()
-#     return a_wrapper_accepting_arguments
-#
-#
-# @a_decorator_passing_arguments
-# def print_soup():
-#     print("soup")
-#
-#
-# print_soup(10)
-
-
-'''########'''
-''' methods -> 'self' is important(2 places -> wrapper defition and when method is used inside wrapper)'''
-'''########'''
+''' instance methods'''
 # def method_friendly_decorator(method_to_decorate):
-#     def wrapper(self, lie):
-#         lie = lie - 3
-#         method_to_decorate(self, lie)
+#     def wrapper(self, arg_alias):
+#         print("Additional feature")
+#         method_to_decorate(self, arg_alias)
 #     return wrapper
 #
 #
-# class Lucy(object):
-#
+# class SomeClass():
 #     def __init__(self):
-#         self.age = 32
+#         self.attr = 1
 #
 #     @method_friendly_decorator
-#     def sayYourAge(self, lie):
-#         print("I am {0}, what did you think?".format(self.age + lie))
+#     def some_method(self, arg_):
+#         print(self.attr, arg_)
 #
-# l = Lucy()
-# l.sayYourAge(0)
+# some_obj = SomeClass()
+# some_obj.some_method(2)
 
-'''########'''
-''' arguments-blind, function_or_method-blind decorator'''
-'''########'''
+''' arguments - THE ONLY WAY'''
 # def a_decorator_passing_arbitrary_arguments(function_to_decorate):
 #     def a_wrapper_accepting_arbitrary_arguments(*args, **kwargs):
 #         print("Do sth")
@@ -121,17 +81,17 @@ def my_shiny_new_decorator(a_function_to_decorate):
 # some_object.some_method(4, 5, 6)
 
 
-'''########'''
-''' passing external arguments into decorator'''
-'''########'''
-''' Zalozmy, ze chcemy, aby to, jak dekorator udekoruje od czegos zalezalo, ale nie wiemy ile to bedzie wynosic, bo np.
-musi sie wpierw gdzies policzyc. Jak przekazac to do dekoratora, skoro on 
-MUSI MIEC TYLKO JEDEN ARGUMENT (FUNKCJE)
+''' @decorator(arg_)'''
+''' 
+sens _>                                                             Zalozmy, ze chcemy, aby to, jak dekorator udekoruje 
+                                                                    od czegos zalezalo, ale nie wiemy ile to bedzie 
+                                                                    wynosic, bo np. musi sie wpierw gdzies policzyc. 
+                                                                    Jak przekazac to do dekoratora, skoro on MUSI MIEC 
+                                                                    TYLKO JEDEN ARGUMENT (FUNKCJE)?
 '''
 # CALCULATED_VALUE = 3 #from import
 #
 # def decorator_maker_with_arguments(important_arg):
-#
 #     def my_decorator(func):
 #         def wrapped():
 #             print("Wazny argument wynosi:", important_arg)
@@ -147,28 +107,10 @@ MUSI MIEC TYLKO JEDEN ARGUMENT (FUNKCJE)
 #
 # decorated_function_with_arguments()
 
-'''########'''
-''' jak owracpowac, gdy funkcja ma miec return?'''
-'''########'''
-# def my_shiny_new_decorator(a_function_to_decorate):
-#     def the_wrapper_around_the_original_function():
-#         print("Before the function runs")
-#         res = a_function_to_decorate()
-#         print("After the function runs")
-#         return res
-#     return the_wrapper_around_the_original_function
-#
-#
-# @my_shiny_new_decorator
-# def a_stand_alone_function():
-#     return "elo"
-#
-#
-# print(a_stand_alone_function())
 
-'''########'''
-''' useful decorators'''
-'''########'''
+'''######################
+USEFUL DECORATORS
+######################'''
 # def benchmark(func):
 #     """
 #     A decorator that prints the time a function takes
@@ -218,9 +160,13 @@ MUSI MIEC TYLKO JEDEN ARGUMENT (FUNKCJE)
 # print("R", reverse_string("Able was I ere I saw Elba"))
 
 
-'''########'''
-''' property'''
-'''########'''
+'''######################
+PROPERTIES
+######################'''
+'''
+dekor 'property' - co bierze, co zwraca ? ->                                                 metode(getter) -> property
+dekor 'pos.setter', itp - co biora, co zwracaja? ->                                         property->property
+'''
 # class MiniClass:
 #     def __init__(self):
 #         self.hiddenArgument = 3
@@ -245,12 +191,7 @@ MUSI MIEC TYLKO JEDEN ARGUMENT (FUNKCJE)
 # some_obj = SomeClass()
 #
 # print(some_obj.stupid_arg.hiddenArgument)
-# some_obj.pos = 5
 #
-# print(some_obj.stupid_arg.hiddenArgument)
-# print(some_obj.pos)
-'''
-dekor 'property' - co bierze, co zwraca ? ->                                                 metode(getter) -> property
-dekor 'pos.setter', itp - co biora, co zwracaja? ->                                         property->property
-'''
+# some_obj.pos = 5
+# print(some_obj.stupid_arg.hiddenArgument, some_obj.pos)
 

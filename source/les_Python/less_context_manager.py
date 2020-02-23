@@ -1,4 +1,3 @@
-
 ''' long version'''
 # class File():
 #     def __init__(self, filename, mode):
@@ -12,6 +11,9 @@
 #     def __exit__(self, *args):
 #         print("wychodze")
 #         self.open_file.close()
+"""
+przewaga wersji long?->                                          mozna dac `return self` zamiast `return self.open_file`
+"""
 
 # IMPORTANT
 ''' short version'''

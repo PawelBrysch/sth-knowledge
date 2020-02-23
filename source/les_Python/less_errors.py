@@ -1,5 +1,19 @@
+"""#################################
+LVL 0
+#################################"""
+''' another error without `except`'''
+# def func(a):
+#     try:
+#         a[2]
+#         a.items()
+#         return("True")
+#     except TypeError:
+#         return("False")
+#
+# iterable_=[1,2,3]
+# print("func, ", func(iterable_))
 
-''' if error inside except'''
+''' if error inside `except`'''
 # def func(a):
 #     try:
 #         a[2]
@@ -12,84 +26,27 @@
 # print("func, ", func(bb))
 
 
-''' wheter "try" or "except" ''' #TODO look close at the "moment"
+''' czy `try` leci do konca'''
 # def func(a):
 #     try:
 #         a[2]
-#         print("momemet1")
-#         return("git")
+#         return("True")
 #     except TypeError:
-#         print("momemet2")
-#         return("t_error")
+#         return("False")
 #     finally:
-#         print("back at home :)")
+#         print("END")
 #
-# aa=[1,2,3]
-# print("func, ", func(aa))
+# iterable_=[1,2,3]
+# print(func(iterable_))
 #
-# print(" ")
+# print("\n")
 #
-# bb = 2
-# print("func, ", func(bb))
-
-''' wheter "try" or "except" ''' #TODO wersion without returns (obvious)
-# def func(a):
-#     try:
-#         a[2]
-#         print("momemet1")
-#     except TypeError:
-#         print("momemet2")
-#     finally:
-#         print("back at home :)")
-#
-# aa=[1,2,3]
-# func(aa)
-#
-# print(" ")
-#
-# bb = 2
-# func(bb)
+# not_iterable = 2
+# print(func(not_iterable))
 
 
-''' when other error (that error also could be at outer region of code (eq. in some function)'''
-# def func(a):
-#     try:
-#         a[2]
-#         a.items()
-#         return("git")
-#     except TypeError:
-#         return("t_error")
-#
-#     finally:
-#         print("back at home :)")
-#
-# aa=[1,2,3]
-# print("func, ", func(aa))
-
-
-''' right exception in outer code'''
-# def raise_exeptron(arg):
-#     arg[2]
-#
-# def func(a):
-#     try:
-#         raise_exeptron(a)
-#         return("git")
-#     except TypeError:
-#         return("t_error")
-#     finally:
-#         print("back at home :)")
-#
-# aa=[1,2,3]
-# print("func, ", func(aa))
-#
-# print(" ")
-#
-# bb = 2
-# print("func, ", func(bb))
-
-''' czy try sie naprawde wykonuje?'''
-# a=2
+''' czy `try` cofa to, do czego doszlo?'''
+# a = 2
 # number = 7
 #
 # try:
@@ -101,95 +58,47 @@
 # print(number)
 # # #->8
 
-''' czy zrobia sie wszystkie wyjatki, czy tylko pierwszy'''
-# a=2
-# b=3
+"""#################################
+LVL 1
+#################################"""
+''' exception in outer context'''
+# def method_that_will_rise_exception(arg_):
+#     arg_[2]
 #
-# try:
-#     c = a[2]
-#     print("przeszedlem")
-#     d = b.method()
-# except TypeError as e:
-#     print("t",e)
-# except AttributeError as e:
-#     print("a", e)
-# #->8
+# def func(a):
+#     try:
+#         method_that_will_rise_exception(a)
+#     except TypeError:
+#         return("ERROR")
+#
+# aa=[1,2,3]
+# print(func(aa))
+#
+# print("\n")
+#
+# bb = 2
+# print(func(bb))
 
-''' raise exception'''
-# import sys
-#
-# def linux_interaction():
-#     if not 'linux' in sys.platform:
-#         raise Exception("Function can only run on Linux systems.")
-#     print('Doing something.')
-#
+"""#################################
+'''Exception'''
+#################################"""
+#TODO 1 w sumie po co takie "czyste" exception
+#TODO 2 czy except Expcetion wylapie konkretne errory? (moze to odp. na TODO 1)
+# def method_that_raise_exception():
+#     raise Exception("Exception label")
 #
 # try:
-#     linux_interaction()
+#     method_that_raise_exception()
 # except Exception:
-#     print('Linux function was not executed')
+#     print('handled!')
 
-
-''' using "assert" '''
-# import sys
-#
-# def linux_interaction():
-#     assert ('linux' in sys.platform), "Function can only run on Linux systems."
-#     print('Doing something.')
-#
-# try:
-#     linux_interaction()
-# except AssertionError as error:
-#     print(error)
-#     print('The linux_interaction() function was not executed')
-
-''' kiedy ponizszy jest OK?'''
-# import logging
-#
-# def get_number():
-#     return int('foo')
-#
-# try:
-#     x = get_number()
-# except Exception as ex:
-#     logging.exception('Caught an error')
-# #-> gdy jest to np. glowna petla systemu
-
+"""#################################
+assert
+#################################"""
 '''
-Exception-kiedy?
-1.                                                  gdy uzywamy raise. TYLKO dla bledow, ktore sami CELOWO chcemy wywolac
-Raise- kiedy?
-1.                                                                                                      wraz z Exception
-2.                                                                                                              reraise
-Assert-kiedy?
-1.                                                                                                      do debugowania
-
-
-czy assert da sie zastapic raise?                                                          TAK( raise AssertionError (w ifie))
-czy Excepion mozna zastapic konkretnym errorem?                                                                     mozna
-czy mozna dodac wiadomosc do exception w momecie uzycia raise?                          Mozna, tak ja kdo innych errorow
-jaka jest przewaga assert?                                                                          krotszy do napisania
-czy "except Exception:"jest spoko?                                                          nie, tak samo jako "except:"
+czy assert da sie zastapic raise? ->                                                 TAK( raise AssertionError (w ifie))
+jaka jest przewaga assert? ->                                                                       krotszy do napisania
 '''
-#TODO to jak wyłapywac własne exception, skor onie moze my pisac "except Exception" ?
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# assert 2 == 2
+# assert 2 == 3
 

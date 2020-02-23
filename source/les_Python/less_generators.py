@@ -89,3 +89,11 @@ Ale mamy na to iteratory
 # My_generator = mygen()
 # for i in My_generator:
 #     print("wypisuje", i)
+
+
+'''###########################'''
+''' Generators'''
+'''###########################'''
+# ############INFO!!!############
+# genetatora mozna zrobic z comprehensions i wtedy przypomina tupla.
+# Tupla nie da sie z comprehensions

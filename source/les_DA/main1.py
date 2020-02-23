@@ -2,7 +2,7 @@ from scipy.stats import norm, t
 import statistics
 from math import sqrt
 
-norm.cdf(1.76)
+norm.cdf(2.15)
 norm.ppf(0.95)
 norm.ppf(0.975)
 norm.ppf(0.05)
@@ -11,7 +11,11 @@ norm.ppf(0.025)
 t.cdf(0, 11)
 t.ppf(0.95, 3)
 
-alis = [3.58, 10.03, 4.77, 14.66]
+alis = [5.45,
+        4.23,
+        7.22,
+        6.94,
+        5.98]
 
 mean = statistics.mean(alis)
 variance = statistics.variance(alis)

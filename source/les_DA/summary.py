@@ -17,7 +17,7 @@ lm = get_model(path_to_data='Data//Multiple-Regression-Analysis-Data.txt', index
 lm2 = get_model(path_to_data='Data//excel_develop.csv', index_name="MonkeyID", dependent_var_name="Length")
 
 print('')
-print(lm.summary())
+print(lm2.summary())
 print('')
 print('== Analysis of Variance ANOVA ==')
 print('')
