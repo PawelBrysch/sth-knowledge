@@ -1,17 +1,11 @@
+"""CUSTOM ITERABLES"""
 '''
-brak __iter__() -> nie zrobi sie for, bo obiekt nie jest iterable
-brak __next__() -> nie zrobi sie for, iter nie zwrocil iteratora. Zwraca sam siebie, wiec wniosek z tego taki, ze
-                   stajemy sie iteratorem dopiero, gdy mamy funkcje next
-
-mamy obydwa -> next() zadziala, ale pewnie zle, bo potrzebuje, by itera przedtem wlaczyc (ale tylko do ustawienia warunkow
-               poczatkowych petli
+next() vs .__next() ->                                                                                       bez roznicy
 '''
 # class vector:
 #     def __init__(self, xx, yy):
 #         self.x = xx
 #         self.y = yy
-#
-#
 #
 #     def __iter__(self):
 #         print("iter")
@@ -30,18 +24,23 @@ mamy obydwa -> next() zadziala, ale pewnie zle, bo potrzebuje, by itera przedtem
 #         else:
 #             raise StopIteration
 #
-# vec1 = vector(4,7)
+# obj_ = vector(4,7)
 #
-# for elem in vec1:
-#     print("wypisuje", elem)
+# # IMPLICIT
+# for elem in obj_:
+#     print(elem)
 #
-# print(" ")
-#
-# vec1.__iter__()
-# print(next(vec1))
-# print(next(vec1))
+# # EXPLICIT
+# iterator_ = obj_.__iter__()
+# while True:
+#     try:
+#         next_element = iterator_.__next__()
+#         print(next_element)
+#     except StopIteration:
+#         break
 
-''' 
+
+'''
 "list" to nie jest "iterator", mimo ze "iterable" , wiec nie mozemy uzyc next()
 Ale mamy na to iteratory
 '''
@@ -52,6 +51,9 @@ Ale mamy na to iteratory
 # print(next(my_iterator))
 # print(next(my_iterator))
 # print(next(my_iterator))
+#
+# for elem in my_iterator:
+#     print("elo")
 
 
 

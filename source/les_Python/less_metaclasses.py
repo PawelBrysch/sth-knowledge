@@ -1,73 +1,48 @@
+"""##########################################
+Basics
+##########################################"""
+''' under the hood'''
+# class_ref = type("ClassName", (), {"arg1": "initial_value"})
+# obj1 = object.__new__(class_ref)
+# print(obj1, "\n", obj1.arg1)
 
-''' new '''
-''' args, kwargs w new sa raczej nieobowiazkowe, ale nie zaomnimy ich napisac
-'''
+''' new (default implicit form)'''
 # class SomeClass:
-#     classArg = 1
-#
 #     def __new__(cls, *args, **kwargs):
-#         print("new")
+#         print("count!")
 #         return object.__new__(cls)
 #
-#
-#     def __init__(self, aa):
-#         print("init")
-#         self.arg1 = aa
-#
-#
-# obj1 = SomeClass(11)
-# obj2 = SomeClass(12)
+# alis = [SomeClass() for i in range(2)]
 
-'''
-1 . co robi `__new__()`?->                                  ustala, co bedzie returnowac konstruktor (na swoim returnie)
-'''
-# class ProperClass():
-#     def __new__(cls, *args, **kwargs):
-#         print("Creating Instance")
-#         print(args, kwargs)
-#         instance = object.__new__(cls)
-#         return instance
-#
-#     def __init__(self, aa):
-#         self.a = aa
-#
-# class MockedClass():
-#     def __new__(cls, *args, **kwargs):
-#         print("Creating Instance")
-#         print(args, kwargs)
-#         return "lol"
-#
-#     def __init__(self, aa):
-#         self.a = aa
-#
-#
-# p = ProperClass(5)
-# print("was created: ", p, "\n")
-# m = MockedClass(5)
-# print("was created: ", m)
 
-''' method metaclass -> (str, tuple, dict)'''
-# def upper_attr(future_class_name, future_class_parents, future_class_attr):
-#
-#     uppercase_attr = {}
-#     for name, val in future_class_attr.items():
-#         if not name.startswith('__'):
-#             uppercase_attr[name.upper()] = val
-#         else:
-#             uppercase_attr[name] = val
-#
-#     return type(future_class_name, future_class_parents, uppercase_attr)
-#
-#
-# class Foo( metaclass=upper_attr):
-#     bar = 'bip'
-#
-#
-# print(hasattr(Foo, 'bar'))
-# print(hasattr(Foo, 'BAR'))
-#
-# f = Foo()
-# print(f.BAR)
+
+"""##########################################
+Custom metaclass
+##########################################"""
+def do_whatever_with_class_metaattributes(arg1, arg2, arg3):
+    # do whatever
+    return arg1, arg2, arg3
+
+def do_whatever_during_definition():
+    print("It is executed during definition, lol")
+
+def some_metaclass(future_class_name, future_class_parents, future_class_attr):
+    # FEATURE 1
+    future_class_name, future_class_parents, future_class_attr = do_whatever_with_class_metaattributes(
+        future_class_name, future_class_parents, future_class_attr
+    )
+
+    # FEATURE 2
+    do_whatever_during_definition()
+
+    return type(future_class_name, future_class_parents, future_class_attr)
+
+
+class SomeClass(metaclass=some_metaclass):
+    def __init__(self):
+        self.attr1 = "some_val"
+
+
 
 ''' klasa metaclass'''
 '''
