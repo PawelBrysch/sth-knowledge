@@ -86,5 +86,5 @@ CASE 2. Call <args & kwargs>
 # showcase = {"name":"Pawel", "scam1":11, "scam2":12, "surname":"Brysch", "scam3":13}
 # pretty_func(**showcase)
 # # #->OK (o dziwo)
-# test line czy ssh dziala
+# test line czy ssh dziala, dodalem maila do local configa
 
