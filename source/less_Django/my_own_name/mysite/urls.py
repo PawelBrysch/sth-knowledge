@@ -14,13 +14,10 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include
-
-jaki_path = r"C:\Users\Lenovo\Desktop\PROJECTS\PROGRAMMING\top_proper\sth-knowledge\source\less_Django\my_first_app.urls"
+from django.urls import include, path
 
 urlpatterns = [
-    # NOTE dodajemy widoki z: apki do: projektu
-    # path('my_first_app/', include('my_first_app.urls')),
-    # path('my_first_app/', include(jaki_path)),
+    # NOTE
+    path('my_first_app/', include('my_first_app.urls')),
     path('admin/', admin.site.urls),
 ]
