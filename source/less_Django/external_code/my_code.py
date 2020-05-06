@@ -53,6 +53,30 @@ czy trzeba cos returnowac? ->                                                   
 o co chodzi? ->                                                       np. o 'get_object_or_404(ModelName, pk=chosen_id)'
 """
 
+''' POST '''
+# def view_getting_POST(request):
+#    data = request.POST
+
+
+''' creating_urls_on_fly '''
+# from django.urls import reverse
+#
+# # ASSUME # path('<int:some_arg>/', some_view_func, name='some_view_name'),
+# namespace_name = "some_namespace_name"
+# view_name = "some_view_name"
+# arguments_from_pattern = (123,)
+#
+# rendered_url = reverse(
+#     viewname=":".join([namespace_name, view_name]),
+#     args=arguments_from_pattern
+# )
+
+
+''' redirection '''
+# from django.http import HttpResponseRedirect
+# def some_view(request):
+#     ...
+#     return HttpResponseRedirect("some/url")
 
 """#######################################
 MODEL workflow
@@ -81,6 +105,15 @@ DATABASE API
 https://docs.djangoproject.com/en/3.0/intro/tutorial02/#s-playing-with-the-api
 
 """
+
+
+"""#######################################
+LOGGING
+#######################################"""
+# import logging
+# logger = logging.getLogger("anything, REALLY!")
+# logger.warning("sth")
+
 
 """#######################################
 TEMPLATES
