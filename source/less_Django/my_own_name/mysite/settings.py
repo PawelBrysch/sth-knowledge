@@ -38,6 +38,7 @@ ALLOWED_HOSTS = []
 # NOTE necessary to run db
 INSTALLED_APPS = [
     'my_first_app.apps.MyFirstAppConfig',
+    'polls.apps.PollsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
