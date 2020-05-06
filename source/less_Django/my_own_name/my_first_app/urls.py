@@ -1,9 +1,9 @@
-# NOTE trzeba stworzyc ten plik
 from django.urls import path
 from . import views
-from less_Django.external_code.my_code import my_custom_request_handler
 
-# NOTE - gdy nie ma byc dodatkowego komponentu url ->                                                 path('', ..., ...)
 urlpatterns = [
-    path('optional_url_component/', my_custom_request_handler, name='some_name'),
+    path('', views.index, name='index'),
+    path('<int:question_id>/', views.detail, name='detail'),
+    path('<int:question_id>/results/', views.results, name='results'),
+    path('<int:question_id>/vote/', views.vote, name='vote'),
 ]
