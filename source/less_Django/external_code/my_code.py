@@ -2,6 +2,20 @@ PYTHON_PATH = rf"C:\Users\Lenovo\Desktop\PROJECTS\PROGRAMMING\top_proper\sth-kno
 MANAGE_PY = rf"C:\Users\Lenovo\Desktop\PROJECTS\PROGRAMMING\top_proper\sth-knowledge\source\less_Django\my_own_name\manage.py"
 
 """#######################################
+APP
+#######################################"""
+"""how to add app from external source?"""
+# #---# in 'mysite.setting.py'
+# import sys
+# sys.path.insert(0, r"path\to\containing_directory")
+#
+# INSTALLED_APPS = [
+#     ...,
+#     'some_app.apps.SomeAppConfig',
+#     ...
+# ]
+
+"""#######################################
 URL DISPATCHER
 #######################################"""
 """ api """
