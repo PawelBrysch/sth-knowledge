@@ -2,6 +2,11 @@ PYTHON_PATH = rf"C:\Users\Lenovo\Desktop\PROJECTS\PROGRAMMING\top_proper\sth-kno
 MANAGE_PY = rf"C:\Users\Lenovo\Desktop\PROJECTS\PROGRAMMING\top_proper\sth-knowledge\source\less_Django\my_own_name\manage.py"
 
 """#######################################
+catalog of names
+#######################################"""
+# generic views
+
+"""#######################################
 APP
 #######################################"""
 """how to add app from external source?"""
