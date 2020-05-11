@@ -102,7 +102,8 @@ MODEL workflow
 DATABASE API
 #######################################"""
 """
-1. SELECT (+WHERE)
+1. SELECT (+WHERE <filter>)
+    `__lte` -> "less than or equal"
 2. JOIN 
 3. INSERT
 4. DELETE
@@ -111,6 +112,44 @@ https://docs.djangoproject.com/en/3.0/intro/tutorial02/#s-playing-with-the-api
 
 """
 
+"""#######################################
+TESTING
+#######################################"""
+"""
+* Nice features:
+1. self.assertIs(), etc.
+2. create separate DB (???)
+"""
+
+"""running test script"""
+# from less_Django.external_code.scripts_ import run_command_line
+# app_name = "some_app_name"
+#
+#
+# def test_scripts():
+#     run_command_line([
+#         PYTHON_PATH, MANAGE_PY, "test", app_name
+#     ])
+
+"""test template"""
+# from django.test import TestCase
+#
+# class STHTests(TestCase):
+#     def test_sth(self):
+#         self.assertIs(True, True)
+
+"""test view"""
+from less_Django.external_code.scripts_ import get_pseudo_client
+from django.urls import reverse
+
+
+path_to_project = "C:\\Users\\Lenovo\\Desktop\\PROJECTS\\PROGRAMMING\\top_proper\\sth-knowledge\\source\\less_Django\\my_own_name"
+some_url_pattern_name = 'polls:index'
+some_context_key = 'latest_question_list'
+
+client = get_pseudo_client(path_to_project)
+response = client.get(reverse(some_url_pattern_name))
+print(response.context[some_context_key])
 
 """#######################################
 LOGGING
