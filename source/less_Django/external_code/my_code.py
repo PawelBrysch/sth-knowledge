@@ -86,6 +86,7 @@ o co chodzi? ->                                                       np. o 'get
 """#######################################
 MODEL workflow
 #######################################"""
+""" workflow """
 # from less_Django.external_code.scripts_ import run_command_line
 # def commit_changes_in_app_models(app_name):
 #     run_command_line([
@@ -96,6 +97,9 @@ MODEL workflow
 #     run_command_line([
 #         PYTHON_PATH, MANAGE_PY, "migrate"
 #     ])
+
+"""`Model.objects.create()` zamiast `Model()`"""
+# # https://stackoverflow.com/questions/26672077/django-model-vs-model-objects-create
 
 
 """#######################################
@@ -121,6 +125,25 @@ TESTING
 2. create separate DB (???)
 """
 
+''' `model tests` vs `view tests`'''
+#   # w `view tests` trzeba pushowac obiekty do bazy, a w `model tests` nie
+
+"""`Client`"""
+"""
+    na jakiej bazie tutaj pracujemy? ->                                                                       na devowej
+"""
+# from less_Django.external_code.scripts_ import get_pseudo_client
+# from django.urls import reverse
+#
+#
+# path_to_project = "C:\\Users\\Lenovo\\Desktop\\PROJECTS\\PROGRAMMING\\top_proper\\sth-knowledge\\source\\less_Django\\my_own_name"
+# some_url_pattern_name = 'polls:index'
+# some_context_key = 'latest_question_list'
+#
+# client = get_pseudo_client(path_to_project)
+# response = client.get(reverse(some_url_pattern_name))
+# print(response.context[some_context_key])
+
 """running test script"""
 # from less_Django.external_code.scripts_ import run_command_line
 # app_name = "some_app_name"
@@ -138,18 +161,7 @@ TESTING
 #     def test_sth(self):
 #         self.assertIs(True, True)
 
-"""test view"""
-from less_Django.external_code.scripts_ import get_pseudo_client
-from django.urls import reverse
 
-
-path_to_project = "C:\\Users\\Lenovo\\Desktop\\PROJECTS\\PROGRAMMING\\top_proper\\sth-knowledge\\source\\less_Django\\my_own_name"
-some_url_pattern_name = 'polls:index'
-some_context_key = 'latest_question_list'
-
-client = get_pseudo_client(path_to_project)
-response = client.get(reverse(some_url_pattern_name))
-print(response.context[some_context_key])
 
 """#######################################
 LOGGING
