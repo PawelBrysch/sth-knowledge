@@ -37,6 +37,9 @@ ALLOWED_HOSTS = []
 
 # NOTE necessary to run db
 INSTALLED_APPS = [
+    # NOTE to use drf
+    'rest_framework',
+    'snippets.apps.SnippetsConfig',
     'polls.apps.PollsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
