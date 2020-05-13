@@ -12,7 +12,7 @@ from .serializers import SnippetSerializer
 #  1. return django.http.JsonResponse(serializer.data)
 #  2. data = JSONParser().parse(request)
 
-
+# NOTE format=None sprawia, ze mozna miec dwie wersje responsa (.api i .json)
 @api_view(['GET', 'POST'])
 def snippet_list(request, format=None):
     """

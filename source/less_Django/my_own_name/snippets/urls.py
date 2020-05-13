@@ -7,4 +7,5 @@ urlpatterns = [
     path('snippets/<int:pk>/', views.snippet_detail),
 ]
 
+# NOTE sprawia, ze mozna miec dwie wersje responsa (.api i .json)
 urlpatterns = format_suffix_patterns(urlpatterns)
