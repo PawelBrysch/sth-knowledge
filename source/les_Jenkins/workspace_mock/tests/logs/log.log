@@ -1,0 +1,21 @@
+============================= test session starts =============================
+platform win32 -- Python 3.6.8, pytest-5.4.1, py-1.8.1, pluggy-0.13.1
+rootdir: C:\Users\Lenovo\Desktop\PROJECTS\PROGRAMMING\top_proper\sth-knowledge
+collected 2 items
+
+source\les_Jenkins\workspace_mock\tests\src\test_01.py .F                [100%]
+
+================================== FAILURES ===================================
+______________________________ TestSth.test_bad _______________________________
+
+self = <src.test_01.TestSth object at 0x000000000355B780>
+
+    def test_bad(self):
+>       assert suma(2, 3) == 23
+E       assert 5 == 23
+E        +  where 5 = suma(2, 3)
+
+source\les_Jenkins\workspace_mock\tests\src\test_01.py:10: AssertionError
+=========================== short test summary info ===========================
+FAILED source/les_Jenkins/workspace_mock/tests/src/test_01.py::TestSth::test_bad
+========================= 1 failed, 1 passed in 0.06s =========================
