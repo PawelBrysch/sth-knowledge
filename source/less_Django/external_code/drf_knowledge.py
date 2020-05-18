@@ -1,18 +1,33 @@
-import subprocess
-# from subprocess import check_output
-import os
 
-# TODO zbudowac narzedzia do wysylania requestow
-http = rf"C:\Users\Lenovo\Desktop\PROJECTS\PROGRAMMING\top_proper\sth-knowledge\venv\Scripts\http.exe"
 
-# command = f"{http} http://127.0.0.1:8000/snippets.json"
-command = f"http://127.0.0.1:8000/snippets.json"
+"""#####################################
+HTTP METHODS dispatcher
+#####################################"""
+"""link below"""
+# from less_Django.my_own_name.snippets import views
 
-# sub_output = subprocess.Popen([http, command], stdout=subprocess.PIPE)
-# sub_output = subprocess.run([http, command], stdout=subprocess.PIPE)
+"""#####################################
+??? 
+#####################################"""
+from less_Django.external_code.scripts_ import get_printable_json
+import requests
+
+# TODO ujednolic te metode
+json_ = get_printable_json("GET", r"/snippets.json")
+print(json_)
+
+# url_ = r"http://127.0.0.1:8000/snippets/"
 #
-# text = sub_output.communicate()[0]
+#
+# snippet = {
+#     # "id": 7,
+#     "title": "",
+#     "code": "print(\"hello, THIRD world\")",
+#     "linenos": False,
+#     "language": "python",
+#     "style": "friendly"
+# }
+# r = requests.post(url_, json=snippet)
 
-# out = subprocess.check_output([http, command])
 
-res = os.popen(f'{http} {command}').read()
+

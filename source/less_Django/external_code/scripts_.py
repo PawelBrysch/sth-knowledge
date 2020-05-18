@@ -3,6 +3,12 @@ from django.test.utils import setup_test_environment
 from django.test import Client
 import os
 import sys
+import json
+import requests
+
+METHOD_HTTP_NAME_to_PYTHON_NAME = {
+    "GET": "get"
+}
 
 LOGGING = {
     'version': 1,
@@ -42,6 +48,14 @@ def get_pseudo_client(path_to_project):
     setup_test_environment()
     client = Client()
     return client
+
+
+def get_printable_json(method, url_suffix):
+    method_python_name = METHOD_HTTP_NAME_to_PYTHON_NAME[method]
+    req = getattr(requests, method_python_name)(f'http://127.0.0.1:8000{url_suffix}')
+    content = json.loads(req.content)
+    pretty_string = json.dumps(content, indent=4, sort_keys=True)
+    return pretty_string
 
 if __name__ == '__main__':
     python_path = rf"C:\Users\Lenovo\Desktop\PROJECTS\PROGRAMMING\top_proper\sth-knowledge\venv\Scripts\python.exe"

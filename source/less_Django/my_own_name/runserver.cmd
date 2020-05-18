@@ -1,0 +1,1 @@
+C:\Users\Lenovo\Desktop\PROJECTS\PROGRAMMING\top_proper\sth-knowledge\venv\Scripts\python.exe manage.py runserver
