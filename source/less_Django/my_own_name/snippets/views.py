@@ -1,18 +1,10 @@
-from django.http import HttpResponse, JsonResponse
-from django.views.decorators.csrf import csrf_exempt
 from rest_framework import status
-from rest_framework.parsers import JSONParser
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from .models import Snippet
 from .serializers import SnippetSerializer
 
-# TODO opisac jakos te rosponsy
-# NOTE istnieja metody prymitywniejsze:
-#  1. return django.http.JsonResponse(serializer.data)
-#  2. data = JSONParser().parse(request)
 
-# NOTE format=None sprawia, ze mozna miec dwie wersje responsa (.api i .json)
 @api_view(['GET', 'POST'])
 def snippet_list(request, format=None):
     """

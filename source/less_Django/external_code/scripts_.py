@@ -7,7 +7,10 @@ import json
 import requests
 
 METHOD_HTTP_NAME_to_PYTHON_NAME = {
-    "GET": "get"
+    "GET": "get",
+    "POST": "post",
+    "DELETE": "delete",
+    "PUT": "put"
 }
 
 LOGGING = {
@@ -50,12 +53,16 @@ def get_pseudo_client(path_to_project):
     return client
 
 
-def get_printable_json(method, url_suffix):
+def get_printable_json_or_status_code(method, url_suffix, **additional_kwargs):
     method_python_name = METHOD_HTTP_NAME_to_PYTHON_NAME[method]
-    req = getattr(requests, method_python_name)(f'http://127.0.0.1:8000{url_suffix}')
-    content = json.loads(req.content)
-    pretty_string = json.dumps(content, indent=4, sort_keys=True)
-    return pretty_string
+    req = getattr(requests, method_python_name)(f'http://127.0.0.1:8000{url_suffix}', **additional_kwargs)
+    try:
+        content = json.loads(req.content)
+        pretty_string = json.dumps(content, indent=4, sort_keys=True)
+        return pretty_string
+    except:
+        # We can return sth, so let it be req.
+        return req.status_code
 
 if __name__ == '__main__':
     python_path = rf"C:\Users\Lenovo\Desktop\PROJECTS\PROGRAMMING\top_proper\sth-knowledge\venv\Scripts\python.exe"
