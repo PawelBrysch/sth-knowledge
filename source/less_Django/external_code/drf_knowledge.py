@@ -27,6 +27,8 @@ HTTP METHODS dispatcher
 """#####################################
 API view vs CLASS_BASED view
 #####################################"""
+# TODO porownac z mixinsami -> zrobic galezie w gicie
+# TODO zrobic tak samo z serializatorem
 "links"
 # API -> https://www.django-rest-framework.org/tutorial/2-requests-and-responses/#pulling-it-all-together
 # CLASS -> https://www.django-rest-framework.org/tutorial/3-class-based-views/
