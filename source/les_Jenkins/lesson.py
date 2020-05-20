@@ -20,6 +20,8 @@ PLUGINS
 parse plugins from html ->                                                          target\=\"_blank\"\>[a-z 0-9\.\:]*\<
 jakie ciekawe pluginy z testusa? ->                                                       `Python plugin`, `Text finder`
 """
+"""HTML publisher"""
+#mozna zapisywac pliki w pamieci Jenkinsa (a artefakty tego nie robią?)
 
 
 """###################################
