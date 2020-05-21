@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'snippets.apps.SnippetsConfig',
     'polls.apps.PollsConfig',
+    'hostimage.apps.HostimageConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
