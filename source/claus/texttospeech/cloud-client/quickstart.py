@@ -29,7 +29,8 @@ def run_quickstart():
         https://www.w3.org/TR/speech-synthesis/
     """
     import os
-    os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = rf"C:\Users\Lenovo\Desktop\PROJECTS\PROGRAMMING\top_proper\sth-knowledge\source\claus\My Project 50657-cb19afa7f888.json"
+    # os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = rf"C:\Users\Lenovo\Desktop\PROJECTS\PROGRAMMING\top_proper\sth-knowledge\source\claus\My Project 50657-cb19afa7f888.json"
+    os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = rf"C:\Users\Lenovo\Desktop\PROJECTS\PROGRAMMING\top_proper\_auth\nataly_auth.json"
 
     from google.cloud import texttospeech
 
