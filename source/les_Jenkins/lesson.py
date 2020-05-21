@@ -34,12 +34,22 @@ Czemu lepsze?->
 2. stage ->         widac na jakim etapie wywala sie pipeline (np. na kompilacji, albo na jakichs specyficznych testach)
 3. node -> 
 """
+
 # TODO node, master, slave - tu sie skoncyzl tutorial
 
 # TODO moze dodac pythonpath juz gdzies w Jenkinsie
 
 # TODO %PYTHON% %FAKE_COMPILER% src/some_module.py target/
 #  dodaj notke o tzm, jak w roznych konsolkach wpisuje sie sciezki
+
+"""###################################
+DISTRIBUTED
+###################################"""
+"""stash/unstash"""
+"""
+co robi? ->                                                                            transferuje pliki miedzy node'ami
+"""
+
 
 """###################################
 Groovy
