@@ -14,6 +14,7 @@ values = [pattern.search(lines).group(1) for pattern in patterns]
 keys = ["aws_access_key_id", "aws_secret_access_key"]
 auth = dict(zip(keys, values))
 
+# TODO chyba zgubilem argument z tokenem"
 polly_client = boto3.Session(**auth, region_name='us-west-2').client('polly')
 
 text = f'<speak><prosody rate="70%">{input_}</prosody></speak>'
