@@ -1,6 +1,7 @@
 from sklearn.linear_model import LinearRegression
 import pandas as pd
 import os
+from yellowbrick.regressor import ResidualsPlot
 
 def linreg_wrapper(df, output_column):
     X = df.iloc[:, :-1]
@@ -33,3 +34,16 @@ exp_calories = Experiment(df_calories, "calories")
 exp_density_big = Experiment(df_density_big, "bone density", "weight")
 exp_density_small = Experiment(df_density_small, "bone density", "years")
 
+# TODO Resolve FutureWarning
+
+visualizer = ResidualsPlot(exp_calories.reg_with)
+df = exp_calories.df_with
+output_column = "calories"
+X = df.iloc[:, :-1]
+y = df[output_column]
+visualizer.score(X, y)
+visualizer.show()
+
+assert "[3.84990315 8.92499051 2.19968337] 250.9495035007924" == repr(exp_calories)
+assert """[0.58707936 0.83484872] 2.8340167340040523\n[0.18930451] 90.69592806454129""" == repr(exp_density_big)
+assert """[-0.54460774  0.7615358   0.93237663] 4.079731215362401\n[0.5649755  0.76466156] 7.673955643254104""" == repr(exp_density_small)
