@@ -24,8 +24,10 @@ def get_patients_for_1_day(prob, average_time_in_minutes):
 
 def plot(cumulation):
     global CONSIDERED_TIME_IN_MINUTES
-    x = list(range(CONSIDERED_TIME_IN_MINUTES))
-    y = cumulation.value[:CONSIDERED_TIME_IN_MINUTES]
+    # x = list(range(CONSIDERED_TIME_IN_MINUTES))
+    # y = cumulation.value[:CONSIDERED_TIME_IN_MINUTES]
+    y = cumulation.value
+    x = list(range(len(y)))
     plt.plot(x, y, label=cumulation.get_label())
     plt.legend(loc='best')
 
@@ -54,6 +56,7 @@ class Cumulation:
         self.value = [0] * (2 * CONSIDERED_TIME_IN_MINUTES + 3)  # viruses on each minute
         some_patients = get_patients_for_1_day(prob, average_time_in_minutes)
         all_contrib(some_patients, self.value, average_time_in_minutes)
+        self.value = self.value[:CONSIDERED_TIME_IN_MINUTES]
 
     def get_label(self):
         return f"{self.prob} {self.average_time_in_minutes}"
@@ -67,7 +70,7 @@ class TenDayCumulation:
 
         self.value = []
         for i in range(10):
-            self.value += Cumulation(prob, average_time_in_minutes)
+            self.value += Cumulation(prob, average_time_in_minutes).value
 
 
     def get_label(self):
@@ -86,10 +89,19 @@ def get_1day_cumulation(prob, average_time_in_minutes):
 # TODO 10 dni zamiast jednego
      # TODO ogranicz value na koniec obliczania
      # TODO plot robi w zaleznosc od dlugosci
-cum1 = Cumulation(0.10, 10)
-cum2 = Cumulation(0.02, 10)
+# cum1 = Cumulation(0.10, 10)
+# cum2 = Cumulation(0.02, 10)
+# plot(cum1)
+# plot(cum2)
+
+cum1 = TenDayCumulation(0.10, 10)
+cum2 = TenDayCumulation(0.02, 10)
+cum3 = TenDayCumulation(0.10, 60)
+cum4 = TenDayCumulation(0.02, 60)
 plot(cum1)
 plot(cum2)
+plot(cum3)
+plot(cum4)
 
 # NOTE sprawdzamy, czy rozklady sa dobrze liczone
 # prob = 0.20
