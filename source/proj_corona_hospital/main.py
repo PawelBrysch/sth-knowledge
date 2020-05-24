@@ -22,18 +22,13 @@ def get_patients_for_1_day(prob, average_time_in_minutes):
     number_of_admitted_patients = math.ceil(MAXIMUM_NUMBER_OF_PATIENTS / average_time_in_minutes)
     return list(all_patients)[:number_of_admitted_patients]
 
-def plot(cumulation_list):
-    global CONSIDERED_TIME_IN_MINUTES
-    x = list(range(CONSIDERED_TIME_IN_MINUTES))
-    y = cumulation_list[:CONSIDERED_TIME_IN_MINUTES]
-    plt.plot(x, y)
-
-def plot2(cumulation):
+def plot(cumulation):
     global CONSIDERED_TIME_IN_MINUTES
     x = list(range(CONSIDERED_TIME_IN_MINUTES))
     y = cumulation.value[:CONSIDERED_TIME_IN_MINUTES]
     plt.plot(x, y, label=cumulation.get_label())
     plt.legend(loc='best')
+
 
 def batch_contrib(absolute_start_time, cumulation_list):
     global CONSIDERED_TIME_IN_MINUTES, NUMBER_AFTER_MINUTES
@@ -63,6 +58,21 @@ class Cumulation:
     def get_label(self):
         return f"{self.prob} {self.average_time_in_minutes}"
 
+
+class TenDayCumulation:
+    def __init__(self, prob, average_time_in_minutes):
+        global CONSIDERED_TIME_IN_MINUTES
+        self.prob = prob
+        self.average_time_in_minutes = average_time_in_minutes
+
+        self.value = []
+        for i in range(10):
+            self.value += Cumulation(prob, average_time_in_minutes)
+
+
+    def get_label(self):
+        return f"{self.prob} {self.average_time_in_minutes}"
+
 def get_1day_cumulation(prob, average_time_in_minutes):
     global CONSIDERED_TIME_IN_MINUTES
     cumulation = [0] * (2 * CONSIDERED_TIME_IN_MINUTES + 3)  # viruses on each minute
@@ -71,20 +81,21 @@ def get_1day_cumulation(prob, average_time_in_minutes):
     return cumulation
 
 
-# cum1 = get_1day_cumulation(0.10, 10)
-# cum2 = get_1day_cumulation(0.02, 10)
-# plot(cum1)
-# plot(cum2)
 
-# TODO prawdziwy prob
+
 # TODO 10 dni zamiast jednego
-
+     # TODO ogranicz value na koniec obliczania
+     # TODO plot robi w zaleznosc od dlugosci
 cum1 = Cumulation(0.10, 10)
 cum2 = Cumulation(0.02, 10)
-plot2(cum1)
-plot2(cum2)
+plot(cum1)
+plot(cum2)
 
-
-# plot(CUMULATION)
-
-
+# NOTE sprawdzamy, czy rozklady sa dobrze liczone
+# prob = 0.20
+# real_probs = []
+# for i in range(100):
+#     some_res = list(np.random.binomial(n=1, p=prob, size=MAXIMUM_NUMBER_OF_PATIENTS))
+#     freq = some_res.count(1)
+#     real_probs.append(freq/MAXIMUM_NUMBER_OF_PATIENTS)
+# avg_prob = sum(real_probs) / len(real_probs)
