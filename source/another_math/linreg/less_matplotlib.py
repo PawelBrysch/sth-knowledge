@@ -1,7 +1,7 @@
 """####################################
 HISTOGRAM
 ####################################"""
-# from matplotlib.pyplot import hist
+from matplotlib.pyplot import hist
 # import numpy as np
 #
 # np.random.seed(19680801)
