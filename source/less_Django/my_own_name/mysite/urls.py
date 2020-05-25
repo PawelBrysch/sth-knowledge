@@ -16,9 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 
+from rest_framework_swagger.views import get_swagger_view
+
+schema_view = get_swagger_view(title='My own delicious  API')
+
 urlpatterns = [
-    path('', include('snippets.urls')),
+    path('snippets/', include('snippets.urls')),
     path('polls/', include('polls.urls')),
     path('hostimage/', include('hostimage.urls')),
     path('admin/', admin.site.urls),
+    path('', schema_view)
 ]

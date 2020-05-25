@@ -4,12 +4,36 @@ from django.http import Http404
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
+import coreapi
+from rest_framework.schemas import AutoSchema
+
+# TODO wykminic, jakie puty wchodza, a jakie nie
+# NOTE do swaggera
+class MySchema(AutoSchema):
+    def get_manual_fields(self, path, method):
+        extra_fields = []
+        # if method.lower() == in ["post", "put"]:
+        if method.lower() in ["post", "put"]:
+            extra_fields = [
+                # coreapi.Field(name='desc'),
+                # coreapi.Field(name='id', type="integer"),
+                coreapi.Field(name='title'),
+                coreapi.Field(name='code'),
+                coreapi.Field(name='linenos'),
+                coreapi.Field(name='language'),
+                coreapi.Field(name='style'),
+            ]
+        manual_fields = super().get_manual_fields(path, method)
+        return manual_fields + extra_fields
 
 
 class SnippetList(APIView):
     """
     List all snippets, or create a new snippet.
     """
+    # NOTE dla swaggera
+    schema = MySchema()
+
     def get(self, request, format=None):
         snippets = Snippet.objects.all()
         serializer = SnippetSerializer(snippets, many=True)
@@ -27,6 +51,9 @@ class SnippetDetail(APIView):
     """
     Retrieve, update or delete a snippet instance.
     """
+    # NOTE dla swaggera
+    schema = MySchema()
+
     def get_object(self, pk):
         try:
             return Snippet.objects.get(pk=pk)

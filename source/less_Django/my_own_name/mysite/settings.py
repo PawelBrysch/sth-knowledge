@@ -28,17 +28,22 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '^ag8)ka-xe7bb*l82u^en2r6$sf29ik3mkm23dy&jp30=n$*a)'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
 
+DEBUG = True
 ALLOWED_HOSTS = []
 
+# DEBUG = False
+# ALLOWED_HOSTS = ['*']
 
 # Application definition
+
+REST_FRAMEWORK = { 'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema' }
 
 # NOTE necessary to run db
 INSTALLED_APPS = [
     # NOTE to use drf
     'rest_framework',
+    'rest_framework_swagger',
     'snippets.apps.SnippetsConfig',
     'polls.apps.PollsConfig',
     'hostimage.apps.HostimageConfig',

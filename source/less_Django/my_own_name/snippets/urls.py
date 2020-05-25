@@ -8,8 +8,12 @@ from . import views
 # ]
 
 urlpatterns = [
-    path('snippets/', views.SnippetList.as_view()),
-    path('snippets/<int:pk>/', views.SnippetDetail.as_view()),
+    path('', views.SnippetList.as_view()),
+    path('<int:pk>/', views.SnippetDetail.as_view()),
 ]
 
-urlpatterns = format_suffix_patterns(urlpatterns)
+# NOTE
+"""
+czy jak wylaczymy, to juz nie ma jsonów? ->                                                                NIE, dalej są
+"""
+# urlpatterns = format_suffix_patterns(urlpatterns)
