@@ -49,10 +49,11 @@ exp_density_small = ExperimentIncludedExcluded(df_density_small, "bone density",
 # TODO zrob z tego testy
      # TODO porownaj zapisy obrazu (!!!!!!! już prawie zrobione)
 import matplotlib.pyplot as plt
-some_png = os.path.abspath("some_png.png")
-
-retval_out = residuals_against_fitted(exp_calories.model_included)
-plt.close(retval_out.fig)
+# some_png = os.path.abspath("some_png.png")
+#
+# retval_out = residuals_against_fitted(exp_calories.model_included)
+# # plt.close(retval_out.fig)
+#
 # retval_out.fig.savefig(some_png) # TODO to !!!!
 
 # TODO dodaj alternatywny
@@ -61,7 +62,7 @@ plt.close(retval_out.fig)
 """###################################
 tests
 ###################################"""
-retval_out = residuals_against_fitted(exp_calories.model_included)
+# retval_out = residuals_against_fitted(exp_calories.model_included)
 
 
 assert "[3.84990315 8.92499051 2.19968337] 250.9495035007924" == repr(exp_calories)

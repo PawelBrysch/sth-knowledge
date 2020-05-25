@@ -1,6 +1,8 @@
 from math_linreg2.main import ExperimentIncludedExcluded, ModelWrapper, residuals_against_fitted
+from unittest.mock import patch
 import pandas as pd
 import matplotlib.pyplot as plt
+import filecmp
 import os
 
 
@@ -21,14 +23,21 @@ class TestName:
         assert """[0.58707936 0.83484872] 2.8340167340040523\n[0.18930451] 90.69592806454129""" == repr(exp_density_big)
         assert """[-0.54460774  0.7615358   0.93237663] 4.079731215362401\n[0.5649755  0.76466156] 7.673955643254104""" == repr(exp_density_small)
 
-    def test_visualise(self):
+   # TODO wpisac gdzie zmagania z tad
+
+    @patch("yellowbrick.base.plt.show")
+    def test_visualise(self, mock_show):
         df_calories = pd.read_excel(io=os.path.abspath("data/calories.xlsx"), header=0, usecols="C:F", nrows=80)
         exp_calories = ExperimentIncludedExcluded(df_calories, "calories")
 
         output_path = os.path.abspath("temp/received.png")
         expected_path = os.path.abspath("data/expected.png")
+        try:
+            os.remove(output_path)
+        except:
+            pass
 
         retval_out = residuals_against_fitted(exp_calories.model_included)
-        plt.close(retval_out.fig)
-        retval_out.fig.savefig(expected_path)
+        retval_out.fig.savefig(output_path)
+        assert filecmp.cmp(expected_path, output_path)
 
