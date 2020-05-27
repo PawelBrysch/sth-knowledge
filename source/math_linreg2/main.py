@@ -1,4 +1,5 @@
 from sklearn.linear_model import LinearRegression
+import statsmodels.api as sm
 import pandas as pd
 import os
 from yellowbrick.regressor import ResidualsPlot
@@ -15,7 +16,8 @@ class ModelWrapper:
     def __init__(self, df, output_column):
         self.X = df.iloc[:, :-1]
         self.y = df[output_column]
-        self.value = LinearRegression().fit(self.X, self.y)
+        self.value_sklearn = LinearRegression().fit(self.X, self.y)
+        self.value_statsmodels = sm.OLS(self.y, sm.add_constant(self.X)).fit()
 
 
 class ExperimentIncludedExcluded:
@@ -29,7 +31,7 @@ class ExperimentIncludedExcluded:
             self.model_excluded = ModelWrapper(self.df_excluded, output_column)
 
     def __repr__(self):
-        regs = [model.value for model in [self.model_included, self.model_excluded] if model is not None]
+        regs = [model.value_sklearn for model in [self.model_included, self.model_excluded] if model is not None]
         reprs = [f"{reg.coef_} {reg.intercept_}" for reg in regs]
         return "\n".join(reprs)
 
@@ -43,28 +45,3 @@ exp_calories = ExperimentIncludedExcluded(df_calories, "calories")
 exp_density_big = ExperimentIncludedExcluded(df_density_big, "bone density", "weight")
 exp_density_small = ExperimentIncludedExcluded(df_density_small, "bone density", "years")
 
-
-
-
-# TODO zrob z tego testy
-     # TODO porownaj zapisy obrazu (!!!!!!! już prawie zrobione)
-import matplotlib.pyplot as plt
-# some_png = os.path.abspath("some_png.png")
-#
-# retval_out = residuals_against_fitted(exp_calories.model_included)
-# # plt.close(retval_out.fig)
-#
-# retval_out.fig.savefig(some_png) # TODO to !!!!
-
-# TODO dodaj alternatywny
-    # https://stackoverflow.com/questions/27928275/find-p-value-significance-in-scikit-learn-linearregression
-# TODO porownaj ze swoja summary
-"""###################################
-tests
-###################################"""
-# retval_out = residuals_against_fitted(exp_calories.model_included)
-
-
-assert "[3.84990315 8.92499051 2.19968337] 250.9495035007924" == repr(exp_calories)
-assert """[0.58707936 0.83484872] 2.8340167340040523\n[0.18930451] 90.69592806454129""" == repr(exp_density_big)
-assert """[-0.54460774  0.7615358   0.93237663] 4.079731215362401\n[0.5649755  0.76466156] 7.673955643254104""" == repr(exp_density_small)
