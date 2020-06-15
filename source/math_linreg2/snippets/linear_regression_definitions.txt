@@ -1,0 +1,20 @@
+Linear regression model
+
+$ model:= \quad  y=X\beta + \epsilon$
+
+$ y \in cRV^N$ $\quad$ $ X \in cRV^{N \times K}$ $\quad$ $ \epsilon \in cRV^N$ $\quad$ 
+$ \beta \in \mathbb{R}^K$
+
+$ \widehat{\beta} = MLE\_estimator(model)$, $\quad \widehat{\beta} \in cRV^K$
+
+$ S = (X^TX)^{-1}$
+
+$\widehat{\sigma^2}  = 
+\frac{1}{N-K} \sum_{i=1}^N (y_i-x_i\widehat{\beta})^2$
+$\quad$ (adjusted sample variance)
+
+ASSUMPTIONS:
+
+1. $ \epsilon \sim $ MV-N($0, \sigma^2I$)
+
+

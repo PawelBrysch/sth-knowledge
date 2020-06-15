@@ -45,3 +45,4 @@ exp_calories = ExperimentIncludedExcluded(df_calories, "calories")
 exp_density_big = ExperimentIncludedExcluded(df_density_big, "bone density", "weight")
 exp_density_small = ExperimentIncludedExcluded(df_density_small, "bone density", "years")
 
+exp_density_big.model_excluded.value_statsmodels.summary()
