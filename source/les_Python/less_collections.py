@@ -37,6 +37,28 @@
  |    \\   |   |          |   
  |_____/ __|__ |_____     |   
 ###################################################"""
+# TODO na co to komu? (deque)
+"""###########################
+DEQUE
+##########################"""
+# from collections import namedtuple
+#
+#
+# Animal = namedtuple('Animal', 'name age type')
+# perry = Animal(name="perry", age=31, type="cat")
+# print(perry)
+#
+# '''
+# Minus ->                                                                                                       immutable
+# '''
+#
+# perry = perry._asdict()
+# print(perry)
+#
+# '''
+# Namedtuple lepsze od slownika, bo: (2)                                                                        1) szybsze                                                                                           2) latwiejszy dostep do pola?
+# '''
+
 ''' list of tuples jako rozbudowany slownik'''
 # tuple1 = ("pawel",25,"M")
 # tuple2 = ("maks", 22, "K")
@@ -58,6 +80,20 @@
 # bdict = {"szla":7, "baba":8, "po":9, "lodzie":10}
 # adict.update(bdict)
 # print(adict)
+
+
+''' kwestia rozpokowywania dictow - cdn...'''
+# def func_(arg1, arg2):
+#     print(arg1+arg2)
+#
+#
+# # func_(arg1=2, arg2=3, arg3=4)
+#
+# dict1 = {"arg1":2, "arg2":3}
+# dict2 = {"arg1":2, "arg2":3}
+#
+# # func_(dict1)
+# func_(**dict2)
 
 
 """###################################################
@@ -88,3 +124,35 @@
 # stack.pop()
 # stack.append(7)
 # print(stack)
+
+"""http://www.network-science.de/ascii/         ->slant"""
+"""#################################################
+    _______   ____  ____  ___
+   / ____/ | / / / / /  |/  /
+  / __/ /  |/ / / / / /|_/ / 
+ / /___/ /|  / /_/ / /  / /  
+/_____/_/ |_/\____/_/  /_/   
+#################################################"""
+#TODO czy enumy maja jakies korzysci?
+
+# from enum import Enum as _Enum
+#
+#
+# class ScopeLevels(_Enum):
+#     """
+#     Class for helping with typo mistakes.
+#
+#     """
+#     EVERYTHING = "everything"
+#     CHILDREN_ONLY = "children_only"
+#     # NOTHING = "nothing"
+#
+#
+# def check_is_arg(arg):
+#     return not isinstance(arg, ScopeLevels) and arg is not None
+#
+# print(check_is_arg(None))
+# print(check_is_arg(ScopeLevels.EVERYTHING))
+# print(check_is_arg(ScopeLevels.CHILDREN_ONLY))
+# print(check_is_arg("everything"))
+# print(check_is_arg("children_only"))

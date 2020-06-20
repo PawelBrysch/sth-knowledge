@@ -19,29 +19,43 @@ Basics
 """##########################################
 Custom metaclass
 ##########################################"""
-def do_whatever_with_class_metaattributes(arg1, arg2, arg3):
-    # do whatever
-    return arg1, arg2, arg3
+# def do_whatever_with_class_metaattributes(arg1, arg2, arg3):
+#     # do whatever
+#     return arg1, arg2, arg3
+#
+# def do_whatever_during_definition():
+#     print("It is executed during definition, lol")
+#
+# def some_metaclass(future_class_name, future_class_parents, future_class_attr):
+#     # FEATURE 1
+#     future_class_name, future_class_parents, future_class_attr = do_whatever_with_class_metaattributes(
+#         future_class_name, future_class_parents, future_class_attr
+#     )
+#
+#     # FEATURE 2
+#     do_whatever_during_definition()
+#
+#     return type(future_class_name, future_class_parents, future_class_attr)
+#
+#
+# class SomeClass(metaclass=some_metaclass):
+#     def __init__(self):
+#         self.attr1 = "some_val"
 
-def do_whatever_during_definition():
-    print("It is executed during definition, lol")
 
-def some_metaclass(future_class_name, future_class_parents, future_class_attr):
-    # FEATURE 1
-    future_class_name, future_class_parents, future_class_attr = do_whatever_with_class_metaattributes(
-        future_class_name, future_class_parents, future_class_attr
-    )
-
-    # FEATURE 2
-    do_whatever_during_definition()
-
-    return type(future_class_name, future_class_parents, future_class_attr)
-
-
-class SomeClass(metaclass=some_metaclass):
-    def __init__(self):
-        self.attr1 = "some_val"
-
+"""##########################################
+DURING DEFINITION
+##########################################"""
+# def call_clsinit(*args, **kwargs):
+#     cls = type(*args, **kwargs)
+#     cls._cls_init()
+#     return cls
+#
+#
+# class MyClass(metaclass=call_clsinit):
+#     @classmethod
+#     def _cls_init(cls):
+#         print("Running during definition")
 
 
 ''' klasa metaclass'''
