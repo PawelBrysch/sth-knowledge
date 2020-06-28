@@ -1,3 +1,4 @@
+Jakas mala zmiana
 # Dlaczego chcesz dzisiaj wykonać swoje nawyki.
 By lepiej wyglądać i bardziej ryzykować.
 # A co z niewaleniem konia?
