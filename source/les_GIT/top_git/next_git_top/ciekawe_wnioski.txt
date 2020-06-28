@@ -1,0 +1,15 @@
+@@@ ad.1
+
+# Jestesmy w repo2
+$git checkout branch1
+$git checkout <sha(bcommit_2)>
+&git checkout -b intermediate_branch
+$git log -100
+
+# Okazalo sie, ze nie widzi commitow "commit_1, commit_2"
+# Jak gdyby idac w tyl sciezki naprawde sie rozdzielaly
+
+@@@ ad.2
+# Robiac merge przesuwa sie TYLKO ta galaz, na ktorej bylismy.
+# Zatem, jesli bylismy na developie (mowa o mergu przed pushem), to był to błąd, jesli z niego zmergowalismy. 
+# Develop ma zostac tam, gdzie był.
