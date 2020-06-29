@@ -1,4 +1,4 @@
-#!c:\users\devoted_w\documents\snippets_tops\sth-knowledge\venv\scripts\python.exe
+#!c:\users\lenovo\desktop\projects\programming\top_proper\sth-knowledge\venv\scripts\python.exe
 # EASY-INSTALL-ENTRY-SCRIPT: 'pylatexenc==2.5','console_scripts','latexwalker'
 __requires__ = 'pylatexenc==2.5'
 import re
