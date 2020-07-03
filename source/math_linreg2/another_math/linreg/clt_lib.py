@@ -78,15 +78,23 @@ custom_pdf = CustomPDF(0.1, 0.16908)
 """ integral """
 # integral = integrate.quad(lambda x: custom_pdf.pdf(x), 0, custom_pdf.max_)[0]
 
+
+# TODO przeksztalc to do funkcji i wywal
 """ random variate """
-# class CustomRV(rv_continuous):
-#     def __init__(self, *args, **kwargs):
-#         rv_continuous.__init__(self, *args, **kwargs)
-#         self.custom_pdf = CustomPDF(0.1, 0.16908)
-#
-#     def _pdf(self, x):
-#         return self.custom_pdf.pdf(x)
-#
-#
-# custom_rv = CustomRV(a=custom_pdf.min_, b=custom_pdf.max_)
-# custom_rv.rvs()
+class CustomRV(rv_continuous):
+    def __init__(self, *args, **kwargs):
+        rv_continuous.__init__(self, *args, **kwargs)
+        self.custom_pdf = CustomPDF(0.1, 0.16908)
+
+    def _pdf(self, x):
+        return self.custom_pdf.pdf(x)
+
+
+custom_rv = CustomRV(a=custom_pdf.min_, b=custom_pdf.max_)
+res = custom_rv.rvs()
+
+
+res2 = [custom_rv.rvs() for i in range(100)]
+from matplotlib.pyplot import hist
+
+hist(res2)

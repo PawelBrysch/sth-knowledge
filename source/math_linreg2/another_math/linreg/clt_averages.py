@@ -1,5 +1,6 @@
 import json
 from matplotlib.pyplot import hist
+import pathlib as pl
 
 
 def chunks(lst, n):
@@ -7,8 +8,7 @@ def chunks(lst, n):
         yield lst[i:i + n]
 
 
-with open(
-        rf"C:\Users\Lenovo\Desktop\PROJECTS\PROGRAMMING\top_proper\sth-knowledge\source\another_math\linreg\output.json") as json_file:
+with open(pl.Path.cwd().joinpath("data").joinpath("sample_100k_customdistro.json")) as json_file:
     imported_data = json.load(json_file)
 
 population = sum(imported_data['data'], [])
