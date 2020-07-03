@@ -6,12 +6,24 @@ import json
 from pygame import mixer
 from mutagen.mp3 import MP3
 from tkinter import Tk
+from pathlib import Path
+import os
+
 
 with open("config.json") as infile:
     CONFIG = json.load(infile)
 
 
 def make_sound_from_text(path_to_auth, prosody_rate):
+    def get_path_to_output():
+        path_to_records = Path(os.environ["CLAUS"]).joinpath("db").joinpath("niem_60").joinpath("wav")
+        max_record_number = max(
+            [int(path.stem) for path in path_to_records.glob('**/*') if path.is_file()]
+        )
+        new_record_filename = f"{max_record_number + 1}.mp3"
+        new_record_path = Path(os.path.realpath(__file__)).parent.joinpath(new_record_filename)
+        return new_record_path
+
     def get_clipboard_value():
         return Tk().clipboard_get()
 
@@ -32,9 +44,12 @@ def make_sound_from_text(path_to_auth, prosody_rate):
     response = polly_client.synthesize_speech(
         VoiceId='Hans', OutputFormat='mp3', Text=text, TextType='ssml'
     )
-    file = open(CONFIG["OUTPUT_FILENAME"], 'wb')
+    new_record_path = get_path_to_output()
+    # file = open(CONFIG["OUTPUT_FILENAME"], 'wb')
+    file = open(new_record_path, 'wb')
     file.write(response['AudioStream'].read())
     file.close()
+    return new_record_path
 
 
 class MixerWrapper:
@@ -62,8 +77,37 @@ if __name__ == "__main__":
     PATH_TO_AUTH = rf"C:\Users\Lenovo\Desktop\PROJECTS\PROGRAMMING\top_proper\_auth\nataly_aws_auth.csv"
     # PATH_TO_AUTH = CONFIG["PATH_TO_CONFIG"]
 
-    make_sound_from_text(PATH_TO_AUTH, CONFIG["PROSODY_RATE"])
-    player = MixerWrapper(CONFIG["OUTPUT_FILENAME"])
+    new_record_path = make_sound_from_text(PATH_TO_AUTH, CONFIG["PROSODY_RATE"])
+    # player = MixerWrapper(CONFIG["OUTPUT_FILENAME"])
+    player = MixerWrapper(new_record_path)
     player.start_recording()
     player.play()
     player.stop_recording()
+
+# from pathlib import Path
+# import os
+# path_to_records = Path(os.environ["CLAUS"]).joinpath("db").joinpath("niem_60").joinpath("wav")
+# max_record_number = max(
+#     [int(path.stem) for path in path_to_records.glob('**/*') if path.is_file()]
+# )
+# new_record_filename = f"{max_record_number + 1}.wav"
+# new_record_path = Path(os.path.realpath(__file__)).parent.joinpath(new_record_filename)
+
+
+# PATH_TO_AUTH = rf"C:\Users\Lenovo\Desktop\PROJECTS\PROGRAMMING\top_proper\_auth\nataly_aws_auth.csv"
+# #     # PATH_TO_AUTH = CONFIG["PATH_TO_CONFIG"]
+# #
+# new_record_path = make_sound_from_text(PATH_TO_AUTH, CONFIG["PROSODY_RATE"])
+#
+# from os import path
+# from pydub import AudioSegment
+#
+# # files
+# src = new_record_path
+# dst = src.with_suffix(".wav")
+#
+# # convert wav to mp3
+# sound = AudioSegment.from_mp3(src)
+# sound.export(dst, format="wav")
+# TODO
+# https://stackoverflow.com/questions/22284461/pydub-windowserror-error-2-the-system-can-not-find-the-file-specified - to rozwiaze problem z niedzialajacym ffmpegiem
