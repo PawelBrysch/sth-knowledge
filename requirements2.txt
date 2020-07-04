@@ -107,3 +107,6 @@ wcwidth==0.1.9
 wheel==0.34.2
 wrapt==1.12.1
 wxPython==4.1.0
+yellowbrick==1.1
+xlrd==1.2.0
+

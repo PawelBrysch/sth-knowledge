@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import pandas as pd
-# TODO opis
 
+# TODO opis
 def conditional_probability(dice, sample):
     if max(sample) > dice:
         return 0

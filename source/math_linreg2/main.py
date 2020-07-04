@@ -4,7 +4,7 @@ import pandas as pd
 import os
 from yellowbrick.regressor import ResidualsPlot
 
-
+# TODO znajdz .score() dla regresji liniowej
 
 def residuals_against_fitted(model):
     visualizer = ResidualsPlot(model.value)

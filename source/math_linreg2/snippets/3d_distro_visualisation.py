@@ -1,12 +1,13 @@
 import matplotlib.pyplot as plt
 from matplotlib.ticker import MaxNLocator
 import numpy as np
-from math_linreg2.logreg.enhance_fromfunction import adjust_to_fromfunction
+from math_linreg2.less_numpy.lib_3d_visu import adjust_to_fromfunction
 
-
+# model parameters
 PARAM_X = 0.3
 PARAM_Y = 0.5
 
+# from logistic regression
 def z_func(x_arg, y_arg):
  return 1 / (1 + np.exp(
   PARAM_X * x_arg + PARAM_Y * y_arg
