@@ -4,8 +4,8 @@ import numpy as np
 import scipy.integrate as integrate
 from math import sqrt
 from matplotlib.pyplot import scatter
-from scipy.stats import rv_continuous
-
+from matplotlib.pyplot import hist
+from math_linreg2.less_scipy.main import RandomObservationGenerator
 
 def create_framework_matrix(height, first_line_length):
     h = height
@@ -66,35 +66,23 @@ class CustomPDF:
 
 custom_pdf = CustomPDF(0.1, 0.16908)
 
-""" framework """
+""" boundaries """
 # scatter(custom_pdf.framework_matrix[:, 0], custom_pdf.framework_matrix[:, 1])
 
-""" distribution """
+""" sketch of distribution """
 # X_VALUES = [random.randint(0, 10 * int(custom_pdf.max_)) / 10 for i in range(100000)]
 # Y_VALUES = custom_pdf.function_(X_VALUES)
 # data = np.array([X_VALUES, Y_VALUES]).T
 # scatter(data[:, 0], data[:, 1])
 
-""" integral """
+""" integral == 1"""
 # integral = integrate.quad(lambda x: custom_pdf.pdf(x), 0, custom_pdf.max_)[0]
 
-
-# TODO przeksztalc to do funkcji i wywal
-""" random variate """
-class CustomRV(rv_continuous):
-    def __init__(self, *args, **kwargs):
-        rv_continuous.__init__(self, *args, **kwargs)
-        self.custom_pdf = CustomPDF(0.1, 0.16908)
-
-    def _pdf(self, x):
-        return self.custom_pdf.pdf(x)
+""" random sample generation """
+# helper = CustomPDF(0.1, 0.16908)
+# some_gen = RandomObservationGenerator(helper.pdf, helper.min_, helper.max_)
+# some_list = [next(some_gen) for i in range(500)]
+# hist(some_list, bins=20)
 
 
-custom_rv = CustomRV(a=custom_pdf.min_, b=custom_pdf.max_)
-res = custom_rv.rvs()
 
-
-res2 = [custom_rv.rvs() for i in range(100)]
-from matplotlib.pyplot import hist
-
-hist(res2)
