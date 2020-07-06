@@ -1,17 +1,13 @@
 import boto3
 import re
-import time
-import pyautogui
-import json
-from pygame import mixer
-from mutagen.mp3 import MP3
 from tkinter import Tk
 from pathlib import Path
 import os
+import simpleaudio as sa
+import pyperclip
 
-
-with open("config.json") as infile:
-    CONFIG = json.load(infile)
+PATH_TO_AUTH = rf"C:\Users\Lenovo\Desktop\PROJECTS\PROGRAMMING\top_proper\_auth\nataly_aws_auth.csv"
+PROSODY_RATE = 70
 
 
 def make_sound_from_text(path_to_auth, prosody_rate):
@@ -45,69 +41,32 @@ def make_sound_from_text(path_to_auth, prosody_rate):
         VoiceId='Hans', OutputFormat='mp3', Text=text, TextType='ssml'
     )
     new_record_path = get_path_to_output()
-    # file = open(CONFIG["OUTPUT_FILENAME"], 'wb')
     file = open(new_record_path, 'wb')
     file.write(response['AudioStream'].read())
     file.close()
     return new_record_path
 
 
-class MixerWrapper:
-    def __init__(self, path_to_source_mp3):
-        mixer.init()
-        self.path_to_source_mp3 = path_to_source_mp3
-        self.length = MP3(path_to_source_mp3).info.length
+def convert_mp3_to_wav(src, dst, cwd):
+    path_to_fffmpeg = cwd.joinpath("ffmpeg").joinpath("bin").joinpath("ffmpeg.exe")
+    os.system(f"{path_to_fffmpeg} -i {src} -acodec pcm_s16le -ac 1 -ar 16000 {dst}")
+    return dst
 
-    def start_recording(self):
-        pyautogui.moveTo(CONFIG["POSITION_Y"], CONFIG["POSITION_X"])
-        time.sleep(0.1)
-        pyautogui.click()
 
-    def play(self):
-        mixer.music.load(self.path_to_source_mp3)
-        mixer.music.play()
+def play_mp3(src):
+    wave_obj = sa.WaveObject.from_wave_file(src)
+    play_obj = wave_obj.play()
+    play_obj.wait_done()
 
-    def stop_recording(self):
-        time.sleep(self.length + 1)
-        pyautogui.click()
-
+def copy_to_clipboard(text):
+    pyperclip.copy(text)
+    pyperclip.paste()
 
 if __name__ == "__main__":
-    # SWITCH HERE
-    PATH_TO_AUTH = rf"C:\Users\Lenovo\Desktop\PROJECTS\PROGRAMMING\top_proper\_auth\nataly_aws_auth.csv"
-    # PATH_TO_AUTH = CONFIG["PATH_TO_CONFIG"]
-
-    new_record_path = make_sound_from_text(PATH_TO_AUTH, CONFIG["PROSODY_RATE"])
-    # player = MixerWrapper(CONFIG["OUTPUT_FILENAME"])
-    player = MixerWrapper(new_record_path)
-    player.start_recording()
-    player.play()
-    player.stop_recording()
-
-# from pathlib import Path
-# import os
-# path_to_records = Path(os.environ["CLAUS"]).joinpath("db").joinpath("niem_60").joinpath("wav")
-# max_record_number = max(
-#     [int(path.stem) for path in path_to_records.glob('**/*') if path.is_file()]
-# )
-# new_record_filename = f"{max_record_number + 1}.wav"
-# new_record_path = Path(os.path.realpath(__file__)).parent.joinpath(new_record_filename)
+    # TODO Usun
+    path_to_mp3 = make_sound_from_text(PATH_TO_AUTH, PROSODY_RATE)
+    path_to_wav = convert_mp3_to_wav(path_to_mp3, path_to_mp3.with_suffix(".wav"), path_to_mp3.parent)
+    play_mp3(str(path_to_wav))
+    copy_to_clipboard(str(path_to_wav))
 
 
-# PATH_TO_AUTH = rf"C:\Users\Lenovo\Desktop\PROJECTS\PROGRAMMING\top_proper\_auth\nataly_aws_auth.csv"
-# #     # PATH_TO_AUTH = CONFIG["PATH_TO_CONFIG"]
-# #
-# new_record_path = make_sound_from_text(PATH_TO_AUTH, CONFIG["PROSODY_RATE"])
-#
-# from os import path
-# from pydub import AudioSegment
-#
-# # files
-# src = new_record_path
-# dst = src.with_suffix(".wav")
-#
-# # convert wav to mp3
-# sound = AudioSegment.from_mp3(src)
-# sound.export(dst, format="wav")
-# TODO
-# https://stackoverflow.com/questions/22284461/pydub-windowserror-error-2-the-system-can-not-find-the-file-specified - to rozwiaze problem z niedzialajacym ffmpegiem
