@@ -6,8 +6,10 @@ from yellowbrick.regressor import ResidualsPlot
 
 # TODO znajdz .score() dla regresji liniowej
 
+
+# TODO dodaj jako funkcje
 def residuals_against_fitted(model):
-    visualizer = ResidualsPlot(model.value)
+    visualizer = ResidualsPlot(model.value_sklearn)
     visualizer.score(model.X, model.y)
     visualizer.show()
     return visualizer
@@ -19,7 +21,7 @@ class ModelWrapper:
         self.value_sklearn = LinearRegression().fit(self.X, self.y)
         self.value_statsmodels = sm.OLS(self.y, sm.add_constant(self.X)).fit()
 
-
+# TODO z tego zrob funkcji, ktora generuje następny model
 class ExperimentIncludedExcluded:
     def __init__(self, df, output_column, column_to_exclude=None):
         self.df_included = df
@@ -30,6 +32,7 @@ class ExperimentIncludedExcluded:
             self.df_excluded = df.drop([column_to_exclude], axis="columns")
             self.model_excluded = ModelWrapper(self.df_excluded, output_column)
 
+    # TODO przenies to do wrappera jako compare with
     def __repr__(self):
         regs = [model.value_sklearn for model in [self.model_included, self.model_excluded] if model is not None]
         reprs = [f"{reg.coef_} {reg.intercept_}" for reg in regs]

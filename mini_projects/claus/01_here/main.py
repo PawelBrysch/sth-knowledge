@@ -5,6 +5,7 @@ from pathlib import Path
 import os
 import simpleaudio as sa
 import pyperclip
+import shutil
 
 PATH_TO_AUTH = rf"C:\Users\Lenovo\Desktop\PROJECTS\PROGRAMMING\top_proper\_auth\nataly_aws_auth.csv"
 PROSODY_RATE = 70
@@ -17,7 +18,7 @@ def make_sound_from_text(path_to_auth, prosody_rate):
             [int(path.stem) for path in path_to_records.glob('**/*') if path.is_file()]
         )
         new_record_filename = f"{max_record_number + 1}.mp3"
-        new_record_path = Path(os.path.realpath(__file__)).parent.joinpath(new_record_filename)
+        new_record_path = Path(os.path.realpath(__file__)).parent.joinpath("temp").joinpath(new_record_filename)
         return new_record_path
 
     def get_clipboard_value():
@@ -62,10 +63,17 @@ def copy_to_clipboard(text):
     pyperclip.copy(text)
     pyperclip.paste()
 
+def tidy():
+    cwd = Path(os.path.realpath(__file__)).parent
+    path_to_temp = cwd.joinpath("temp")
+    shutil.rmtree(path_to_temp)
+    path_to_temp.mkdir()
+    return cwd
+
 if __name__ == "__main__":
-    # TODO Usun
+    cwd = tidy()
     path_to_mp3 = make_sound_from_text(PATH_TO_AUTH, PROSODY_RATE)
-    path_to_wav = convert_mp3_to_wav(path_to_mp3, path_to_mp3.with_suffix(".wav"), path_to_mp3.parent)
+    path_to_wav = convert_mp3_to_wav(path_to_mp3, path_to_mp3.with_suffix(".wav"), cwd)
     play_mp3(str(path_to_wav))
     copy_to_clipboard(str(path_to_wav))
 
