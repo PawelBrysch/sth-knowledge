@@ -1,4 +1,4 @@
-from math_linreg2.main import ExperimentIncludedExcluded, ModelWrapper, residuals_against_fitted
+from math_linreg2.main import ExperimentIncludedExcluded, ModelWrapper
 from unittest.mock import patch
 import pandas as pd
 import filecmp
@@ -36,7 +36,7 @@ class TestName:
         except:
             pass
 
-        retval_out = residuals_against_fitted(exp_calories.model_included)
+        retval_out = exp_calories.model_included.residuals_against_fitted()
         retval_out.fig.savefig(output_path)
 
         assert filecmp.cmp(expected_path, output_path)

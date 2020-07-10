@@ -7,26 +7,39 @@ from yellowbrick.regressor import ResidualsPlot
 # TODO znajdz .score() dla regresji liniowej
 
 
-# TODO dodaj jako funkcje
-def residuals_against_fitted(model):
-    visualizer = ResidualsPlot(model.value_sklearn)
-    visualizer.score(model.X, model.y)
-    visualizer.show()
-    return visualizer
-
 class ModelWrapper:
     def __init__(self, df, output_column):
         self.X = df.iloc[:, :-1]
         self.y = df[output_column]
         self.value_sklearn = LinearRegression().fit(self.X, self.y)
         self.value_statsmodels = sm.OLS(self.y, sm.add_constant(self.X)).fit()
+        # Private
+        self._output_column = output_column
+
+    def __repr__(self):
+        return f"{self.value_sklearn.coef_} {self.value_sklearn.intercept_}"
+
+    def residuals_against_fitted(self):
+        visualizer = ResidualsPlot(self.value_sklearn)
+        visualizer.score(self.X, self.y)
+        visualizer.show()
+        return visualizer
+
+    def factory_method(self, column_to_exclude: str):
+        new_model = None
+        # new_df = df.drop([column_to_exclude], axis="columns")
+        new_model = ModelWrapper(new_df, self.output_column)
+        return new_model
+
+
+
 
 # TODO z tego zrob funkcji, ktora generuje następny model
 class ExperimentIncludedExcluded:
+
     def __init__(self, df, output_column, column_to_exclude=None):
         self.df_included = df
         self.model_included = ModelWrapper(self.df_included, output_column)
-
         self.model_excluded = None
         if column_to_exclude is not None:
             self.df_excluded = df.drop([column_to_exclude], axis="columns")
