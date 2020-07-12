@@ -1,7 +1,5 @@
 from sklearn.linear_model import LinearRegression
 import statsmodels.api as sm
-import pandas as pd
-import os
 from yellowbrick.regressor import ResidualsPlot
 
 # TODO znajdz .score() dla regresji liniowej
@@ -41,22 +39,5 @@ class ModelWrapper:
             new_model = ModelWrapper(new_df, model._output_column)
             return new_model
 
-
     def create_similar(self, column_to_exclude: str):
         return ModelWrapper.ModelWrapperFactory.create(self, column_to_exclude)
-
-
-if __name__ == '__main__':
-    df_calories = pd.read_excel(io=os.path.abspath("data/calories.xlsx"), header=0, usecols="C:F", nrows=80)
-    df_density_big = pd.read_excel(io=os.path.abspath("data/confoundOmitted_bigIntercept.xlsx"), header=0,
-                                   usecols="C:E", nrows=80)
-    df_density_small = pd.read_excel(
-        io=os.path.abspath("data/nearlyPerfectlyCorrelatedConfoundOmitted_smallIntercept.xlsx"), header=0,
-        usecols="C:F", nrows=80)
-
-    model_calories = ModelWrapper(df_calories, "calories")
-    model_density_big = ModelWrapper(df_density_big, "bone density")
-    model_density_small = ModelWrapper(df_density_small, "bone density")
-
-    model_density_big_wo_weight = model_density_big.create_similar("weight")
-    model_density_small_wo_years = model_density_small.create_similar("years")

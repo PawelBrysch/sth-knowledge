@@ -1,4 +1,5 @@
-from math_linreg2.main import ModelWrapper
+# from math_linreg2.main import ModelWrapper
+from math_linreg2.less_sklearn.lib import ModelWrapper
 from unittest.mock import patch
 import pandas as pd
 import filecmp
