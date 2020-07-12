@@ -18,9 +18,12 @@ class TestName:
         exp_density_big = ExperimentIncludedExcluded(df_density_big, "bone density", "weight")
         exp_density_small = ExperimentIncludedExcluded(df_density_small, "bone density", "years")
 
-        assert "[3.84990315 8.92499051 2.19968337] 250.9495035007924" == repr(exp_calories)
-        assert """[0.58707936 0.83484872] 2.8340167340040523\n[0.18930451] 90.69592806454129""" == repr(exp_density_big)
-        assert """[-0.54460774  0.7615358   0.93237663] 4.079731215362401\n[0.5649755  0.76466156] 7.673955643254104""" == repr(exp_density_small)
+        res2 = repr(exp_density_big)
+        res3 = repr(exp_density_small)
+
+        assert repr(exp_calories) == "[3.84990315 8.92499051 2.19968337] 250.94950350079193"
+        assert repr(exp_density_big) == "[0.58707936 0.83484872] 2.8340167340040523\n[0.18930451] 90.69592806454129"
+        assert repr(exp_density_small) == "[-0.54460774  0.7615358   0.93237663] 4.0797312153622585\n[0.5649755  0.76466156] 7.673955643254075"
 
    # TODO wpisac gdzies zmagania z tad
 
