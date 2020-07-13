@@ -40,7 +40,11 @@ def convert_tex_to_trimmedpng(path_to_input):
     convert_from_pdf_to_png(Path(path_to_input_copy).with_suffix(".pdf"), path_to_intermediate)
     trim_png(path_to_intermediate, path_to_output)
     shutil.rmtree(path_to_tempdir)
-    subprocess.Popen(rf'explorer /select,"{path_to_output}"')
+    try:
+        subprocess.Popen(rf'explorer /select,"{path_to_output}"')
+    except FileNotFoundError:
+        # subprocess.Popen(f'xdg-open {path_to_output.parent}/')
+        os.system(f'xdg-open {path_to_output.parent}')
 
 
 def parse_arguments(input_):
