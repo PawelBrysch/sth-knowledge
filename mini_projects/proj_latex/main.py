@@ -25,7 +25,7 @@ def trim_png(path_to_input, path_to_output):
 
 def convert_tex_to_trimmedpng(path_to_input):
     # paths refs
-    # path_to_input = rf"C:\Users\devoted_w\Documents\snippets_tops\sth-knowledge\mini_projects\proj_latex\input\test2.tex"
+    # path_to_input = rf"C:\Users\devoted_w\Documents\snippets_tops\sth-knowledge\mini_projects\proj_latex\input\test.tex"
     input_filename = op.basename(path_to_input)
     cwd = op.abspath(op.join(path_to_input, op.pardir, op.pardir))
     path_to_tempdir = op.join(cwd, "temp")
