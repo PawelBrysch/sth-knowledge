@@ -26,6 +26,14 @@ class ModelWrapper:
         print(self)
         print(other)
 
+    @property
+    def f_value(self):
+        return self.value_statsmodels.f_pvalue
+
+    @property
+    def r_squared(self):
+        return self.value_statsmodels.rsquared
+
     def residuals_against_fitted(self):
         visualizer = ResidualsPlot(self.value_sklearn)
         visualizer.score(self.X, self.y)
