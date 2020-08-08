@@ -13,6 +13,7 @@ def get_param(model):
     rsquared = model.value_statsmodels.rsquared
     return f_pvalue * rsquared
 
+# TODO to sfajluje, wiec trzeba bedzie naprawic
 def scatter(model):
     ref = plt.scatter(model.X['Xs'], model.y)
     # plt.xticks(model.X['Xs'].values)
@@ -36,26 +37,31 @@ def scatter(model):
 
 params = []
 
-# TODO dodanie jeszcze jednego wymiaru
 
 Fs = []
 Rs = []
 
-# for i in range(1000):
-Xs = pd.Series(np.random.uniform(0, 10, (10)))
-Ys = pd.Series(np.random.uniform(0, 10, (10)))
+SAMPLE_SIZE = 10
 
-df = pd.DataFrame().assign(Xs=Xs, Ys=Ys)
-model = ModelWrapper(df, "Ys")
+for i in range(300):
+    # TODO sparametryzuj
+    Xs = pd.Series(np.random.uniform(0, 10, (SAMPLE_SIZE)))
+    Ys = pd.Series(np.random.uniform(0, 10, (SAMPLE_SIZE)))
+    Zs = pd.Series(np.random.uniform(0, 10, (SAMPLE_SIZE)))
+    Z1s = pd.Series(np.random.uniform(0, 10, (SAMPLE_SIZE)))
 
-param = get_param(model)
-# params.append(param)
+    df = pd.DataFrame().assign(Xs=Xs, Ys=Ys, Zs=Zs, Z1s=Z1s)
+    model = ModelWrapper(df, "Z1s")
 
-F = model.value_statsmodels.f_pvalue
-R = model.value_statsmodels.rsquared
+    param = get_param(model)
+    # params.append(param)
+    # result(model)
 
-Fs.append(F)
-Rs.append(R)
+    F = model.value_statsmodels.f_pvalue
+    R = model.value_statsmodels.rsquared
+
+    Fs.append(F)
+    Rs.append(R)
 
     # if 0.1 < F < 0.9 and 0.5 < R < 0.9:
     #     print("OK!")
@@ -64,4 +70,10 @@ Rs.append(R)
     #     # model.value_statsmodels.summary()
     #     break
 
-# plt.scatter(Fs, Rs)
+# TODO policzenie procentow
+
+plt.scatter(Fs, Rs)
+plt.xticks(np.linspace(0, 1, 11))
+plt.yticks(np.linspace(0, 1, 11))
+plt.axvline(x=0.05)
+plt.axhline(y=0.5)
