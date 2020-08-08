@@ -20,3 +20,4 @@ no_of_samples = int(population_size / sample_size)
 samples = list(chunks(population, no_of_samples))
 averages = [sum(sample) / sample_size for sample in samples]
 hist(averages, 50)
+hist(population, bins=100)
