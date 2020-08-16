@@ -51,25 +51,21 @@ big_testdata = pd.DataFrame.from_dict({
 # X.__matmul__(X.T)
 # np.identity(X.__len__())
 
-THETA_0 = np.array([-1, 2, 1])
-
-def func_H(x1: float, x2: float, theta: np.array):
-    return 1 / (
-        1 + np.exp(
-            -(theta[0] + x1 * theta[1] + x2 * theta[2])
-        )
-    )
 
 class Step:
     def __init__(self):
         pass
 
     @staticmethod
-    def calculate_h(arg_X: pd.DataFrame, theta: np.array):
-        return func_H(arg_X['X1'], arg_X['X2'], theta)
+    def _h(X1: pd.Series, X2: pd.Series, theta: np.array):
+        return 1 / (
+                1 + np.exp(
+                    -(theta[0] + X1 * theta[1] + X2 * theta[2])
+                )
+        )
 
     @staticmethod
-    def calculate_D(h: pd.Series, w: pd.Series):
+    def _D(h: pd.Series, w: pd.Series):
         return np.diag(
             -w * h * (1 - h)
         )

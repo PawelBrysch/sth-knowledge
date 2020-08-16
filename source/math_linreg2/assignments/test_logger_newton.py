@@ -1,32 +1,31 @@
 import pytest
-from .logreg_newton import Step, weights, func_H
+from .logreg_newton import Step, weights
+# from .logreg_newton import Step, weights, func_H
 import pandas as pd
 import numpy as np
 
 
 class TestName:
-    def test_func_H(self):
-        THETA_0 = np.array([-1, 2, 1])
+    # def test_func_H(self):
+    #     THETA_0 = np.array([-1, 2, 1])
+    #
+    #     assert func_H(2, 3, THETA_0) == 0.9975273768433653
+    #     assert func_H(1, 4, THETA_0) == 0.9933071490757153
 
-        assert func_H(2, 3, THETA_0) == 0.9975273768433653
-        assert func_H(1, 4, THETA_0) == 0.9933071490757153
-
-    def test_calculate_h(self):
+    def test_h(self):
         THETA_0 = np.array([-1, 2, 1])
-        small_testdata = pd.DataFrame.from_dict({
-            'Y': [0, 0],
-            'X1': [2, 1],
-            'X2': [3, 4],
-        })
-        res = Step.calculate_h(small_testdata, THETA_0)
+        X1 = pd.Series([2, 1])
+        X2 = pd.Series([3, 4])
+
+        res = Step._h(X1, X2, THETA_0)
         pd.testing.assert_series_equal(res, pd.Series([0.99752738, 0.99330715]))
 
 
-    def test_calculate_D(self):
+    def test_D(self):
         h1 = pd.Series([4, 5, 6])
         w1 = pd.Series([3, 2, 1])
 
-        res = Step.calculate_D(h1, w1)
+        res = Step._D(h1, w1)
         np.testing.assert_array_equal(res, np.array([[36,  0,  0], [0, 40,  0], [0,  0, 30]]))
 
 
