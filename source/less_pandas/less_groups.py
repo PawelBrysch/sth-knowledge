@@ -34,20 +34,20 @@ AGGREGATION
 # transformed_series_of_sth2 = iterator_of_series_of_sth2_grouped_by_sth1.transform(some_func)
 
 """agg()"""
-# import random
-# from typing import Any
-#
-# df = get_some_df()
-# sth1 = 'artist'
-# sth2 = 'acquisitionYear'
-#
-# def some_func(series: pd.Series) -> Any:
-#     # do sth
-#     return random.randint(0, 10)
-#
-# iterator_of_dfs_grouped_by_sth1 = df.groupby(sth1)
-# iterator_of_series_of_sth2_grouped_by_sth1 = iterator_of_dfs_grouped_by_sth1[sth2]
-# result = iterator_of_series_of_sth2_grouped_by_sth1.agg(some_func)
+import random
+from typing import Any
+
+df = get_some_df()
+sth1 = 'artist'
+sth2 = 'acquisitionYear'
+
+def some_func(series: pd.Series) -> Any:
+    # do sth
+    return random.randint(0, 10)
+
+iterator_of_dfs_grouped_by_sth1 = df.groupby(sth1)
+iterator_of_series_of_sth2_grouped_by_sth1 = iterator_of_dfs_grouped_by_sth1[sth2]
+result = iterator_of_series_of_sth2_grouped_by_sth1.agg(some_func)
 
 """filter()"""
 # df = get_some_df()
