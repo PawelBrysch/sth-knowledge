@@ -4,10 +4,12 @@ import numpy as np
 from typing import List
 import matplotlib.pyplot as plt
 from math_linreg2.less_matplotlib.lib_lines import get_line_data
+from sklearn.linear_model import LogisticRegression
 
 
 
 """notatka"""
+# TODO przenies gdzies
 # X.__matmul__(X.T)
 # np.identity(X.__len__())
 
@@ -106,39 +108,34 @@ class Algorithm:
         return thetas[-1]
 
 
-
+"""parsing"""
 data_ = pt2.assign(X1=pt1['X1'], X2=pt1['X2'])
 data_ = data_.assign(X0=pd.Series(np.ones(data_.shape[0])))
-# TODO zmieniaj barwy powoli, by dostac 'ruch'
-x_avg = [-0.065, 0.015]
-# x_avg = [0, -10]
 
-# algo = Algorithm(data=data_, theta0=np.array([1, 1, 1]), lambda_=0.0001, tau=0.5, x=x_avg, no_steps=8)
-# algo.execute()
-# print(algo.success)
+"""parameters"""
+# TODO zwizualizuj to na 4-ech wykresach.
+# x_avg = [-0.065, 0.015]
+x_avg = [-0.75, 0.75]
+
+"""execution"""
 results = []
 for tau in [0.01, 0.05, 0.1, 0.5, 1.0, 5.0, 10, 50]:
     algo = Algorithm(data=data_, theta0=np.array([1, 1, 1]), lambda_=0.0001, tau=tau, x=x_avg, no_steps=8)
     algo.execute()
-    # print(algo.success)
     results.append(algo.result)
-# TODO jak algorytm ma sie skonczyc
-# result = [elem.theta0 for elem in algo.steps]
-# np.allclose(result[6], result[7])
 
 """logreg"""
-from sklearn.linear_model import LogisticRegression
 X = data_.loc[:, ['X1', 'X2']]
 y = data_['Y']
 logreg = LogisticRegression(random_state=0, solver='lbfgs').fit(X, y)
 
 """plot"""
-# TODO zrobic fajne kolorki
 Y1, Y0 = [x for _, x in data_.groupby(data_['Y'] < 0.5)]
 ref1 = Y1.plot(kind="scatter", x="X1", y="X2", color="r")
 Y0.plot(kind="scatter", x="X1", y="X2", color="b", ax=ref1)
-plt.plot(*get_line_data(model=logreg, axes=ref1), label="orig")
+plt.plot(*get_line_data(model=logreg, axes=ref1), label="orig", color='g')
+colors = ["{:.1f}".format(elem) for elem in np.linspace(0.1, 0.8, 8)]
 for i, theta_ in enumerate(results):
-    plt.plot(*get_line_data(theta=theta_, axes=ref1), label=f"{i}")
+    plt.plot(*get_line_data(theta=theta_, axes=ref1), label=f"{i}", color=colors[i])
 plt.legend(loc='upper left')
-plt.annotate(xy=x_avg, xytext=x_avg, text='X')
+plt.annotate("S", (0.5, 0.5))

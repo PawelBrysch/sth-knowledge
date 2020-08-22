@@ -47,7 +47,7 @@ Two figures - classic
 # y1 = np.linspace(3, 5, 10)
 # y2 = np.linspace(2, 6, 10)
 #
-#
+# # 1 way
 # plt.subplot(2, 1, 1)
 # plt.plot(x, y1)
 # plt.ylabel('y1')
@@ -57,3 +57,13 @@ Two figures - classic
 # plt.ylabel('y2')
 #
 # plt.show()
+#
+#
+# # 2 way
+# fig, (ax1, ax2) = plt.subplots(2, 1)
+#
+# ax1.plot(x, y1)
+# ax1.set_ylabel('y1')
+#
+# ax2.plot(x, y2)
+# ax2.set_ylabel('y2')

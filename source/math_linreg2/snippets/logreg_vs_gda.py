@@ -51,5 +51,5 @@ result = data.assign(
 ref1 = data.loc[:33, :].plot(kind="scatter", x="X", y="Y", color="r")
 data.loc[33:, :].plot(kind="scatter", x="X", y="Y", color="b", ax=ref1)
 plt.plot(*get_line_data(model=logreg, axes=ref1), label="logreg")
-plt.plot(*get_line_data(model=gda, axes=ref1), label="gda")
+plt.plot(*get_line_data(model=gda, axes=ref1), label="gda", color='0.9')
 plt.legend(loc='upper left')
