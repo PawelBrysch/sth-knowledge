@@ -125,24 +125,32 @@ class Experiment:
 # TODO zwizualizuj to na 4-ech wykresach.
 
 
-exp = Experiment([-0.75, 0.75])
-exp.calculate_result()
+# exp = Experiment([-0.75, 0.75])
+# exp.calculate_result()
+
+experiments = [
+    Experiment([-0.75, 0.75]),
+    Experiment([0.75, 0.75])
+]
+for exp in experiments:
+    exp.calculate_result()
 
 """logreg"""
 logreg = LogisticRegression(random_state=0, solver='lbfgs').fit(DF.loc[:, ['X1', 'X2']], DF['Y'])
 
 """plot"""
 Y1, Y0 = [x for _, x in DF.groupby(DF['Y'] < 0.5)]
-fig, ax = plt.subplots(1, 1)
 
+fig, (ax1, ax2) = plt.subplots(2, 1)
 
-Y1.plot(kind="scatter", x="X1", y="X2", color="r", ax=ax)
-Y0.plot(kind="scatter", x="X1", y="X2", color="b", ax=ax)
-ax.plot(*get_line_data(model=logreg, axes=ax), label="orig", color='g')
-colors = ["{:.1f}".format(elem) for elem in np.linspace(0.1, 0.8, 8)]
-for i, theta_ in enumerate(exp.results):
-    ax.plot(*get_line_data(theta=theta_, axes=ax), label=f"{i}", color=colors[i])
-ax.legend(loc='upper left')
-ax.annotate("(S)", exp.x)
+for exp, ax in zip(experiments, [ax1, ax2]):
+    Y1.plot(kind="scatter", x="X1", y="X2", color="r", ax=ax)
+    Y0.plot(kind="scatter", x="X1", y="X2", color="b", ax=ax)
+    ax.plot(*get_line_data(model=logreg, axes=ax), label="orig", color='g')
+    colors = ["{:.1f}".format(elem) for elem in np.linspace(0.1, 0.8, 8)]
+    for i, theta_ in enumerate(exp.results):
+        ax.plot(*get_line_data(theta=theta_, axes=ax), label=f"{i}", color=colors[i])
+    ax.legend(loc='upper left')
+    ax.annotate("(S)", exp.x)
 
 
