@@ -6,6 +6,7 @@ from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
 import matplotlib.pyplot as plt
 import numpy as np
 import pathlib as pl
+from math_linreg2.less_matplotlib.lib_lines import get_line_data
 
 
 def parse_data(path):
@@ -20,13 +21,6 @@ def parse_data(path):
     Ys = text.apply(lambda x: re.search(pattern, x).group(2))
     flag_list = pd.Series([i <= 33 for i in range(80)])
     return pd.DataFrame().assign(X=Xs, Y=Ys, is_red=flag_list)
-
-def get_super_line(model):
-    coeff_A = - (model.coef_[0][0] / model.coef_[0][1])
-    coeff_B = - (model.intercept_[0] / model.coef_[0][1])
-    x = np.linspace(data["X"].min(), data["X"].max(), 100)
-    y = coeff_A * x + coeff_B
-    return (x, y)
 
 # create df
 # path_ = rf"C:\Users\Lenovo\Desktop\PROJECTS\PROGRAMMING\top_proper\sth-knowledge\source\math_linreg2\logreg\test_dataset.html"
@@ -56,6 +50,6 @@ result = data.assign(
 # plot results
 ref1 = data.loc[:33, :].plot(kind="scatter", x="X", y="Y", color="r")
 data.loc[33:, :].plot(kind="scatter", x="X", y="Y", color="b", ax=ref1)
-plt.plot(*get_super_line(logreg), label="logreg")
-plt.plot(*get_super_line(gda), label="gda")
+plt.plot(*get_line_data(model=logreg, axes=ref1), label="logreg")
+plt.plot(*get_line_data(model=gda, axes=ref1), label="gda")
 plt.legend(loc='upper left')
