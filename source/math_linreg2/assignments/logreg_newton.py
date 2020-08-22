@@ -13,11 +13,13 @@ from sklearn.linear_model import LogisticRegression
 # X.__matmul__(X.T)
 # np.identity(X.__len__())
 
+"""parsing"""
 x = pl.Path(__file__).with_name('x.dat')
 y = pl.Path(__file__).with_name('y.dat')
 pt1 = pd.read_csv(x, sep=r'\s{2,}', engine='python')
 pt2 = pd.read_csv(y, sep=r'\s{2,}', engine='python')
-
+DF = pt2.assign(X1=pt1['X1'], X2=pt1['X2'])
+DF = DF.assign(X0=pd.Series(np.ones(DF.shape[0])))
 
 
 
@@ -107,35 +109,40 @@ class Algorithm:
         thetas = [elem.theta0 for elem in self.steps]
         return thetas[-1]
 
+# CENTER_X = [-0.065, 0.015]
+class Experiment:
+    def __init__(self, x):
+        self.x = x
+        self.results = None
 
-"""parsing"""
-data_ = pt2.assign(X1=pt1['X1'], X2=pt1['X2'])
-data_ = data_.assign(X0=pd.Series(np.ones(data_.shape[0])))
+    def calculate_result(self):
+        self.results = []
+        for tau in [0.01, 0.05, 0.1, 0.5, 1.0, 5.0, 10, 50]:
+            algo = Algorithm(data=DF, theta0=np.array([1, 1, 1]), lambda_=0.0001, tau=tau, x=self.x, no_steps=8)
+            algo.execute()
+            self.results.append(algo.result)
 
-"""parameters"""
 # TODO zwizualizuj to na 4-ech wykresach.
-# x_avg = [-0.065, 0.015]
-x_avg = [-0.75, 0.75]
 
-"""execution"""
-results = []
-for tau in [0.01, 0.05, 0.1, 0.5, 1.0, 5.0, 10, 50]:
-    algo = Algorithm(data=data_, theta0=np.array([1, 1, 1]), lambda_=0.0001, tau=tau, x=x_avg, no_steps=8)
-    algo.execute()
-    results.append(algo.result)
+
+exp = Experiment([-0.75, 0.75])
+exp.calculate_result()
 
 """logreg"""
-X = data_.loc[:, ['X1', 'X2']]
-y = data_['Y']
-logreg = LogisticRegression(random_state=0, solver='lbfgs').fit(X, y)
+logreg = LogisticRegression(random_state=0, solver='lbfgs').fit(DF.loc[:, ['X1', 'X2']], DF['Y'])
 
 """plot"""
-Y1, Y0 = [x for _, x in data_.groupby(data_['Y'] < 0.5)]
-ref1 = Y1.plot(kind="scatter", x="X1", y="X2", color="r")
-Y0.plot(kind="scatter", x="X1", y="X2", color="b", ax=ref1)
-plt.plot(*get_line_data(model=logreg, axes=ref1), label="orig", color='g')
+Y1, Y0 = [x for _, x in DF.groupby(DF['Y'] < 0.5)]
+fig, ax = plt.subplots(1, 1)
+
+
+Y1.plot(kind="scatter", x="X1", y="X2", color="r", ax=ax)
+Y0.plot(kind="scatter", x="X1", y="X2", color="b", ax=ax)
+ax.plot(*get_line_data(model=logreg, axes=ax), label="orig", color='g')
 colors = ["{:.1f}".format(elem) for elem in np.linspace(0.1, 0.8, 8)]
-for i, theta_ in enumerate(results):
-    plt.plot(*get_line_data(theta=theta_, axes=ref1), label=f"{i}", color=colors[i])
-plt.legend(loc='upper left')
-plt.annotate("S", (0.5, 0.5))
+for i, theta_ in enumerate(exp.results):
+    ax.plot(*get_line_data(theta=theta_, axes=ax), label=f"{i}", color=colors[i])
+ax.legend(loc='upper left')
+ax.annotate("(S)", exp.x)
+
+
