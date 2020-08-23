@@ -1,7 +1,7 @@
 import numpy as np
 
 
-def adjust_to_fromfunction(func, x_array, y_array):
+def adjust_to_fromfunction(func, x_array, y_array, **kwargs):
     class LinearFunction:
         def __init__(self, image):
             self.min_ = image.min()
@@ -15,15 +15,15 @@ def adjust_to_fromfunction(func, x_array, y_array):
 
     def wrapper(x, y):
         print("Do sth")
-        return func(x_func.evaluate(x), y_func.evaluate(y))
+        return func(x_func.evaluate(x), y_func.evaluate(y), **kwargs)
 
     return wrapper
 
 
-# def some_func(x, y):
-#     return x ** 2 * y
-#
-#
+def some_func(x, y):
+    return x ** 2 * y
+
+
 # X_MIN = 2
 # X_MAX = 4
 #

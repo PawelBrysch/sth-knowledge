@@ -5,6 +5,8 @@ from typing import List
 import matplotlib.pyplot as plt
 from math_linreg2.less_matplotlib.lib_lines import get_line_data
 from sklearn.linear_model import LogisticRegression
+from math_linreg2.less_numpy.lib_3d_visu import adjust_to_fromfunction
+
 
 
 
@@ -14,10 +16,10 @@ from sklearn.linear_model import LogisticRegression
 # np.identity(X.__len__())
 
 """parsing"""
-x = pl.Path(__file__).with_name('x.dat')
-y = pl.Path(__file__).with_name('y.dat')
-pt1 = pd.read_csv(x, sep=r'\s{2,}', engine='python')
-pt2 = pd.read_csv(y, sep=r'\s{2,}', engine='python')
+path_to_x = pl.Path(__file__).with_name('x.dat')
+path_to_y = pl.Path(__file__).with_name('y.dat')
+pt1 = pd.read_csv(path_to_x, sep=r'\s{2,}', engine='python')
+pt2 = pd.read_csv(path_to_y, sep=r'\s{2,}', engine='python')
 DF = pt2.assign(X1=pt1['X1'], X2=pt1['X2'])
 DF = DF.assign(X0=pd.Series(np.ones(DF.shape[0])))
 
@@ -109,48 +111,71 @@ class Algorithm:
         thetas = [elem.theta0 for elem in self.steps]
         return thetas[-1]
 
+
+
 # CENTER_X = [-0.065, 0.015]
-class Experiment:
-    def __init__(self, x):
-        self.x = x
-        self.results = None
+# TODO Experiment(tau=0.01) -> dodstaje thete -> predyktuje thete
+class Experiment2:
+    def __init__(self, tau):
+        self.tau = tau
 
-    def calculate_result(self):
-        self.results = []
-        for tau in [0.01, 0.05, 0.1, 0.5, 1.0, 5.0, 10, 50]:
-            algo = Algorithm(data=DF, theta0=np.array([1, 1, 1]), lambda_=0.0001, tau=tau, x=self.x, no_steps=8)
-            algo.execute()
-            self.results.append(algo.result)
+    def predict(self, x):
+        theta = self._get_theta(x)
+        return theta
 
-# TODO zwizualizuj to na 4-ech wykresach.
+    def _get_theta(self, x):
+        algo = Algorithm(data=DF, theta0=np.array([1, 1, 1]), lambda_=0.0001, tau=self.tau, x=x, no_steps=8)
+        algo.execute()
+        return algo.result
+
+exp = Experiment2(0.5)
+
+"""test"""
+np.testing.assert_array_almost_equal(exp._get_theta([-0.75, 0.75]), np.array([0.25687919,  4.24842454, -0.66492687]))
 
 
-# exp = Experiment([-0.75, 0.75])
-# exp.calculate_result()
 
-experiments = [
-    Experiment([-0.75, 0.75]),
-    Experiment([0.75, 0.75])
-]
-for exp in experiments:
-    exp.calculate_result()
+# theta1 = exp.predict([-0.75, 0.75])
+# Ys = np.linspace(DF['X2'].min(), DF['X2'].max(), 80)
+# Xs = np.linspace(DF['X1'].min(), DF['X1'].max(), 80)
+# Zs = np.fromfunction(
+#     adjust_to_fromfunction(Step._h, Ys, Xs, theta=theta1),
+#     (Ys.size, Xs.size))
+#
+#
+# plt.contourf(Ys, Xs, Zs.T,
+#              # levels=MaxNLocator(nbins=2).tick_values(Zs.min(), Zs.max()),
+#              levels=np.array([0., 0.5, 1.]),
+#              cmap=plt.get_cmap('PiYG'))
+# plt.colorbar()
+# plt.title('some_title')
 
-"""logreg"""
-logreg = LogisticRegression(random_state=0, solver='lbfgs').fit(DF.loc[:, ['X1', 'X2']], DF['Y'])
 
-"""plot"""
-Y1, Y0 = [x for _, x in DF.groupby(DF['Y'] < 0.5)]
 
-fig, (ax1, ax2) = plt.subplots(2, 1)
 
-for exp, ax in zip(experiments, [ax1, ax2]):
-    Y1.plot(kind="scatter", x="X1", y="X2", color="r", ax=ax)
-    Y0.plot(kind="scatter", x="X1", y="X2", color="b", ax=ax)
-    ax.plot(*get_line_data(model=logreg, axes=ax), label="orig", color='g')
-    colors = ["{:.1f}".format(elem) for elem in np.linspace(0.1, 0.8, 8)]
-    for i, theta_ in enumerate(exp.results):
-        ax.plot(*get_line_data(theta=theta_, axes=ax), label=f"{i}", color=colors[i])
-    ax.legend(loc='upper left')
-    ax.annotate("(S)", exp.x)
+
+
+
+
+
+
+
+
+
+
+
+# """logreg"""
+# logreg = LogisticRegression(random_state=0, solver='lbfgs').fit(DF.loc[:, ['X1', 'X2']], DF['Y'])
+#
+# """plot"""
+# Y1, Y0 = [x for _, x in DF.groupby(DF['Y'] < 0.5)]
+# fig, ax1 = plt.subplots(1, 1)
+#
+# Y1.plot(kind="scatter", x="X1", y="X2", color="r", ax=ax1)
+# Y0.plot(kind="scatter", x="X1", y="X2", color="b", ax=ax1)
+# ax1.plot(*get_line_data(model=logreg, axes=ax1), label="orig", color='g')
+# ax1.annotate("(S)", exp.x)
+# ax1.legend(loc='upper left')
+
 
 
