@@ -113,8 +113,6 @@ class Algorithm:
 
 
 
-# CENTER_X = [-0.065, 0.015]
-# TODO Experiment(tau=0.01) -> dodstaje thete -> predyktuje thete
 class Experiment2:
     def __init__(self, tau):
         self.tau = tau
@@ -129,50 +127,38 @@ class Experiment2:
         algo.execute()
         return algo.result
 
-# TODO [0.01, 0.05, 0.1, 0.5, 1, 5]
-exp = Experiment2(0.05)
+
 
 """test"""
 # np.testing.assert_array_almost_equal(exp._get_theta([-0.75, 0.75]), np.array([0.25687919,  4.24842454, -0.66492687]))
 # np.testing.assert_almost_equal(exp.predict(-0.75, 0.75), 0.03142767246588209)
 
 
-LENGTH = 20
-
-Ys = np.linspace(DF['X2'].min(), DF['X2'].max(), LENGTH)
-Xs = np.linspace(DF['X1'].min(), DF['X1'].max(), LENGTH)
-Zs = cartesian_map(Xs, Ys, exp.predict)
-
-
-
-
-
-
-
-
-# TODO wdupienie reszty
-    # TODO zwielokrotnienie
-
-
 """logreg"""
 logreg = LogisticRegression(random_state=0, solver='lbfgs').fit(DF.loc[:, ['X1', 'X2']], DF['Y'])
+Y1, Y0 = [x for _, x in DF.groupby(DF['Y'] < 0.5)]
+
+"""experiments"""
+LENGTH = 5 #Powinno byc 40, by bylo fajnie widac.
+experiments = [Experiment2(tau) for tau in [0.01, 0.05, 0.1, 0.5, 1, 5]]
+Ys = np.linspace(DF['X2'].min(), DF['X2'].max(), LENGTH)
+Xs = np.linspace(DF['X1'].min(), DF['X1'].max(), LENGTH)
+
 
 """plot"""
-Y1, Y0 = [x for _, x in DF.groupby(DF['Y'] < 0.5)]
-fig, ax1 = plt.subplots(1, 1)
+fig, ((ax1, ax2, ax3), (ax4, ax5, ax6)) = plt.subplots(2, 3)
+for ax, exp in zip([ax1, ax2, ax3, ax4, ax5, ax6], experiments):
+    Zs = cartesian_map(Xs, Ys, exp.predict)
 
-ref1 = ax1.contourf(
-    Ys, Xs, Zs.T,
-    # levels=np.array([0., 0.5, 1.]), cmap=plt.get_cmap('PiYG')
-    levels=np.array([0., 0.5, 1.]), cmap=plt.get_cmap('coolwarm')
-)
-plt.colorbar(ref1, ax=ax1)
-ax1.set_title(f'{exp.tau}')
+    ref1 = ax.contourf(
+        Ys, Xs, Zs.T,
+        levels=np.array([0., 0.5, 1.]), cmap=plt.get_cmap('coolwarm')
+    )
+    plt.colorbar(ref1, ax=ax)
+    ax.set_title(f'tau={exp.tau}')
 
-Y1.plot(kind="scatter", x="X1", y="X2", color="r", ax=ax1)
-Y0.plot(kind="scatter", x="X1", y="X2", color="b", ax=ax1)
-ax1.plot(*get_line_data(model=logreg, axes=ax1), label="orig", color='g')
-ax1.legend(loc='upper left')
-
-
+    Y1.plot(kind="scatter", x="X1", y="X2", color="r", ax=ax)
+    Y0.plot(kind="scatter", x="X1", y="X2", color="b", ax=ax)
+    ax.plot(*get_line_data(model=logreg, axes=ax), label="orig", color='g')
+    ax.legend(loc='upper left')
 
