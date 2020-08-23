@@ -119,36 +119,39 @@ class Experiment2:
     def __init__(self, tau):
         self.tau = tau
 
-    def predict(self, x):
-        theta = self._get_theta(x)
-        return theta
+    def predict(self, x1, x2):
+        theta = self._get_theta([x1, x2])
+        result = Step._h(x1, x2, theta)
+        return result
 
     def _get_theta(self, x):
         algo = Algorithm(data=DF, theta0=np.array([1, 1, 1]), lambda_=0.0001, tau=self.tau, x=x, no_steps=8)
         algo.execute()
         return algo.result
 
+# TODO [0.01, 0.05, 0.1, 0.5, 1, 5]
 exp = Experiment2(0.5)
 
 """test"""
 np.testing.assert_array_almost_equal(exp._get_theta([-0.75, 0.75]), np.array([0.25687919,  4.24842454, -0.66492687]))
+np.testing.assert_almost_equal(exp.predict(-0.75, 0.75), 0.03142767246588209)
 
 
+theta1 = exp._get_theta([-0.75, 0.75])
+Ys = np.linspace(DF['X2'].min(), DF['X2'].max(), 80)
+Xs = np.linspace(DF['X1'].min(), DF['X1'].max(), 80)
+Zs = np.fromfunction(
+    adjust_to_fromfunction(Step._h, Xs, Ys, theta=theta1),
+    # adjust_to_fromfunction(exp.predict, Xs, Ys),
+    (Ys.size, Xs.size))
 
-# theta1 = exp.predict([-0.75, 0.75])
-# Ys = np.linspace(DF['X2'].min(), DF['X2'].max(), 80)
-# Xs = np.linspace(DF['X1'].min(), DF['X1'].max(), 80)
-# Zs = np.fromfunction(
-#     adjust_to_fromfunction(Step._h, Ys, Xs, theta=theta1),
-#     (Ys.size, Xs.size))
-#
-#
-# plt.contourf(Ys, Xs, Zs.T,
-#              # levels=MaxNLocator(nbins=2).tick_values(Zs.min(), Zs.max()),
-#              levels=np.array([0., 0.5, 1.]),
-#              cmap=plt.get_cmap('PiYG'))
-# plt.colorbar()
-# plt.title('some_title')
+
+plt.contourf(Ys, Xs, Zs.T,
+             # levels=MaxNLocator(nbins=2).tick_values(Zs.min(), Zs.max()),
+             levels=np.array([0., 0.5, 1.]),
+             cmap=plt.get_cmap('PiYG'))
+plt.colorbar()
+plt.title('some_title')
 
 
 
