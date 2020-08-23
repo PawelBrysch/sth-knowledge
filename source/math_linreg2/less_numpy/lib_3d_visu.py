@@ -1,5 +1,5 @@
 import numpy as np
-
+import pandas as pd
 
 def adjust_to_fromfunction(func, x_array, y_array, **kwargs):
     class LinearFunction:
@@ -22,6 +22,35 @@ def adjust_to_fromfunction(func, x_array, y_array, **kwargs):
 
 def some_func(x, y):
     return x ** 2 * y
+
+
+def cartesian_map(Xs: pd.Series, Ys: pd.Series, func):
+    def series_accepting(func_):
+        def wrapper(series):
+            return func_(series['X'], series['Y'])
+        return wrapper
+
+
+    Xs = pd.Series(Xs, name='X')
+    Ys = pd.Series(Ys, name='Y')
+    func = series_accepting(func)
+
+    combinations = Xs.to_frame().assign(key=1).\
+        merge(Ys.to_frame().assign(key=1), on='key')
+    map_ = combinations.apply(func, axis=1).\
+        values.reshape(Xs.size, Ys.size)
+    return map_
+
+"""test"""
+# def trivial_sum(x: int, y: int):
+#     return x + y
+#
+# Xs = pd.Series([1, 2, 3])
+# Ys = pd.Series([10, 20, 30, 40])
+#
+# np.testing.assert_array_equal(cartesian_map(Xs, Ys, trivial_sum), np.array([[11, 21, 31, 41], [12, 22, 32, 42], [13, 23, 33, 43]]))
+
+
 
 
 # X_MIN = 2

@@ -5,7 +5,7 @@ from typing import List
 import matplotlib.pyplot as plt
 from math_linreg2.less_matplotlib.lib_lines import get_line_data
 from sklearn.linear_model import LogisticRegression
-from math_linreg2.less_numpy.lib_3d_visu import adjust_to_fromfunction
+from math_linreg2.less_numpy.lib_3d_visu import adjust_to_fromfunction, cartesian_map
 
 
 
@@ -130,28 +130,18 @@ class Experiment2:
         return algo.result
 
 # TODO [0.01, 0.05, 0.1, 0.5, 1, 5]
-exp = Experiment2(0.5)
+exp = Experiment2(0.05)
 
 """test"""
-np.testing.assert_array_almost_equal(exp._get_theta([-0.75, 0.75]), np.array([0.25687919,  4.24842454, -0.66492687]))
-np.testing.assert_almost_equal(exp.predict(-0.75, 0.75), 0.03142767246588209)
+# np.testing.assert_array_almost_equal(exp._get_theta([-0.75, 0.75]), np.array([0.25687919,  4.24842454, -0.66492687]))
+# np.testing.assert_almost_equal(exp.predict(-0.75, 0.75), 0.03142767246588209)
 
 
-theta1 = exp._get_theta([-0.75, 0.75])
-Ys = np.linspace(DF['X2'].min(), DF['X2'].max(), 80)
-Xs = np.linspace(DF['X1'].min(), DF['X1'].max(), 80)
-Zs = np.fromfunction(
-    adjust_to_fromfunction(Step._h, Xs, Ys, theta=theta1),
-    # adjust_to_fromfunction(exp.predict, Xs, Ys),
-    (Ys.size, Xs.size))
+LENGTH = 20
 
-
-plt.contourf(Ys, Xs, Zs.T,
-             # levels=MaxNLocator(nbins=2).tick_values(Zs.min(), Zs.max()),
-             levels=np.array([0., 0.5, 1.]),
-             cmap=plt.get_cmap('PiYG'))
-plt.colorbar()
-plt.title('some_title')
+Ys = np.linspace(DF['X2'].min(), DF['X2'].max(), LENGTH)
+Xs = np.linspace(DF['X1'].min(), DF['X1'].max(), LENGTH)
+Zs = cartesian_map(Xs, Ys, exp.predict)
 
 
 
@@ -160,25 +150,29 @@ plt.title('some_title')
 
 
 
+# TODO wdupienie reszty
+    # TODO zwielokrotnienie
 
 
+"""logreg"""
+logreg = LogisticRegression(random_state=0, solver='lbfgs').fit(DF.loc[:, ['X1', 'X2']], DF['Y'])
 
+"""plot"""
+Y1, Y0 = [x for _, x in DF.groupby(DF['Y'] < 0.5)]
+fig, ax1 = plt.subplots(1, 1)
 
+ref1 = ax1.contourf(
+    Ys, Xs, Zs.T,
+    # levels=np.array([0., 0.5, 1.]), cmap=plt.get_cmap('PiYG')
+    levels=np.array([0., 0.5, 1.]), cmap=plt.get_cmap('coolwarm')
+)
+plt.colorbar(ref1, ax=ax1)
+ax1.set_title(f'{exp.tau}')
 
-
-
-# """logreg"""
-# logreg = LogisticRegression(random_state=0, solver='lbfgs').fit(DF.loc[:, ['X1', 'X2']], DF['Y'])
-#
-# """plot"""
-# Y1, Y0 = [x for _, x in DF.groupby(DF['Y'] < 0.5)]
-# fig, ax1 = plt.subplots(1, 1)
-#
-# Y1.plot(kind="scatter", x="X1", y="X2", color="r", ax=ax1)
-# Y0.plot(kind="scatter", x="X1", y="X2", color="b", ax=ax1)
-# ax1.plot(*get_line_data(model=logreg, axes=ax1), label="orig", color='g')
-# ax1.annotate("(S)", exp.x)
-# ax1.legend(loc='upper left')
+Y1.plot(kind="scatter", x="X1", y="X2", color="r", ax=ax1)
+Y0.plot(kind="scatter", x="X1", y="X2", color="b", ax=ax1)
+ax1.plot(*get_line_data(model=logreg, axes=ax1), label="orig", color='g')
+ax1.legend(loc='upper left')
 
 
 

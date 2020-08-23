@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 from matplotlib.ticker import MaxNLocator
 import numpy as np
-from math_linreg2.less_numpy.lib_3d_visu import adjust_to_fromfunction
+from math_linreg2.less_numpy.lib_3d_visu import adjust_to_fromfunction, cartesian_map
 
 # model parameters
 PARAM_X = 0.3
@@ -18,6 +18,9 @@ Xs = np.linspace(-10, 10, 80)
 Zs = np.fromfunction(
     adjust_to_fromfunction(z_func, Ys, Xs),
     (Ys.size, Xs.size))
+
+# Zs2 = cartesian_map(Xs, Ys, z_func)
+# Zs = Zs2
 
 
 plt.contourf(Ys, Xs, Zs.T,
