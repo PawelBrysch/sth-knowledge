@@ -3,9 +3,67 @@
 
 \begin{document}
 
+$
+\mathbf{X}_{1}, \mathbf{X}_{2}, ..., \mathbf{X}_{n}$ are jointly normal $
+\Leftrightarrow \newline \Leftrightarrow
+\forall_{a{1}, a{2}, ..., a{n} \in R}\
+a_{1}\mathbf{X}_{1}+a_{2}\mathbf{X}_{2}+...+ a_{n}\mathbf{X}_{n} \sim N
+\newline
+$
 
 $
-\mathbf{X} \sim N_{mv} \Leftrightarrow
+\mathbf{X} \sim N_{s-mv}
+\Leftrightarrow \newline \Leftrightarrow
+p(x)=\frac{1}{(2\pi)^{n/2}}
+\exp{(-\frac{1}{2}x^{T}x)}
+\newline
+$
+
+$
+\mathbf{X} \sim N_{s-mv}
+\Rightarrow \newline \Rightarrow
+\mathbf{X}_{i}, \mathbf{X}_{j}$ are i.i.d$
+\newline
+$
+
+$
+\mathbf{X} \sim N_{mv} \ (v.1)
+\Leftrightarrow \newline \Leftrightarrow
+p(x)=\frac{1}{(2\pi)^{n/2}|\Sigma|^{1/2}}
+\exp{(-\frac{1}{2}(x-\mu)^{T}\Sigma^{-1}(x-\mu))}
+:\ \mu=E[\mathbf{X}], \Sigma=Cov[\mathbf{X}]
+\newline
+$
+
+$
+\mathbf{X} \sim N_{mv} \ (v.2)
+\Leftrightarrow \newline \Leftrightarrow
+\mathbf{X}_{1}, \mathbf{X}_{2}, ..., \mathbf{X}_{n}$ are jointly normal $
+\newline
+$
+
+$
+\mathbf{X} \sim N_{mv} \ (v.1)
+\Leftrightarrow \newline \Leftrightarrow
+\mathbf{X} \sim N_{mv} \ (v.2)
+\newline
+$
+
+
+
+$
+\mathbf{X} \sim N_{mv} \ (v.1)
+\Rightarrow \newline \Rightarrow
+\exists_{\mathbf{A}\in R^{n\times k}}
+\exists_{\mu \in R^{n}}
+\exists_{\mathbf{Z} \sim N_{smv}} \
+\mathbf{X} = \mathbf{A}\mathbf{Z} + \mu
+\newline
+$
+
+$
+\mathbf{X} \sim N_{mv} \ (v.2)
+\Rightarrow \newline \Rightarrow
 \exists_{\mathbf{A}\in R^{n\times k}}
 \exists_{\mu \in R^{n}}
 \exists_{\mathbf{Z} \sim N_{smv}} \
@@ -15,15 +73,10 @@ $
 
 $
 \mathbf{X} = \mathbf{A}\mathbf{Z} + \mu :
-\mathbf{Z} \sim N_{smv}\Rightarrow \newline
+\mathbf{Z} \sim N_{s-mv}\Rightarrow \newline
 \Rightarrow
 E[\mathbf{X}]=\mu, Var[\mathbf{X}]=\mathbf{A}\mathbf{A}^{T}
 \newline
-$
-
-$
-\mathbf{X} \sim N_{mv} \Leftrightarrow
-\forall_{a_{i}\in R} \ \ \sum_{1}^{n}a_{i}X_{i} \sim N
 $
 
 

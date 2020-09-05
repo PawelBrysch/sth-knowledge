@@ -35,20 +35,18 @@ AGGREGATION
 # transformed_series_of_sth2 = iterator_of_series_of_sth2_grouped_by_sth1.transform(some_func)
 
 """agg()"""
-import random
-from typing import Any
-
-df = get_some_df()
-sth1 = 'artist'
-sth2 = 'acquisitionYear'
-
-def some_func(series: pd.Series) -> Any:
-    # do sth
-    return random.randint(0, 10)
-
-iterator_of_dfs_grouped_by_sth1 = df.groupby(sth1)
-iterator_of_series_of_sth2_grouped_by_sth1 = iterator_of_dfs_grouped_by_sth1[sth2]
-result = iterator_of_series_of_sth2_grouped_by_sth1.agg(some_func)
+"""
+1. jak nalezy czytac linijke z agg?->                         argument bedacy indeksem listy jest przekazywany do lambdy
+2. skoro jest to agregacja, to->                                                       funkcje raczej nie beda customowe
+"""
+# import pandas as pd
+# df = pd.DataFrame.from_dict({
+#     'IS_RICH':      [0, 0, 0, 0, 0, 0, 0, 1, 1, 1],
+#     'STUDY_ABROAD': [1, 1, 0, 0, 0, 0, 0, 1, 1, 0]
+# })
+#
+# summary = df.groupby('IS_RICH')['STUDY_ABROAD'].agg(lambda x: x.mean())
+# print(summary)
 
 
 """filter()"""
@@ -77,4 +75,39 @@ FILTER without (!) aggregation
 # print(df)
 
 
+"""******************************************
+DF.apply()
+******************************************"""
+"""axis=1 -> po wierszach -> powstaje nowa kolumna"""
+# import pandas as pd
+# from typing import Any
+#
+# df = pd.DataFrame.from_dict({
+#     'width': [1, 2, 3],
+#     'length': [6, 5, 4]
+# })
+#
+# def area(single_row_df: pd.DataFrame) -> Any:
+#     return single_row_df['width'] * single_row_df['length']
+#
+# df = df.assign(
+#     area=df.apply(area, axis=1)
+# )
+#
+# print(df)
 
+"""axis=0 -> po kolumnach -> zachodzi pewnego rodzaju agregacja"""
+"""
+Tutaj raczej nie przychodzi mi nic innego jak zagregowanie Series'a do jakiejs wartosci.
+Z tego powodu czesciej bedzie sie uzywalo gotowych funkcji zamiast customowych.
+"""
+# import pandas as pd
+#
+# df = pd.DataFrame.from_dict({
+#     'x': [1, 2, 3],
+#     'y': [6, 5, 4]
+# })
+#
+# geometric_center = df.apply(pd.Series.mean, axis=0)
+#
+# print(geometric_center)

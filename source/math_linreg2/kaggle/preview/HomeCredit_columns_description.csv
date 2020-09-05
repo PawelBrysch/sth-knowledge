@@ -1,0 +1,31 @@
+,Unnamed: 0,Table,Row,Description,Special
+0,1,application_{train|test}.csv,SK_ID_CURR,ID of loan in our sample,
+1,2,application_{train|test}.csv,TARGET,"Target variable (1 - client with payment difficulties: he/she had late payment more than X days on at least one of the first Y installments of the loan in our sample, 0 - all other cases)",
+2,5,application_{train|test}.csv,NAME_CONTRACT_TYPE,Identification if loan is cash or revolving,
+3,6,application_{train|test}.csv,CODE_GENDER,Gender of the client,
+4,7,application_{train|test}.csv,FLAG_OWN_CAR,Flag if the client owns a car,
+5,8,application_{train|test}.csv,FLAG_OWN_REALTY,Flag if client owns a house or flat,
+6,9,application_{train|test}.csv,CNT_CHILDREN,Number of children the client has,
+7,10,application_{train|test}.csv,AMT_INCOME_TOTAL,Income of the client,
+8,11,application_{train|test}.csv,AMT_CREDIT,Credit amount of the loan,
+9,12,application_{train|test}.csv,AMT_ANNUITY,Loan annuity,
+10,13,application_{train|test}.csv,AMT_GOODS_PRICE,For consumer loans it is the price of the goods for which the loan is given,
+11,14,application_{train|test}.csv,NAME_TYPE_SUITE,Who was accompanying client when he was applying for the loan,
+12,15,application_{train|test}.csv,NAME_INCOME_TYPE,"Clients income type (businessman, working, maternity leave)",
+13,16,application_{train|test}.csv,NAME_EDUCATION_TYPE,Level of highest education the client achieved,
+14,17,application_{train|test}.csv,NAME_FAMILY_STATUS,Family status of the client,
+15,18,application_{train|test}.csv,NAME_HOUSING_TYPE,"What is the housing situation of the client (renting, living with parents, ...)",
+16,19,application_{train|test}.csv,REGION_POPULATION_RELATIVE,Normalized population of region where client lives (higher number means the client lives in more populated region),normalized 
+17,20,application_{train|test}.csv,DAYS_BIRTH,Client's age in days at the time of application,time only relative to the application
+18,21,application_{train|test}.csv,DAYS_EMPLOYED,How many days before the application the person started current employment,time only relative to the application
+19,22,application_{train|test}.csv,DAYS_REGISTRATION,How many days before the application did client change his registration,time only relative to the application
+20,23,application_{train|test}.csv,DAYS_ID_PUBLISH,How many days before the application did client change the identity document with which he applied for the loan,time only relative to the application
+21,24,application_{train|test}.csv,OWN_CAR_AGE,Age of client's car,
+22,25,application_{train|test}.csv,FLAG_MOBIL,"Did client provide mobile phone (1=YES, 0=NO)",
+23,26,application_{train|test}.csv,FLAG_EMP_PHONE,"Did client provide work phone (1=YES, 0=NO)",
+24,27,application_{train|test}.csv,FLAG_WORK_PHONE,"Did client provide home phone (1=YES, 0=NO)",
+25,28,application_{train|test}.csv,FLAG_CONT_MOBILE,"Was mobile phone reachable (1=YES, 0=NO)",
+26,29,application_{train|test}.csv,FLAG_PHONE,"Did client provide home phone (1=YES, 0=NO)",
+27,30,application_{train|test}.csv,FLAG_EMAIL,"Did client provide email (1=YES, 0=NO)",
+28,31,application_{train|test}.csv,OCCUPATION_TYPE,What kind of occupation does the client have,
+29,32,application_{train|test}.csv,CNT_FAM_MEMBERS,How many family members does client have,
