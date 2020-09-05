@@ -64,8 +64,13 @@ feature_df = df.assign(
 """##########################
 GOOD
 #########################"""
-data = pd.read_pickle("/home/devoted/PROJECTS/sth_knowledge_top/sth-knowledge/source/math_linreg2/snippets/data/confound_variable_v2.pickle")
-
+# data = pd.read_pickle("/home/devoted/PROJECTS/sth_knowledge_top/sth-knowledge/source/math_linreg2/snippets/data/confound_variable_v2.pickle")
+data = pd.read_pickle("/home/devoted/PROJECTS/sth_knowledge_top/sth-knowledge/source/math_linreg2/snippets/data/confound_variable_v3_perfect.pickle")
+# data.to_pickle("/home/devoted/PROJECTS/sth_knowledge_top/sth-knowledge/source/math_linreg2/snippets/data/confound_variable_v3_perfect.pickle")
+# data['EARNINGS_NORM'] = MinMaxScaler().fit_transform(data[['EARNINGS_NORM']]).flatten()
+# data['ABROAD'] = MinMaxScaler().fit_transform(data[['ABROAD']]).flatten()
+# data['ABROAD'] = data['ABROAD'].apply(lambda x: int(x > 0.5))
+# data["QUICK_FNSH"] = data["QUICK_FNSH"].astype(int)
 
 X = data[["ABROAD", "EARNINGS_NORM"]]
 y = data["QUICK_FNSH"]
@@ -73,13 +78,11 @@ y = data["QUICK_FNSH"]
 logreg = LogisticRegression(random_state=0, solver='lbfgs').fit(X, y)
 
 fig, ax = plt.subplots(1, 1)
-
-data.loc[:33, :].plot(kind="scatter", x="ABROAD", y="EARNINGS_NORM", color="r", ax=ax)
-data.loc[33:, :].plot(kind="scatter", x="ABROAD", y="EARNINGS_NORM", color="b", ax=ax)
-plt.plot(*get_line_data(model=logreg, axes=ax), label="logreg")
-
-plt.legend(loc='upper left')
-
+Y1, Y0 = [x for _, x in data.groupby(data['QUICK_FNSH'] < 0.5)]
+Y1.plot(kind="scatter", x="ABROAD", y="EARNINGS_NORM", color="r", ax=ax)
+Y0.plot(kind="scatter", x="ABROAD", y="EARNINGS_NORM", color="b", ax=ax)
+line_data = get_line_data(model=logreg, axes=ax)
+ax.plot(*line_data, label="orig", color='g')
 
 """##########################
 BAD
