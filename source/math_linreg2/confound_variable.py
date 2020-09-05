@@ -64,27 +64,18 @@ feature_df = df.assign(
 """##########################
 GOOD
 #########################"""
-data = pd.read_pickle("/home/devoted/PROJECTS/sth_knowledge_top/sth-knowledge/source/math_linreg2/snippets/data/confound_variable.pickle")
-data["X"] = pd.to_numeric(data["X"])
-data["Y"] = pd.to_numeric(data["Y"])
+data = pd.read_pickle("/home/devoted/PROJECTS/sth_knowledge_top/sth-knowledge/source/math_linreg2/snippets/data/confound_variable_v2.pickle")
 
-X = data[["X", "Y"]]
-y = data["is_red"]
 
-data2 = pd.DataFrame().assign(
-    ABROAD=data['X'],
-    EARNINGS_NORM=data['Y'],
-    QUICK_FINISH=data['is_red']
-)
+X = data[["ABROAD", "EARNINGS_NORM"]]
+y = data["QUICK_FNSH"]
 
 logreg = LogisticRegression(random_state=0, solver='lbfgs').fit(X, y)
 
 fig, ax = plt.subplots(1, 1)
 
-data.loc[:33, :].plot(kind="scatter", x="X", y="Y", color="r", ax=ax)
-data.loc[33:, :].plot(kind="scatter", x="X", y="Y", color="b", ax=ax)
-# data.loc[:33, :].plot(kind="scatter", x="ABROAD", y="EARNINGS_NORM", color="r", ax=ax)
-# data.loc[33:, :].plot(kind="scatter", x="ABROAD", y="EARNINGS_NORM", color="b", ax=ax)
+data.loc[:33, :].plot(kind="scatter", x="ABROAD", y="EARNINGS_NORM", color="r", ax=ax)
+data.loc[33:, :].plot(kind="scatter", x="ABROAD", y="EARNINGS_NORM", color="b", ax=ax)
 plt.plot(*get_line_data(model=logreg, axes=ax), label="logreg")
 
 plt.legend(loc='upper left')
