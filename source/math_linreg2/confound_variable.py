@@ -60,46 +60,42 @@ feature_df = df.assign(
 # logreg_1.predict(test_sample)
 
 
+def split(data: pd.DataFrame):
+    return data[["ABROAD", "EARNINGS_NORM"]], data["QUICK_FNSH"]
 
+def visualize(data: pd.DataFrame, model: LogisticRegression, ax):
+    ax.axis(xmin=-1, xmax=2)
+    ax.axis(ymin=-1, ymax=2)
+
+    Y1, Y0 = [x for _, x in data.groupby(data['QUICK_FNSH'] < 0.5)]
+    Y1.plot(kind="scatter", x="ABROAD", y="EARNINGS_NORM", color="r", ax=ax)
+    Y0.plot(kind="scatter", x="ABROAD", y="EARNINGS_NORM", color="b", ax=ax)
+    line_data = get_line_data(model=model, axes=ax)
+    ax.plot(*line_data, label="orig", color='g')
+
+# TODO 1. obliczac procent i wypisywac
 """##########################
-GOOD
+BADANIE
 #########################"""
-# data = pd.read_pickle("/home/devoted/PROJECTS/sth_knowledge_top/sth-knowledge/source/math_linreg2/snippets/data/confound_variable_v2.pickle")
-data = pd.read_pickle("/home/devoted/PROJECTS/sth_knowledge_top/sth-knowledge/source/math_linreg2/snippets/data/confound_variable_v3_perfect.pickle")
-# data.to_pickle("/home/devoted/PROJECTS/sth_knowledge_top/sth-knowledge/source/math_linreg2/snippets/data/confound_variable_v3_perfect.pickle")
-# data['EARNINGS_NORM'] = MinMaxScaler().fit_transform(data[['EARNINGS_NORM']]).flatten()
-# data['ABROAD'] = MinMaxScaler().fit_transform(data[['ABROAD']]).flatten()
-# data['ABROAD'] = data['ABROAD'].apply(lambda x: int(x > 0.5))
-# data["QUICK_FNSH"] = data["QUICK_FNSH"].astype(int)
+data_good = pd.read_pickle("/home/devoted/PROJECTS/sth_knowledge_top/sth-knowledge/source/math_linreg2/snippets/data/confound_variable_v3_perfect.pickle")
+data_bad = feature_df[['ABROAD', 'EARNINGS_NORM', "QUICK_FNSH"]]
 
-X = data[["ABROAD", "EARNINGS_NORM"]]
-y = data["QUICK_FNSH"]
+X_good, y_good = split(data_good)
+X_bad, y_bad = split(data_bad)
 
-logreg = LogisticRegression(random_state=0, solver='lbfgs').fit(X, y)
+logreg_good = LogisticRegression(random_state=0, solver='lbfgs').fit(X_good, y_good)
+logreg_bad = LogisticRegression(random_state=0, solver='lbfgs').fit(X_bad, y_bad)
 
-fig, ax = plt.subplots(1, 1)
-Y1, Y0 = [x for _, x in data.groupby(data['QUICK_FNSH'] < 0.5)]
-Y1.plot(kind="scatter", x="ABROAD", y="EARNINGS_NORM", color="r", ax=ax)
-Y0.plot(kind="scatter", x="ABROAD", y="EARNINGS_NORM", color="b", ax=ax)
-line_data = get_line_data(model=logreg, axes=ax)
-ax.plot(*line_data, label="orig", color='g')
+score_good = logreg_good.score(X_good, y_good)
+score_bad = logreg_bad.score(X_bad, y_bad)
 
-"""##########################
-BAD
-#########################"""
-# X = feature_df[['ABROAD', 'EARNINGS_NORM']]
-# y = feature_df['QUICK_FNSH']
-# logreg_test = LogisticRegression(random_state=0, solver='lbfgs').fit(X, y)
-# res_test = logreg_test.predict_proba(X)
-# score_test = logreg_test.score(X, y)
-#
-# fig, ax = plt.subplots(1, 1)
-# Y1, Y0 = [x for _, x in feature_df.groupby(feature_df['QUICK_FNSH'] < 0.5)]
-# Y1.plot(kind="scatter", x="ABROAD", y="EARNINGS_NORM", color="r", ax=ax)
-# Y0.plot(kind="scatter", x="ABROAD", y="EARNINGS_NORM", color="b", ax=ax)
-# ax.axis(xmin=-1, xmax=2)
-# ax.axis(ymin=-1, ymax=2)
-# # ax.ylim([-1, 2])
-# line_data = get_line_data(model=logreg_test, axes=ax)
-# ax.plot(*line_data, label="orig", color='g')
-# # ax.plot(*get_line_data(model=logreg_test, axes=ax), label="orig", color='g')
+data_good = data_good.assign(SCORE=logreg_good.predict(X_good))
+data_bad = data_bad.assign(SCORE=logreg_bad.predict(X_bad))
+
+print(score_good, score_bad)
+
+"""visualize"""
+fig, (ax1, ax2) = plt.subplots(1, 2)
+
+visualize(data_good, logreg_good, ax1)
+visualize(data_bad, logreg_bad, ax2)
