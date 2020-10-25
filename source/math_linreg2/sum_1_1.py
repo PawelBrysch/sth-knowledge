@@ -1,69 +1,63 @@
+import itertools
+import time
 import numpy as np
-import scipy.linalg as la
 import matplotlib.pyplot as plt
 
 
+def solution(X):
+    Q, R = np.linalg.qr(X)
+    return np.apply_along_axis(lambda x: sum(x * x), 1, Q)
 
 
-TIMES_LOG = []
-def benchmark(func):
-    global TIMES_LOG
-    import time
-    def wrapper(*args, **kwargs):
-        t = time.clock()
-        res = func(*args, **kwargs)
-        TIMES_LOG.append(time.clock()-t)
-        return res
-    return wrapper
-
-
-
-def create_normal_array(m, n, seed):
-    np.random.seed(seed)
+"""helper method"""
+def sample_normal_array(m, n):
+    np.random.seed(1)
     array = np.random.normal(size=(m, n))
     return array
 
-@benchmark
-def qr(A):
-    # return la.qr(A, pivoting=True)
-    return np.linalg.qr(A)
+
+"""TEST OF PERFORMANCE"""
+# LOG_M_UPPER_BOUND = 3
+# m_sizes = np.logspace(1, LOG_M_UPPER_BOUND, 20).astype(int)
+# n_sizes = [10, 20, 50, 100, 200, 500]
+#
+# pairs = list(itertools.product(m_sizes, n_sizes))
+# realistic_pairs = list(filter(lambda x: x[0] > x[1], pairs))
+#
+# array_sizes = []
+# computation_times = []
+# for m, n in realistic_pairs:
+#     X = sample_normal_array(m, n)
+#
+#     start = time.clock()
+#     diagonal_of_H = solution(X)
+#     stop = time.clock()
+#
+#     array_sizes.append(m * n)
+#     computation_times.append(stop - start)
+#
+# fig, ax = plt.subplots(1, 1)
+# ax.scatter(array_sizes, computation_times)
+# ax.set_xlabel('m x n')
+# ax.set_ylabel('time [s]')
 
 
-
-PAR_SEED = 1
-MAX_POWER = 4
-
-
-m_sizes = np.logspace(1, MAX_POWER, 20).astype(int)
-n_sizes = m_sizes
-
-ARRAYS = []
-for m in m_sizes:
-    A = create_normal_array(m, 10, 1)
-    ARRAYS.append(A)
-    # Q, R, perm = qr(A)
-    Q, R = qr(A)
-    diagonal_of_H = np.apply_along_axis(lambda x: sum(x * x), 1, Q)
-
-fig, ax = plt.subplots(1, 1)
-ax.scatter(m_sizes, TIMES_LOG)
-ax.set_yscale('log')
-ax.set_yscale('log')
-
-
-"""test_czy dziala"""
-# A = create_normal_array(100, 10, 1)
-# Q, R = np.linalg.qr(A)
-# diagonal_of_H = np.apply_along_axis(lambda x: sum(x * x), 1, Q)
-# res2 = A.dot(np.linalg.inv(A.T.dot(A))).dot(A.T)
-# diag_test = np.diag(res2)
-
-"""remove"""
-# test_array = np.array([
-#     [1, 2, 3],
-#     [4, 5, 6],
-#     [7, 8, 9],
-#     [11, 12, 13]
-# ])
-# z1 = np.apply_along_axis(lambda x: sum(x * x), 1, test_array)
-# np.apply_along_axis(lambda x: print(sum(x * x)), 1, test_array)
+"""TESTS OF CORRECTNESS"""
+# def calculate_leverages_brute_force(X):
+#     H = X.dot(np.linalg.inv(X.T.dot(X))).dot(X.T)
+#     return np.diag(H)
+#
+# test_cases = [
+#     (10, 10),
+#     (100, 10),
+#     (1000, 10),
+#     (10000, 10),
+#     (1000, 100),
+#     (10000, 100)
+# ]
+#
+# for m, n in test_cases:
+#     X = sample_normal_array(m, n)
+#     leverages = solution(X)
+#     leverages_brute_force = calculate_leverages_brute_force(X)
+#     np.testing.assert_array_almost_equal(leverages, leverages_brute_force)
